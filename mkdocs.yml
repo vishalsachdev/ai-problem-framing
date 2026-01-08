@@ -1,0 +1,80 @@
+site_name: AI Problem Framing for AI Practitioners
+site_description: A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.
+site_url: https://dmccreary.github.io/ai-problem-framing
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.footer
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.highlight
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+
+nav:
+  - Home: index.md
+  - Course Description: course-description.md
+  - Chapters:
+    - "1. The AI Problem Framing Mindset": chapters/01-mindset/index.md
+    - "1. Quiz": chapters/01-mindset/quiz.md
+    - "2. AI Solution Alternatives": chapters/02-ai-alternatives/index.md
+    - "2. Quiz": chapters/02-ai-alternatives/quiz.md
+    - "3. The Loop Framework": chapters/03-the-loop-framework/index.md
+    - "3. Quiz": chapters/03-the-loop-framework/quiz.md
+    - "4. Diagnosis": chapters/04-diagnosis/index.md
+    - "4. Quiz": chapters/04-diagnosis/quiz.md
+    - "5. Pivot": chapters/05-pivot/index.md
+    - "5. Quiz": chapters/05-pivot/quiz.md
+    - "6. Application & Case Studies": chapters/06-application/index.md
+    - "6. Quiz": chapters/06-application/quiz.md
+  - Simulations:
+    - "Loop Framework Visualizer": sims/loop-framework-visualizer/index.md
+    - "AI Alternatives Decision Tree": sims/ai-alternatives-decision-tree/index.md
+    - "Signal Dashboard": sims/signal-dashboard/index.md
+    - "Pivot Decision Matrix": sims/pivot-decision-matrix/index.md
+  - Learning Graph: learning-graph/index.md
+  - Glossary: glossary.md
+  - FAQ: faq.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dmccreary/ai-problem-framing
