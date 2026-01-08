@@ -6,6 +6,8 @@ Most AI practitioners learn to optimize models, engineer features, and deploy sy
 
 This course teaches you to frame AI problems before you build AI solutions. You'll learn systematic frameworks for deconstructing vague business goals into actionable AI opportunities, evaluating solution alternatives, and diagnosing when to persist, pivot, or stop. These skills separate practitioners who build technically impressive systems from those who deliver measurable business value.
 
+This course is inspired by [Rajiv Shah's Maven course](https://maven.com/rajistics/ai-problem-framing), with gratitude for his influence. The teaching philosophy presented here is mine — see [Teaching Philosophy](teaching-philosophy.md).
+
 ## What You'll Learn
 
 By the end of this course, you will be able to:

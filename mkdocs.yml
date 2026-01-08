@@ -52,6 +52,7 @@ extra_javascript:
 nav:
   - Home: index.md
   - Course Description: course-description.md
+  - Teaching Philosophy: teaching-philosophy.md
   - Chapters:
     - "1. The AI Problem Framing Mindset": chapters/01-mindset/index.md
     - "1. Quiz": chapters/01-mindset/quiz.md
