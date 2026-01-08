@@ -1,0 +1,2724 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/chapters/02-ai-alternatives/">
+      
+      
+        <link rel="prev" href="../01-mindset/quiz/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2. AI Solution Alternatives - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-ai-solution-alternatives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. AI Solution Alternatives
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-prediction-archetypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Prediction Archetypes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: Prediction Archetypes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forecasting-vs-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forecasting vs Regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection-vs-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anomaly Detection vs Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering-vs-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clustering vs Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-search-and-retrieval-archetypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Search and Retrieval Archetypes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Search and Retrieval Archetypes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-search-vs-lexical-search-vs-structured-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Search vs Lexical Search vs Structured Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation-vs-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation vs Prediction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-context-vs-rag-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long Context vs RAG (Retrieval-Augmented Generation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-generation-archetypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Generation Archetypes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Generation Archetypes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generation-vs-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation vs Retrieval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction-vs-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extraction vs Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tuning-vs-prompting-vs-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Tuning vs Prompting vs RAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-agent-archetypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: Agent Archetypes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Agent Archetypes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deterministic-agents-vs-autonomous-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deterministic Agents vs Autonomous Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-optimization-vs-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Optimization vs Prediction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portfolio-project-alternatives-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portfolio Project: Alternatives Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portfolio Project: Alternatives Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-1-generate-alternatives-5-approaches-per-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Generate Alternatives (5+ approaches per problem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-compare-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Compare Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-recommend-and-justify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Recommend and Justify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Reflection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submission Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundational-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundational Papers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Guides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparisons-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparisons and Trade-offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Studies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-2-ai-solution-alternatives">Chapter 2: AI Solution Alternatives<a class="headerlink" href="#chapter-2-ai-solution-alternatives" title="Permanent link">&para;</a></h1>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><strong>Compare and contrast</strong> 13 fundamental AI approach archetypes across prediction, search, generation, and agent categories</li>
+<li><strong>Select</strong> appropriate AI approaches based on problem characteristics, constraints, and success criteria</li>
+<li><strong>Evaluate</strong> trade-offs between alternative approaches across dimensions of data requirements, interpretability, latency, and maintenance burden</li>
+<li><strong>Apply</strong> the "alternatives menu" thinking to real problems by systematically generating multiple candidate approaches before converging on a solution</li>
+</ol>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>In 2019, a healthcare analytics team spent six months building a sophisticated classification model to predict patient readmissions within 30 days. The model achieved 87% accuracy on their test set. The data science team celebrated. Leadership was impressed. Then they deployed it.</p>
+<p>Within two weeks, clinicians stopped using it.</p>
+<p>The problem? The model predicted <em>which</em> patients would be readmitted, but clinicians needed to know <em>when</em> patients would likely deteriorate to intervene at the right moment. The team had built a binary classifier when they needed a time-series forecasting system. Same data. Same goal of reducing readmissions. Completely wrong approach.</p>
+<p>This failure wasn't due to poor modeling skills or insufficient data. The team made a strategic error at the very beginning: they converged on a solution archetype before fully exploring alternatives. They asked "How accurately can we classify readmissions?" when they should have asked "What are all the ways we could use AI to help clinicians reduce readmissions?"</p>
+<p>This chapter teaches you to avoid premature convergence by building a mental model of the AI solution space. You'll learn 13 fundamental solution archetypes, understand when each applies, and develop the discipline to systematically consider alternatives before committing to implementation.</p>
+<p>The payoff is substantial. Teams that generate and evaluate multiple approaches before building tend to deliver solutions that are:</p>
+<ul>
+<li><strong>Better aligned</strong> with actual user needs (not just stated requirements)</li>
+<li><strong>More maintainable</strong> because they chose approaches that fit organizational capabilities</li>
+<li><strong>Less expensive</strong> because they avoided over-engineering or under-engineering the solution</li>
+<li><strong>Faster to valuable</strong> because they identified the simplest adequate approach</li>
+</ul>
+<p>Let's build your alternatives menu.</p>
+<h2 id="section-1-prediction-archetypes">Section 1: Prediction Archetypes<a class="headerlink" href="#section-1-prediction-archetypes" title="Permanent link">&para;</a></h2>
+<p>Prediction is the most common category of AI applications, but "prediction" encompasses distinctly different archetypes with different use cases, data requirements, and success criteria. Four major prediction archetypes deserve careful differentiation.</p>
+<h3 id="forecasting-vs-regression">Forecasting vs Regression<a class="headerlink" href="#forecasting-vs-regression" title="Permanent link">&para;</a></h3>
+<p>Both forecasting and regression predict numerical outcomes, but they differ fundamentally in their relationship to time and the nature of their predictions.</p>
+<p><strong>Regression</strong> predicts outcomes based on features at a single point in time, with no inherent temporal ordering. Examples:</p>
+<ul>
+<li>Predicting house prices from bedroom count, location, and square footage</li>
+<li>Estimating patient length-of-stay from admission vitals and diagnosis codes</li>
+<li>Predicting customer lifetime value from demographic and behavioral features</li>
+</ul>
+<p>Regression models assume features are simultaneously available and the prediction task is repeatable with new feature combinations. You can predict house prices for thousands of imaginary houses by varying features.</p>
+<p><strong>Forecasting</strong> predicts future values in a time series based on historical patterns. Examples:</p>
+<ul>
+<li>Predicting next month's sales from the past 24 months of sales data</li>
+<li>Forecasting daily electricity demand from historical demand patterns</li>
+<li>Predicting patient vital signs for the next 4 hours from the past 24 hours</li>
+</ul>
+<p>Forecasting models assume temporal dependencies—recent past matters more than distant past, seasonality exists, trends evolve. You cannot forecast sales for a new product with no history.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Regression</th>
+<th>Forecasting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Time dependence</strong></td>
+<td>Features available simultaneously</td>
+<td>Sequential observations over time</td>
+</tr>
+<tr>
+<td><strong>Prediction target</strong></td>
+<td>Any feature combination</td>
+<td>Next point(s) in time series</td>
+</tr>
+<tr>
+<td><strong>Data requirements</strong></td>
+<td>Cross-sectional or panel data</td>
+<td>Sufficient historical time series</td>
+</tr>
+<tr>
+<td><strong>Model assumptions</strong></td>
+<td>Feature independence (often)</td>
+<td>Temporal autocorrelation</td>
+</tr>
+<tr>
+<td><strong>Interpretability</strong></td>
+<td>Feature importance</td>
+<td>Lag relationships, seasonality</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Using regression when temporal patterns matter. The readmission prediction story from our introduction exemplifies this—they built a regression model (predict readmission risk from admission features) when they needed forecasting (predict when deterioration would occur).</p>
+<p><strong>When to choose regression:</strong></p>
+<ul>
+<li>Outcome depends on features available at prediction time, not historical trajectory</li>
+<li>You need to simulate "what-if" scenarios by varying features</li>
+<li>Temporal ordering is irrelevant or non-existent</li>
+<li>You have abundant cross-sectional data but limited time series history</li>
+</ul>
+<p><strong>When to choose forecasting:</strong></p>
+<ul>
+<li>Outcome is inherently temporal (what happens next?)</li>
+<li>Historical patterns contain predictive signal (seasonality, trends, cycles)</li>
+<li>You need lead time for intervention (predict 2 hours before the event)</li>
+<li>Features are time-varying observations of the same entity</li>
+</ul>
+<h3 id="anomaly-detection-vs-classification">Anomaly Detection vs Classification<a class="headerlink" href="#anomaly-detection-vs-classification" title="Permanent link">&para;</a></h3>
+<p>Both identify unusual instances, but anomaly detection and classification differ in how they define "unusual" and what data they require.</p>
+<p><strong>Classification</strong> assigns instances to predefined categories based on labeled training data. Examples:</p>
+<ul>
+<li>Email spam detection (spam vs. not spam)</li>
+<li>Medical diagnosis from imaging (cancer vs. benign)</li>
+<li>Credit card fraud detection (fraudulent vs. legitimate)</li>
+</ul>
+<p>Classification requires labeled examples of all classes you want to distinguish. The model learns decision boundaries from examples of both normal and abnormal cases.</p>
+<p><strong>Anomaly detection</strong> identifies instances that deviate from expected patterns without necessarily having labeled examples of anomalies. Examples:</p>
+<ul>
+<li>Network intrusion detection (normal traffic patterns vs. deviations)</li>
+<li>Manufacturing defect detection (normal sensor readings vs. outliers)</li>
+<li>User behavior anomalies (typical usage patterns vs. deviations)</li>
+</ul>
+<p>Anomaly detection learns the distribution of normal behavior and flags instances that fall outside expected patterns. It doesn't need examples of every possible anomaly type.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Classification</th>
+<th>Anomaly Detection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Label requirements</strong></td>
+<td>Need examples of all classes</td>
+<td>Often needs only normal examples</td>
+</tr>
+<tr>
+<td><strong>Anomaly definition</strong></td>
+<td>Pre-specified categories</td>
+<td>Statistical deviation from normal</td>
+</tr>
+<tr>
+<td><strong>Known unknowns</strong></td>
+<td>Detects known anomaly types</td>
+<td>Can detect novel anomaly types</td>
+</tr>
+<tr>
+<td><strong>Imbalance tolerance</strong></td>
+<td>Works with imbalanced classes</td>
+<td>Designed for rare events</td>
+</tr>
+<tr>
+<td><strong>Interpretability</strong></td>
+<td>Why this class vs. others</td>
+<td>How this differs from normal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Framing anomaly detection as classification when you lack comprehensive labeled anomalies. Early fraud detection systems often made this error—trying to classify transactions as fraudulent when they only had examples of a few fraud types. New fraud patterns went undetected.</p>
+<p><strong>When to choose classification:</strong></p>
+<ul>
+<li>You have labeled examples of all important categories</li>
+<li>Anomaly types are well-understood and relatively stable</li>
+<li>You need to distinguish between multiple specific anomaly types</li>
+<li>False positive rates must be precisely controlled</li>
+</ul>
+<p><strong>When to choose anomaly detection:</strong></p>
+<ul>
+<li>Anomalies are rare and diverse (can't label all types)</li>
+<li>New anomaly patterns emerge over time</li>
+<li>You have abundant normal data but few anomaly examples</li>
+<li>The cost of missing novel anomalies is high</li>
+</ul>
+<p><strong>Hybrid approaches:</strong> Many production systems combine both. Anomaly detection flags unusual patterns, then classification distinguishes between known anomaly types and genuinely novel cases requiring human review.</p>
+<h3 id="clustering-vs-classification">Clustering vs Classification<a class="headerlink" href="#clustering-vs-classification" title="Permanent link">&para;</a></h3>
+<p>The confusion between clustering and classification causes more project failures than almost any other alternatives mixup. Both group similar instances, but they serve fundamentally different purposes.</p>
+<p><strong>Classification</strong> assigns instances to predefined categories using labeled training data. You know the categories in advance. The model learns to reproduce human-defined labels.</p>
+<p><strong>Clustering</strong> discovers natural groupings in data without predefined categories. You don't know the groups in advance. The algorithm finds structure based on similarity.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Classification</th>
+<th>Clustering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supervision</strong></td>
+<td>Requires labeled training data</td>
+<td>Unsupervised, no labels needed</td>
+</tr>
+<tr>
+<td><strong>Categories</strong></td>
+<td>Predefined by humans</td>
+<td>Discovered from data patterns</td>
+</tr>
+<tr>
+<td><strong>Reproducibility</strong></td>
+<td>Consistent labels for new data</td>
+<td>Clusters may shift with new data</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Compare predictions to true labels</td>
+<td>Assess cluster quality (coherence, separation)</td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Automate human categorization</td>
+<td>Discover unknown structure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical distinction in use cases:</strong></p>
+<p>Use <strong>classification</strong> when:</p>
+<ul>
+<li>The categories are established and meaningful (spam vs. not-spam, cat vs. dog)</li>
+<li>You need consistent labeling of new instances</li>
+<li>Regulations or business rules define the categories</li>
+<li>You can obtain labeled training data</li>
+</ul>
+<p>Use <strong>clustering</strong> when:</p>
+<ul>
+<li>Categories are unknown or poorly defined</li>
+<li>You want to discover natural segments (customer personas, patient subtypes)</li>
+<li>The goal is exploration or dimensionality reduction</li>
+<li>Creating labels is expensive or subjective</li>
+</ul>
+<p><strong>Common mistake:</strong> Using classification when you don't actually know the right categories. Consider customer segmentation: marketing teams often have legacy segments ("premium," "value," "inactive") but clustering might reveal that customers actually group by different behaviors (time-of-day usage, feature combinations, lifecycle stage). Classification would perpetuate potentially irrelevant categorization.</p>
+<p><strong>The readmission case revisited:</strong> If our healthcare team had considered clustering, they might have discovered that patients naturally group into distinct readmission risk profiles with different intervention needs—not just "high risk" vs. "low risk" but "comorbidity-driven," "medication-adherence-driven," "social-determinant-driven." This would have changed the entire problem framing.</p>
+<h2 id="section-2-search-and-retrieval-archetypes">Section 2: Search and Retrieval Archetypes<a class="headerlink" href="#section-2-search-and-retrieval-archetypes" title="Permanent link">&para;</a></h2>
+<p>When users need to find information, multiple retrieval paradigms exist. Choosing the wrong one leads to poor relevance, high latency, or unsustainable costs.</p>
+<h3 id="semantic-search-vs-lexical-search-vs-structured-search">Semantic Search vs Lexical Search vs Structured Search<a class="headerlink" href="#semantic-search-vs-lexical-search-vs-structured-search" title="Permanent link">&para;</a></h3>
+<p>Three fundamentally different approaches to finding relevant information, each with distinct strengths and appropriate contexts.</p>
+<p><strong>Lexical search</strong> matches query terms to document terms using string matching, Boolean logic, and statistical weighting (TF-IDF, BM25). Examples:</p>
+<ul>
+<li>Traditional search engines (before neural embeddings)</li>
+<li>SQL full-text search</li>
+<li>grep, Elasticsearch, Solr</li>
+</ul>
+<p>Lexical search excels when queries use precise terminology that appears in target documents. It's fast, interpretable, and works well for factual lookup ("find documents containing 'quarterly revenue 2023'").</p>
+<p><strong>Semantic search</strong> embeds queries and documents into vector spaces where semantic similarity (not lexical overlap) determines relevance. Examples:</p>
+<ul>
+<li>Dense retrieval using BERT, sentence transformers</li>
+<li>Modern RAG systems</li>
+<li>"Similar documents" features</li>
+</ul>
+<p>Semantic search excels when users express concepts differently than documents ("budget constraints" might match documents about "cost limitations" or "resource restrictions"). It handles synonyms, paraphrasing, and conceptual similarity naturally.</p>
+<p><strong>Structured search</strong> queries databases with explicit schema and relational logic. Examples:</p>
+<ul>
+<li>SQL queries against relational databases</li>
+<li>GraphQL queries</li>
+<li>Filter-based interfaces (e-commerce facets)</li>
+</ul>
+<p>Structured search excels when data has well-defined schema, queries need precise filtering on attributes, and business logic requires exact match semantics.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Lexical Search</th>
+<th>Semantic Search</th>
+<th>Structured Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Matching basis</strong></td>
+<td>Term overlap</td>
+<td>Conceptual similarity</td>
+<td>Attribute filters</td>
+</tr>
+<tr>
+<td><strong>Vocabulary gap</strong></td>
+<td>Poor (must use exact terms)</td>
+<td>Good (handles synonyms)</td>
+<td>N/A (predefined schema)</td>
+</tr>
+<tr>
+<td><strong>Precision on factual lookup</strong></td>
+<td>Excellent</td>
+<td>Good</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Very fast</td>
+<td>Slower (embedding + similarity)</td>
+<td>Very fast (indexed)</td>
+</tr>
+<tr>
+<td><strong>Interpretability</strong></td>
+<td>Transparent (terms matched)</td>
+<td>Opaque (embedding similarity)</td>
+<td>Transparent (filters applied)</td>
+</tr>
+<tr>
+<td><strong>Data requirements</strong></td>
+<td>Text documents</td>
+<td>Text + embedding model</td>
+<td>Structured data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Replacing lexical search entirely with semantic search. In practice, hybrid approaches outperform either alone. Lexical search for precise term matching plus semantic search for conceptual similarity often yields the best user experience.</p>
+<p><strong>When to choose lexical search:</strong></p>
+<ul>
+<li>Users know precise terminology (technical documentation, legal search)</li>
+<li>Documents contain unique identifiers or codes</li>
+<li>Latency requirements are strict</li>
+<li>Query interpretation must be transparent</li>
+</ul>
+<p><strong>When to choose semantic search:</strong></p>
+<ul>
+<li>Users express needs in natural language</li>
+<li>Terminology varies across documents</li>
+<li>Conceptual similarity matters more than exact matches</li>
+<li>You can tolerate embedding computation latency</li>
+</ul>
+<p><strong>When to choose structured search:</strong></p>
+<ul>
+<li>Data has well-defined schema</li>
+<li>Queries involve precise attribute filtering</li>
+<li>Business rules require exact match semantics</li>
+<li>Relationships between entities matter</li>
+</ul>
+<h3 id="recommendation-vs-prediction">Recommendation vs Prediction<a class="headerlink" href="#recommendation-vs-prediction" title="Permanent link">&para;</a></h3>
+<p>Recommendation systems predict preferences, but "recommendation" differs from general prediction in critical ways that affect architecture and evaluation.</p>
+<p><strong>Prediction</strong> estimates a target variable from input features, treating all instances independently:</p>
+<ul>
+<li>Predict customer churn from behavioral features</li>
+<li>Predict equipment failure from sensor data</li>
+<li>Predict patient readmission risk from clinical features</li>
+</ul>
+<p><strong>Recommendation</strong> predicts user preferences in a collaborative or content-based framework, leveraging patterns across users or items:</p>
+<ul>
+<li>Recommend movies based on viewing history and similar users</li>
+<li>Recommend products based on purchase patterns</li>
+<li>Recommend content based on engagement signals</li>
+</ul>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Prediction</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data structure</strong></td>
+<td>Feature matrix (independent instances)</td>
+<td>User-item interaction matrix</td>
+</tr>
+<tr>
+<td><strong>Signals used</strong></td>
+<td>Features of single instance</td>
+<td>Patterns across users/items</td>
+</tr>
+<tr>
+<td><strong>Cold start</strong></td>
+<td>No special concern</td>
+<td>Major challenge (new users/items)</td>
+</tr>
+<tr>
+<td><strong>Evaluation</strong></td>
+<td>Accuracy on fixed test set</td>
+<td>Ranking metrics, online A/B tests</td>
+</tr>
+<tr>
+<td><strong>Diversity concern</strong></td>
+<td>Not typically relevant</td>
+<td>Critical (filter bubbles, serendipity)</td>
+</tr>
+<tr>
+<td><strong>Feedback loops</strong></td>
+<td>Not typically present</td>
+<td>Strong (recommendations influence behavior)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Building a recommendation system when you actually need prediction. Consider "predict which products this customer will buy"—sounds like recommendation, but if you only have features of the customer and products (no collaborative signal from other users), you're building a prediction model, not a recommendation system.</p>
+<p>Conversely, building independent prediction models when collaborative patterns exist wastes valuable signal. If similar users exhibit similar preferences, recommendation approaches will outperform pure prediction.</p>
+<p><strong>When to choose prediction:</strong></p>
+<ul>
+<li>Instance features are sufficient without cross-user/cross-item patterns</li>
+<li>You need predictions for each instance independently</li>
+<li>Collaborative signal is weak or absent</li>
+<li>Cold start is not a concern</li>
+</ul>
+<p><strong>When to choose recommendation:</strong></p>
+<ul>
+<li>User-item interaction patterns exist</li>
+<li>"Similar users like similar items" holds</li>
+<li>You need to rank options, not just predict outcomes</li>
+<li>Diversity and serendipity matter</li>
+</ul>
+<h3 id="long-context-vs-rag-retrieval-augmented-generation">Long Context vs RAG (Retrieval-Augmented Generation)<a class="headerlink" href="#long-context-vs-rag-retrieval-augmented-generation" title="Permanent link">&para;</a></h3>
+<p>Two fundamentally different approaches to providing LLMs with external information, with distinct trade-offs in cost, latency, and reliability.</p>
+<p><strong>Long context</strong> puts all relevant information directly in the model's context window:</p>
+<ul>
+<li>Entire documents or codebases in a single prompt</li>
+<li>Full conversation histories</li>
+<li>Complete datasets for analysis</li>
+</ul>
+<p>Modern LLMs support 100K–200K+ token contexts, making this feasible for moderate-sized information.</p>
+<p><strong>RAG</strong> retrieves relevant chunks from external knowledge bases and injects only retrieved portions into the prompt:</p>
+<ul>
+<li>Vector database with embeddings of documents</li>
+<li>Retrieve top-k relevant chunks based on query</li>
+<li>Inject retrieved chunks into prompt with question</li>
+</ul>
+<p>RAG selectively includes information rather than providing everything.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Long Context</th>
+<th>RAG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Information volume</strong></td>
+<td>Everything in context</td>
+<td>Only retrieved chunks</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Higher (more input tokens)</td>
+<td>Lower (fewer input tokens)</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Higher (process full context)</td>
+<td>Lower (smaller context)</td>
+</tr>
+<tr>
+<td><strong>Retrieval errors</strong></td>
+<td>None (everything present)</td>
+<td>Possible (relevance failures)</td>
+</tr>
+<tr>
+<td><strong>Context limits</strong></td>
+<td>Bounded by model capacity</td>
+<td>Unbounded (scale knowledge base)</td>
+</tr>
+<tr>
+<td><strong>Knowledge updates</strong></td>
+<td>Requires full context refresh</td>
+<td>Update knowledge base only</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong></td>
+<td>Guaranteed (full info present)</td>
+<td>Variable (depends on retrieval)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Assuming RAG is always better because it's "more advanced." Long context is simpler, has fewer failure modes, and often delivers better results when information volume fits within context limits.</p>
+<p>Conversely, forcing everything into context when you have massive knowledge bases wastes resources and may exceed context limits.</p>
+<p><strong>When to choose long context:</strong></p>
+<ul>
+<li>Information volume fits comfortably in context window</li>
+<li>You need guaranteed access to all information</li>
+<li>Retrieval errors are costly</li>
+<li>Information changes infrequently</li>
+<li>Simplicity and reliability are priorities</li>
+</ul>
+<p><strong>When to choose RAG:</strong></p>
+<ul>
+<li>Information volume exceeds practical context limits</li>
+<li>Knowledge base updates frequently</li>
+<li>Cost optimization is critical</li>
+<li>Only small portions of knowledge base are relevant per query</li>
+<li>You can tolerate retrieval errors</li>
+</ul>
+<p><strong>Hybrid approaches:</strong> Many production systems use both—RAG for massive knowledge bases, then expand to full documents when needed via long context.</p>
+<h2 id="section-3-generation-archetypes">Section 3: Generation Archetypes<a class="headerlink" href="#section-3-generation-archetypes" title="Permanent link">&para;</a></h2>
+<p>When you need to produce new content—text, code, designs—multiple generation approaches exist with different capabilities and constraints.</p>
+<h3 id="generation-vs-retrieval">Generation vs Retrieval<a class="headerlink" href="#generation-vs-retrieval" title="Permanent link">&para;</a></h3>
+<p>The choice between generating new content and retrieving existing content is fundamental to system architecture.</p>
+<p><strong>Retrieval</strong> finds and returns existing content from databases, knowledge bases, or document collections:</p>
+<ul>
+<li>FAQ systems returning pre-written answers</li>
+<li>Document search returning relevant passages</li>
+<li>Code completion suggesting snippets from repositories</li>
+</ul>
+<p><strong>Generation</strong> creates new content on-demand using language models:</p>
+<ul>
+<li>Chatbots composing responses</li>
+<li>Code generation tools writing new functions</li>
+<li>Summarization systems producing abstracts</li>
+</ul>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Retrieval</th>
+<th>Generation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content source</strong></td>
+<td>Pre-existing, curated</td>
+<td>Created on-demand</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong></td>
+<td>Perfect (returns same content)</td>
+<td>Variable (different each time)</td>
+</tr>
+<tr>
+<td><strong>Quality control</strong></td>
+<td>Curate once, serve many times</td>
+<td>Every response is novel</td>
+</tr>
+<tr>
+<td><strong>Factual accuracy</strong></td>
+<td>Guaranteed (if source is accurate)</td>
+<td>Requires verification (hallucinations)</td>
+</tr>
+<tr>
+<td><strong>Flexibility</strong></td>
+<td>Limited to existing content</td>
+<td>Unbounded flexibility</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Fast (lookup)</td>
+<td>Slower (inference)</td>
+</tr>
+<tr>
+<td><strong>Coverage</strong></td>
+<td>Bounded by curated content</td>
+<td>Unbounded (handles novel queries)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Generating when you should retrieve. If users repeatedly ask questions with well-defined answers (product features, policy details, troubleshooting steps), retrieval delivers faster, more consistent, more accurate responses.</p>
+<p>Conversely, retrieving when you should generate limits flexibility. If queries are open-ended and require synthesis, retrieval-only systems frustrate users with irrelevant canned responses.</p>
+<p><strong>When to choose retrieval:</strong></p>
+<ul>
+<li>Queries map to well-defined content categories</li>
+<li>Factual accuracy is critical</li>
+<li>Responses must be consistent across users</li>
+<li>Latency requirements are strict</li>
+<li>Content requires review/approval before serving</li>
+</ul>
+<p><strong>When to choose generation:</strong></p>
+<ul>
+<li>Queries are open-ended and diverse</li>
+<li>Synthesis across multiple sources is needed</li>
+<li>Personalization or context-specific adaptation is valuable</li>
+<li>You can tolerate occasional errors</li>
+<li>Flexibility is more important than perfect consistency</li>
+</ul>
+<p><strong>Hybrid approaches:</strong> Most production systems combine both. Retrieval for known query types, generation for long-tail or novel queries. Or use retrieval to gather facts, then generation to synthesize personalized responses.</p>
+<h3 id="extraction-vs-generation">Extraction vs Generation<a class="headerlink" href="#extraction-vs-generation" title="Permanent link">&para;</a></h3>
+<p>Both produce structured information from unstructured text, but extraction and generation differ in how they produce output and what guarantees they provide.</p>
+<p><strong>Extraction</strong> identifies and pulls specific information from source text:</p>
+<ul>
+<li>Named entity recognition (find person names, dates, locations)</li>
+<li>Relation extraction (identify connections between entities)</li>
+<li>Parsing structured data from documents (invoices, resumes)</li>
+</ul>
+<p>Extraction returns information that exists explicitly in the source text.</p>
+<p><strong>Generation</strong> produces structured information by interpreting, inferring, or synthesizing from text:</p>
+<ul>
+<li>Summarization (create brief version of document)</li>
+<li>Classification (assign categories not explicitly stated)</li>
+<li>Transformation (convert unstructured notes to structured records)</li>
+</ul>
+<p>Generation creates information not explicitly present in source text.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Extraction</th>
+<th>Generation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source grounding</strong></td>
+<td>Returns text spans from source</td>
+<td>Creates new text/labels</td>
+</tr>
+<tr>
+<td><strong>Faithfulness</strong></td>
+<td>Perfect (quoted directly)</td>
+<td>Requires verification</td>
+</tr>
+<tr>
+<td><strong>Inference level</strong></td>
+<td>Minimal (surface patterns)</td>
+<td>Significant (deep understanding)</td>
+</tr>
+<tr>
+<td><strong>Schema flexibility</strong></td>
+<td>Fixed extraction patterns</td>
+<td>Flexible output formats</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Compare to source text</td>
+<td>Requires external validation</td>
+</tr>
+<tr>
+<td><strong>Ambiguity handling</strong></td>
+<td>May fail to extract</td>
+<td>Makes best guess</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Using generation when extraction suffices. If you need to pull contract dates, party names, and amounts from legal documents, extraction delivers grounded, verifiable results. Generation might hallucinate dates or entities.</p>
+<p>Conversely, extraction fails when information requires inference. "What is the author's sentiment toward the policy?" requires generation—the answer isn't a text span you can extract.</p>
+<p><strong>When to choose extraction:</strong></p>
+<ul>
+<li>Information exists explicitly in text</li>
+<li>Grounding to source spans is important</li>
+<li>Schema is predefined and specific</li>
+<li>Factual accuracy is critical</li>
+<li>You need to show users where information came from</li>
+</ul>
+<p><strong>When to choose generation:</strong></p>
+<ul>
+<li>Information requires inference or synthesis</li>
+<li>Multiple sources must be combined</li>
+<li>Output format is flexible or complex</li>
+<li>Perfect grounding is less critical than usability</li>
+<li>Users benefit from interpretation, not just facts</li>
+</ul>
+<h3 id="fine-tuning-vs-prompting-vs-rag">Fine-Tuning vs Prompting vs RAG<a class="headerlink" href="#fine-tuning-vs-prompting-vs-rag" title="Permanent link">&para;</a></h3>
+<p>Three approaches to specializing LLMs for specific tasks, with drastically different cost structures, data requirements, and maintenance burdens.</p>
+<p><strong>Prompting</strong> provides instructions and examples directly in the prompt without modifying model weights:</p>
+<ul>
+<li>Zero-shot: Instructions only ("Summarize this document")</li>
+<li>Few-shot: Instructions + examples ("Here are 3 example summaries, now summarize this")</li>
+<li>Chain-of-thought: Step-by-step reasoning guidance</li>
+</ul>
+<p>Prompting requires no training data or model updates. You iterate by changing prompts.</p>
+<p><strong>Fine-tuning</strong> trains model weights on task-specific data:</p>
+<ul>
+<li>Full fine-tuning: Update all model parameters</li>
+<li>LoRA/adapter methods: Update small adapter layers</li>
+<li>Instruction tuning: Train on instruction-response pairs</li>
+</ul>
+<p>Fine-tuning requires labeled training data and computational resources. Models become specialized for the task.</p>
+<p><strong>RAG</strong> augments prompts with retrieved information from external knowledge bases:</p>
+<ul>
+<li>Embed documents, retrieve relevant chunks</li>
+<li>Inject retrieved information into prompt</li>
+<li>Generate response based on retrieved context</li>
+</ul>
+<p>RAG requires a knowledge base and retrieval system but no model training.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Prompting</th>
+<th>Fine-Tuning</th>
+<th>RAG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data requirements</strong></td>
+<td>None to few examples</td>
+<td>Hundreds to thousands of examples</td>
+<td>Knowledge base (retrieval corpus)</td>
+</tr>
+<tr>
+<td><strong>Setup effort</strong></td>
+<td>Minimal (write prompts)</td>
+<td>Significant (prepare data, train)</td>
+<td>Moderate (build knowledge base)</td>
+</tr>
+<tr>
+<td><strong>Update frequency</strong></td>
+<td>Instant (change prompt)</td>
+<td>Slow (retrain model)</td>
+<td>Fast (update knowledge base)</td>
+</tr>
+<tr>
+<td><strong>Behavior specificity</strong></td>
+<td>Generic model behavior</td>
+<td>Highly specialized</td>
+<td>Task-general + external knowledge</td>
+</tr>
+<tr>
+<td><strong>Cost per inference</strong></td>
+<td>Low (small prompts)</td>
+<td>Low (no retrieval)</td>
+<td>Moderate (retrieval + generation)</td>
+</tr>
+<tr>
+<td><strong>Initial cost</strong></td>
+<td>Minimal</td>
+<td>High (training)</td>
+<td>Moderate (build knowledge base)</td>
+</tr>
+<tr>
+<td><strong>Knowledge updates</strong></td>
+<td>Requires prompt changes</td>
+<td>Requires retraining</td>
+<td>Update knowledge base only</td>
+</tr>
+<tr>
+<td><strong>Performance ceiling</strong></td>
+<td>Lower on specialized tasks</td>
+<td>Highest on trained tasks</td>
+<td>High on knowledge-intensive tasks</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Jumping straight to fine-tuning when prompting or RAG would suffice. Fine-tuning is expensive and rigid—it makes sense only when:</p>
+<ul>
+<li>You have abundant task-specific training data</li>
+<li>Prompt-based approaches fail to meet quality bars</li>
+<li>Task behavior is stable (not constantly changing)</li>
+<li>Inference volume justifies upfront investment</li>
+</ul>
+<p>Many teams waste months fine-tuning when better prompts or RAG would have solved the problem faster and more flexibly.</p>
+<p><strong>When to choose prompting:</strong></p>
+<ul>
+<li>Task is clear and well-specified</li>
+<li>Few-shot examples provide sufficient guidance</li>
+<li>Requirements change frequently</li>
+<li>Budget for training is limited</li>
+</ul>
+<p><strong>When to choose fine-tuning:</strong></p>
+<ul>
+<li>You have 1000+ high-quality training examples</li>
+<li>Task has specialized vocabulary or patterns</li>
+<li>Inference volume is massive (cost-sensitive)</li>
+<li>Behavior must be highly consistent</li>
+<li>Prompting and RAG both fail to meet quality bars</li>
+</ul>
+<p><strong>When to choose RAG:</strong></p>
+<ul>
+<li>Task requires external knowledge</li>
+<li>Knowledge base changes frequently</li>
+<li>You need factual grounding for responses</li>
+<li>Knowledge is too large for prompts</li>
+<li>You can tolerate retrieval latency</li>
+</ul>
+<p><strong>Hybrid approaches:</strong> Many systems combine all three—fine-tune for task-specific behavior, use RAG for factual knowledge, and use prompting for runtime customization.</p>
+<h2 id="section-4-agent-archetypes">Section 4: Agent Archetypes<a class="headerlink" href="#section-4-agent-archetypes" title="Permanent link">&para;</a></h2>
+<p>When tasks require multi-step reasoning, tool use, or adaptive behavior, agent architectures come into play. Two fundamentally different agent paradigms exist.</p>
+<h3 id="deterministic-agents-vs-autonomous-agents">Deterministic Agents vs Autonomous Agents<a class="headerlink" href="#deterministic-agents-vs-autonomous-agents" title="Permanent link">&para;</a></h3>
+<p>Both agents take actions to accomplish goals, but they differ in how those actions are determined and how much autonomy the system has.</p>
+<p><strong>Deterministic agents</strong> follow predefined workflows, decision trees, or state machines:</p>
+<ul>
+<li>Rule-based chatbots (if user says X, do Y)</li>
+<li>Workflow automation (step 1: fetch data, step 2: transform, step 3: load)</li>
+<li>Scripted tool use (always call API A before API B)</li>
+</ul>
+<p>Deterministic agents have predictable, inspectable, controllable behavior defined by explicit logic.</p>
+<p><strong>Autonomous agents</strong> use LLMs to reason about goals, plan actions, and select tools dynamically:</p>
+<ul>
+<li>ReAct-style agents (model decides which tool to call based on context)</li>
+<li>Multi-agent systems (agents collaborate to solve problems)</li>
+<li>Goal-directed planning (model generates action sequences)</li>
+</ul>
+<p>Autonomous agents have emergent, adaptive behavior determined by model reasoning at runtime.</p>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Deterministic Agents</th>
+<th>Autonomous Agents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Action selection</strong></td>
+<td>Predefined rules/workflows</td>
+<td>LLM reasoning</td>
+</tr>
+<tr>
+<td><strong>Predictability</strong></td>
+<td>Fully predictable</td>
+<td>Emergent behavior</td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>Inspect logic directly</td>
+<td>Requires tracing LLM decisions</td>
+</tr>
+<tr>
+<td><strong>Failure modes</strong></td>
+<td>Known and enumerable</td>
+<td>Surprising and diverse</td>
+</tr>
+<tr>
+<td><strong>Adaptation</strong></td>
+<td>Requires code changes</td>
+<td>Adapts via model capability</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Fast (direct execution)</td>
+<td>Slower (LLM reasoning loops)</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Low (no inference loops)</td>
+<td>Higher (multiple LLM calls)</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>High (deterministic)</td>
+<td>Variable (model-dependent)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Building autonomous agents for tasks that should be deterministic workflows. If the action sequence is well-understood and rarely varies, deterministic agents are faster, cheaper, more reliable, and easier to debug.</p>
+<p>Conversely, building rigid deterministic workflows when you need adaptability. If the task requires dynamic problem-solving, autonomous agents can handle edge cases that deterministic logic would miss.</p>
+<p><strong>When to choose deterministic agents:</strong></p>
+<ul>
+<li>Action sequences are well-defined and stable</li>
+<li>Predictability and reliability are critical</li>
+<li>Latency and cost constraints are tight</li>
+<li>Debugging and auditability are important</li>
+<li>Legal or regulatory requirements demand explainable behavior</li>
+</ul>
+<p><strong>When to choose autonomous agents:</strong></p>
+<ul>
+<li>Tasks require dynamic reasoning and planning</li>
+<li>Action sequences vary significantly by context</li>
+<li>You need adaptability to novel situations</li>
+<li>Model capabilities are sufficient for reliable reasoning</li>
+<li>You can tolerate occasional unexpected behavior</li>
+</ul>
+<p><strong>Hybrid approaches:</strong> Many production systems use deterministic agents as the backbone with autonomous agents for specific subtasks that benefit from flexibility. For example, a deterministic workflow might handle data ingestion and transformation, then invoke an autonomous agent for complex query interpretation or decision-making.</p>
+<h2 id="section-5-optimization-vs-prediction">Section 5: Optimization vs Prediction<a class="headerlink" href="#section-5-optimization-vs-prediction" title="Permanent link">&para;</a></h2>
+<p>A subtle but critical distinction that often goes unrecognized: some business problems frame naturally as optimization, not prediction.</p>
+<p><strong>Prediction</strong> estimates outcomes given inputs:</p>
+<ul>
+<li>Predict demand for each product</li>
+<li>Predict patient readmission risk</li>
+<li>Predict equipment failure timing</li>
+</ul>
+<p><strong>Optimization</strong> finds inputs that maximize or minimize objectives subject to constraints:</p>
+<ul>
+<li>Determine inventory levels that minimize cost while meeting demand</li>
+<li>Schedule surgeries to maximize operating room utilization</li>
+<li>Route vehicles to minimize delivery time and fuel cost</li>
+</ul>
+<p><strong>Key differentiators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Prediction</th>
+<th>Optimization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Goal</strong></td>
+<td>Estimate outcome</td>
+<td>Find best decision</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Forecast or estimate</td>
+<td>Action plan or configuration</td>
+</tr>
+<tr>
+<td><strong>Constraints</strong></td>
+<td>Not typically present</td>
+<td>Critical (budgets, capacity, rules)</td>
+</tr>
+<tr>
+<td><strong>Evaluation</strong></td>
+<td>Prediction accuracy</td>
+<td>Objective value achieved</td>
+</tr>
+<tr>
+<td><strong>User need</strong></td>
+<td>Insight or forecast</td>
+<td>Actionable decision</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Model complexity</td>
+<td>Search space complexity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common mistake:</strong> Building prediction models when users need decisions, not forecasts. Consider demand forecasting—if the real need is "How much should we order?" then optimization (possibly using demand predictions as inputs) delivers more value than predictions alone.</p>
+<p>Conversely, framing problems as optimization when predictions suffice. If users want insight ("will this patient be readmitted?") without needing prescriptive recommendations, prediction is simpler and more interpretable.</p>
+<p><strong>When to choose prediction:</strong></p>
+<ul>
+<li>Goal is insight, awareness, or forecast</li>
+<li>Users make decisions based on predictions</li>
+<li>Constraints and action spaces are user-dependent</li>
+<li>Interpretability is critical</li>
+</ul>
+<p><strong>When to choose optimization:</strong></p>
+<ul>
+<li>Goal is prescriptive recommendation</li>
+<li>Problem has clear objective function and constraints</li>
+<li>Users want "what should I do?" not "what will happen?"</li>
+<li>Decision quality measurably improves with optimal solutions</li>
+</ul>
+<p><strong>Hybrid approaches:</strong> Many systems predict outcomes as inputs to optimization models. Forecast demand (prediction), then optimize inventory (optimization). Predict failure probability (prediction), then optimize maintenance schedule (optimization).</p>
+<h2 id="reflection-questions">Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permanent link">&para;</a></h2>
+<p>Before moving to the portfolio project, reflect on these questions:</p>
+<ol>
+<li>
+<p><strong>Premature Convergence</strong>: Think of a recent AI project you worked on or heard about. What alternative approaches were considered before committing to the final approach? What alternatives were <em>not</em> considered that, in retrospect, might have been viable?</p>
+</li>
+<li>
+<p><strong>Archetype Selection</strong>: For each of these problem statements, identify which archetype(s) seem most appropriate and explain why:</p>
+</li>
+<li>
+<p>"We want to help clinicians identify high-risk patients early"</p>
+</li>
+<li>"We want to help customers find products they'll love"</li>
+<li>"We want to reduce energy consumption in our manufacturing facilities"</li>
+<li>"We want to detect fraudulent transactions"</li>
+<li>
+<p>"We want to answer employee questions about company policies"</p>
+</li>
+<li>
+<p><strong>Trade-off Awareness</strong>: Choose two archetypes from this chapter that seem similar (e.g., classification vs. anomaly detection, or RAG vs. long context). What's one scenario where the first clearly wins, and one scenario where the second clearly wins?</p>
+</li>
+<li>
+<p><strong>Hybrid Thinking</strong>: Many production systems combine multiple archetypes. Why might you combine:</p>
+</li>
+<li>
+<p>Retrieval + Generation?</p>
+</li>
+<li>Lexical Search + Semantic Search?</li>
+<li>Deterministic Agents + Autonomous Agents?</li>
+<li>
+<p>Prediction + Optimization?</p>
+</li>
+<li>
+<p><strong>Missing Alternatives</strong>: Look back at the 13 archetypes. Are there AI approaches you've used that don't fit cleanly into these categories? What would you add to the alternatives menu?</p>
+</li>
+</ol>
+<h2 id="portfolio-project-alternatives-analysis">Portfolio Project: Alternatives Analysis<a class="headerlink" href="#portfolio-project-alternatives-analysis" title="Permanent link">&para;</a></h2>
+<p>For this chapter's portfolio assignment, you'll practice systematic alternative generation by mapping real problems to multiple solution archetypes.</p>
+<h3 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
+<p>Select three of the following problem statements (or use problems from your own domain if you prefer):</p>
+<ol>
+<li><strong>Healthcare</strong>: A hospital wants to reduce emergency department wait times</li>
+<li><strong>Education</strong>: A university wants to improve student retention and completion rates</li>
+<li><strong>Finance</strong>: A bank wants to reduce credit card fraud losses</li>
+<li><strong>E-commerce</strong>: An online retailer wants to increase average order value</li>
+<li><strong>Manufacturing</strong>: A factory wants to reduce equipment downtime</li>
+<li><strong>Customer Support</strong>: A SaaS company wants to reduce support ticket volume</li>
+<li><strong>HR</strong>: An enterprise wants to improve employee retention</li>
+<li><strong>Logistics</strong>: A delivery company wants to optimize route efficiency</li>
+</ol>
+<p>For each of your three chosen problems:</p>
+<h3 id="part-1-generate-alternatives-5-approaches-per-problem">Part 1: Generate Alternatives (5+ approaches per problem)<a class="headerlink" href="#part-1-generate-alternatives-5-approaches-per-problem" title="Permanent link">&para;</a></h3>
+<p>For each problem, systematically generate at least 5 different AI solution archetypes that could address the problem. Use the 13 archetypes from this chapter as your starting menu, but feel free to propose hybrid approaches.</p>
+<p>For each alternative, specify:</p>
+<ul>
+<li><strong>Archetype name</strong> (e.g., "Time-series forecasting," "Hybrid retrieval + generation")</li>
+<li><strong>One-sentence description</strong> of how this approach would work</li>
+<li><strong>Key data requirements</strong> (what data would you need?)</li>
+<li><strong>Primary benefit</strong> (what makes this approach attractive?)</li>
+</ul>
+<h3 id="part-2-compare-alternatives">Part 2: Compare Alternatives<a class="headerlink" href="#part-2-compare-alternatives" title="Permanent link">&para;</a></h3>
+<p>For each problem, create a comparison table evaluating your alternatives across these dimensions:</p>
+<ul>
+<li><strong>Data availability</strong> (Do we likely have this data? Easy/Moderate/Hard)</li>
+<li><strong>Implementation complexity</strong> (Simple/Moderate/Complex)</li>
+<li><strong>Time to value</strong> (Weeks/Months/Quarters)</li>
+<li><strong>Interpretability</strong> (High/Medium/Low)</li>
+<li><strong>Maintenance burden</strong> (Low/Medium/High)</li>
+</ul>
+<h3 id="part-3-recommend-and-justify">Part 3: Recommend and Justify<a class="headerlink" href="#part-3-recommend-and-justify" title="Permanent link">&para;</a></h3>
+<p>For each problem, select your recommended approach and justify your choice in 2-3 paragraphs:</p>
+<ul>
+<li><strong>Why this approach</strong> over the alternatives?</li>
+<li><strong>What assumptions</strong> is your recommendation based on?</li>
+<li><strong>What would change your recommendation?</strong> (e.g., "If we had abundant labeled fraud examples, classification would be preferable to anomaly detection")</li>
+<li><strong>What hybrid approach</strong> might combine strengths of multiple alternatives?</li>
+</ul>
+<h3 id="part-4-reflection">Part 4: Reflection<a class="headerlink" href="#part-4-reflection" title="Permanent link">&para;</a></h3>
+<p>After completing the analysis for all three problems, write a 1-2 paragraph reflection:</p>
+<ul>
+<li>What patterns did you notice in how you generated alternatives?</li>
+<li>Which archetypes appeared most frequently in your recommendations? Why?</li>
+<li>What was most difficult about this exercise?</li>
+<li>How might you improve your alternatives generation process for future problems?</li>
+</ul>
+<h3 id="submission-format">Submission Format<a class="headerlink" href="#submission-format" title="Permanent link">&para;</a></h3>
+<p>Submit a document (PDF or Markdown) with:</p>
+<ul>
+<li>Your three chosen problem statements</li>
+<li>For each problem: Part 1 (alternatives list), Part 2 (comparison table), Part 3 (recommendation)</li>
+<li>Part 4 (reflection)</li>
+</ul>
+<p>Aim for 1500-2500 words total across all three problems and the reflection.</p>
+<h3 id="evaluation-criteria">Evaluation Criteria<a class="headerlink" href="#evaluation-criteria" title="Permanent link">&para;</a></h3>
+<p>Your submission will be evaluated on:</p>
+<ul>
+<li><strong>Diversity of alternatives</strong> (Did you explore genuinely different archetypes, not just variations on one theme?)</li>
+<li><strong>Specificity</strong> (Are alternatives concrete enough to evaluate, not vague hand-waving?)</li>
+<li><strong>Trade-off reasoning</strong> (Do you articulate meaningful differences between alternatives?)</li>
+<li><strong>Justification depth</strong> (Do recommendations demonstrate systematic thinking or just intuition?)</li>
+<li><strong>Assumption awareness</strong> (Do you recognize what your recommendation depends on?)</li>
+</ul>
+<p>Strong submissions demonstrate disciplined exploration of the solution space before converging on a recommendation. Weak submissions converge immediately on an intuitive answer without seriously considering alternatives.</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Before moving to Chapter 3, ensure you understand these core ideas:</p>
+<ol>
+<li>
+<p><strong>Premature convergence is the enemy.</strong> The most common failure mode in AI problem framing is jumping to a solution archetype without systematically considering alternatives.</p>
+</li>
+<li>
+<p><strong>Archetypes are a menu, not a checklist.</strong> You don't need to use all 13 archetypes, but you should consciously choose from the menu rather than defaulting to familiar approaches.</p>
+</li>
+<li>
+<p><strong>Similar-sounding archetypes have critical differences.</strong> Classification vs. anomaly detection, regression vs. forecasting, extraction vs. generation—these pairs seem similar but have different data requirements, assumptions, and appropriate use cases.</p>
+</li>
+<li>
+<p><strong>Hybrid approaches often win in production.</strong> Real systems combine archetypes: lexical + semantic search, retrieval + generation, deterministic + autonomous agents. Think in combinations, not either-or.</p>
+</li>
+<li>
+<p><strong>Context determines the right approach.</strong> There is no universally best archetype. Everything depends on data availability, latency requirements, interpretability needs, maintenance capacity, and organizational constraints.</p>
+</li>
+<li>
+<p><strong>Alternatives generation is a skill.</strong> With practice, you'll develop the discipline to systematically explore the solution space. This chapter gave you the menu—Chapter 3 will teach you the systematic process for using it.</p>
+</li>
+</ol>
+<hr />
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<h3 id="foundational-papers">Foundational Papers<a class="headerlink" href="#foundational-papers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Retrieval-Augmented Generation</strong>: Lewis et al. (2020), "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"</li>
+<li><strong>Few-Shot Prompting</strong>: Brown et al. (2020), "Language Models are Few-Shot Learners"</li>
+<li><strong>ReAct Agents</strong>: Yao et al. (2023), "ReAct: Synergizing Reasoning and Acting in Language Models"</li>
+<li><strong>Dense Retrieval</strong>: Karpukhin et al. (2020), "Dense Passage Retrieval for Open-Domain Question Answering"</li>
+</ul>
+<h3 id="practical-guides">Practical Guides<a class="headerlink" href="#practical-guides" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Forecasting</strong>: Rob Hyndman's "Forecasting: Principles and Practice" (free online textbook)</li>
+<li><strong>Anomaly Detection</strong>: Chandola et al. (2009), "Anomaly Detection: A Survey"</li>
+<li><strong>Recommendation Systems</strong>: Aggarwal (2016), "Recommender Systems: The Textbook"</li>
+<li><strong>LLM Fine-Tuning</strong>: HuggingFace's "Fine-tuning Guide" and OpenAI's "Fine-Tuning Documentation"</li>
+</ul>
+<h3 id="comparisons-and-trade-offs">Comparisons and Trade-offs<a class="headerlink" href="#comparisons-and-trade-offs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>RAG vs. Fine-Tuning</strong>: "When to Use RAG vs. Fine-Tuning" (Pinecone blog series)</li>
+<li><strong>Semantic vs. Lexical Search</strong>: "Hybrid Search: Combining Dense and Sparse Retrieval" (Weaviate documentation)</li>
+<li><strong>Classification vs. Clustering</strong>: James et al., "An Introduction to Statistical Learning" (Chapter 10-12)</li>
+</ul>
+<h3 id="case-studies">Case Studies<a class="headerlink" href="#case-studies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Healthcare Prediction Failures</strong>: Shah et al. (2019), "Making Machine Learning Models Clinically Useful"</li>
+<li><strong>Fraud Detection Evolution</strong>: Bolton &amp; Hand (2002), "Statistical Fraud Detection: A Review"</li>
+<li><strong>Recommendation System Trade-offs</strong>: Gomez-Uribe &amp; Hunt (2016), "The Netflix Recommender System"</li>
+</ul>
+<hr />
+<p><strong>Next Chapter</strong>: In Chapter 3, you'll learn The Loop framework—a systematic process for moving from ambiguous objectives through alternative generation, trade-off analysis, and signal-based decision making. The alternatives menu you just learned becomes a tool within The Loop's structured workflow.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-mindset/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Quiz">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1. Quiz
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2. Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

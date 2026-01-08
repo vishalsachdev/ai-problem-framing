@@ -1,0 +1,3176 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/chapters/06-application/">
+      
+      
+        <link rel="prev" href="../05-pivot/quiz/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. Application & Case Studies - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#application-full-case-studies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Application & Case Studies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-what-separates-success-from-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction: What Separates Success from Failure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classic-ml-pivot-case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classic ML Pivot Case Studies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classic ML Pivot Case Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-1-churn-prediction-customer-success-intervention-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 1: Churn Prediction → Customer Success Intervention System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-2-fraud-detection-risk-scoring-and-adaptive-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 2: Fraud Detection → Risk Scoring and Adaptive Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-3-recommendation-engine-search-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 3: Recommendation Engine → Search Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genai-pivot-case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GenAI Pivot Case Studies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GenAI Pivot Case Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-4-customer-support-chatbot-retrieval-augmented-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 4: Customer Support Chatbot → Retrieval-Augmented Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-5-document-summarization-structured-information-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 5: Document Summarization → Structured Information Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-6-content-generation-content-assistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 6: Content Generation → Content Assistance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-bridges-common-pivot-patterns-across-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Bridges: Common Pivot Patterns Across Domains
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pattern Bridges: Common Pivot Patterns Across Domains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-prediction-action-churn-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Prediction → Action (Churn Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-classification-scoring-fraud-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Classification → Scoring (Fraud Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-engagement-need-fulfillment-recommendation-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Engagement → Need Fulfillment (Recommendation Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-generation-retrieval-chatbot-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Generation → Retrieval (Chatbot Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-summarization-extraction-legal-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Summarization → Extraction (Legal Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-6-full-automation-human-ai-collaboration-content-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 6: Full Automation → Human-AI Collaboration (Content Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-recognition-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Recognition in Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-monday-morning-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Monday Morning Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Monday Morning Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-outcome-clarity-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Outcome Clarity (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-problem-deconstruction-15-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Problem Deconstruction (15 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-alternatives-menu-20-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Alternatives Menu (20 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-trade-off-analysis-20-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Trade-off Analysis (20 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-signal-design-15-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: Signal Design (15 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-commit-or-defer-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Commit or Defer (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-in-practice-example-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist in Practice: Example Walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-portfolio-complete-problem-framing-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Portfolio: Complete Problem Framing Portfolio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Portfolio: Complete Problem Framing Portfolio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portfolio-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portfolio Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portfolio Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-problem-selection-and-context-500-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Problem Selection and Context (500 words)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complete-loop-analysis-1500-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Complete Loop Analysis (1500 words)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-anticipated-failure-modes-and-pivot-plan-500-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Anticipated Failure Modes and Pivot Plan (500 words)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-stakeholder-communication-plan-300-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Stakeholder Communication Plan (300 words)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submission Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Rubric
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation Rubric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systematic-application-40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systematic Application (40%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-of-analysis-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth of Analysis (30%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidence-based-reasoning-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence-Based Reasoning (20%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-clarity-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication Clarity (10%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peer-review-process-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peer Review Process (Optional but Recommended)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Peer Review Process (Optional but Recommended)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-peer-review-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Peer Review Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-focus-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Focus On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-give-useful-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Give Useful Feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-peer-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of Peer Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-conclusion-from-frameworks-to-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Conclusion: From Frameworks to Practice
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Course Conclusion: From Frameworks to Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-youve-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You've Learned
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-changes-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How This Changes Your Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-learn-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Learn Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuing-the-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuing the Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-final-note-on-humility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Final Note on Humility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Recognition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frameworks-and-toolkits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frameworks and Toolkits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="application-full-case-studies">Application - Full Case Studies<a class="headerlink" href="#application-full-case-studies" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This capstone chapter synthesizes all course concepts through detailed case studies of AI projects that succeeded or failed based on problem framing decisions. You'll analyze complete applications of The Loop framework across classic ML and GenAI domains, identify common pivot patterns that transcend technology choices, and develop a practical Monday Morning Checklist for applying problem framing skills to any AI initiative.</p>
+<p>The chapter moves from theoretical understanding to professional practice, demonstrating how experienced practitioners diagnose misaligned projects early, pivot systematically rather than reactively, and build organizational muscle for better upstream decision-making. By studying both successful pivots and costly failures, you'll develop pattern recognition abilities that make problem framing feel less like following a checklist and more like exercising practiced judgment.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter integrates concepts from across the entire course:</p>
+<ol>
+<li>Problem Framing (Chapters 1-3)</li>
+<li>The Loop Framework (Chapter 3)</li>
+<li>Outcome Metrics (Chapter 3)</li>
+<li>Problem Deconstruction (Chapter 3)</li>
+<li>Alternatives Menu (Chapter 2)</li>
+<li>Trade-off Analysis (Chapter 3)</li>
+<li>Signals and Diagnosis (Chapter 4)</li>
+<li>Pivot Decisions (Chapter 5)</li>
+<li>Persist Decisions (Chapter 5)</li>
+<li>Kill Signals (Chapter 4)</li>
+<li>Pattern Bridges (synthesis concept)</li>
+<li>Monday Morning Checklist (applied framework)</li>
+<li>Case Study Analysis (professional skill)</li>
+<li>Cautionary Tales (learning from failures)</li>
+<li>ML Pivot (Chapter 5)</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter assumes mastery of all previous chapters:</p>
+<ul>
+<li><a href="../01-mindset/">Chapter 1: The AI Problem Framing Mindset</a></li>
+<li><a href="../02-ai-alternatives/">Chapter 2: AI Solution Alternatives</a></li>
+<li><a href="../03-the-loop-framework/">Chapter 3: The Loop Framework</a></li>
+<li><a href="../04-diagnosis/">Chapter 4: Diagnosis - Reading Signals</a></li>
+<li><a href="../05-pivot/">Chapter 5: Pivot - Acting on Signals</a></li>
+</ul>
+<hr />
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><strong>Analyze</strong> complete AI case studies using The Loop framework to identify where framing succeeded or failed</li>
+<li><strong>Diagnose</strong> common failure patterns across diverse AI projects (classic ML and GenAI)</li>
+<li><strong>Identify</strong> pivot patterns that recur across different problem domains and solution types</li>
+<li><strong>Apply</strong> the Monday Morning Checklist to assess new AI projects systematically</li>
+<li><strong>Synthesize</strong> course concepts into a coherent problem framing practice ready for professional application</li>
+<li><strong>Evaluate</strong> peer problem framings using the same critical lens applied to case studies</li>
+<li><strong>Create</strong> a complete problem framing portfolio demonstrating systematic thinking from ambiguity to implementation</li>
+</ol>
+<hr />
+<h2 id="introduction-what-separates-success-from-failure">Introduction: What Separates Success from Failure<a class="headerlink" href="#introduction-what-separates-success-from-failure" title="Permanent link">&para;</a></h2>
+<p>You've seen the statistics: 85% of AI projects fail to deliver business value. The technical literature focuses on model performance, data quality, and infrastructure challenges. But when experienced practitioners diagnose failures post-mortem, a different pattern emerges.</p>
+<p>Projects fail because teams built the wrong thing—technically competent solutions to incorrectly framed problems. A churn prediction model with 92% accuracy that doesn't reduce churn. A fraud detection system so sensitive it blocks legitimate transactions. A chatbot that answers questions perfectly but doesn't solve the underlying knowledge access problem.</p>
+<p>The difference between successful and unsuccessful AI practitioners is not model architecture knowledge or coding skill. It's the systematic habit of asking upstream questions before committing to implementation:</p>
+<ul>
+<li>What outcome are we actually pursuing?</li>
+<li>What are we assuming about the problem structure?</li>
+<li>What alternatives exist beyond the obvious approach?</li>
+<li>How will we know if we're solving the right problem?</li>
+<li>What signals would tell us to pivot?</li>
+</ul>
+<p>This chapter shows you these habits in action through detailed case studies. You'll see how practitioners applied The Loop to navigate ambiguity, how they recognized early signals of misalignment, and how they made evidence-based decisions to persist or pivot. More importantly, you'll see the common patterns that transcend specific domains—the repeatable structures that make problem framing a transferable skill rather than domain-specific intuition.</p>
+<hr />
+<h2 id="classic-ml-pivot-case-studies">Classic ML Pivot Case Studies<a class="headerlink" href="#classic-ml-pivot-case-studies" title="Permanent link">&para;</a></h2>
+<h3 id="case-study-1-churn-prediction-customer-success-intervention-system">Case Study 1: Churn Prediction → Customer Success Intervention System<a class="headerlink" href="#case-study-1-churn-prediction-customer-success-intervention-system" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Framing (Incorrect)</strong></p>
+<p>A B2B SaaS company framed their retention challenge as: "We need to predict which customers will churn so we can intervene." The team built a classification model using historical usage data, support tickets, and billing patterns to predict 30-day churn risk.</p>
+<p><strong>Loop Analysis - Original Frame</strong></p>
+<p><strong>Outcome</strong>: Reduce customer churn by 15% within 6 months
+<strong>Atomic Unit</strong>: Individual customer account
+<strong>Decomposition</strong>:
+- Identify at-risk customers (model task)
+- Trigger alerts to customer success team
+- Execute retention campaigns (out of scope for ML team)</p>
+<p><strong>Alternatives Considered</strong>:
+1. Logistic regression (interpretable coefficients for CS team)
+2. Gradient boosting (higher accuracy, less interpretable)
+3. Rule-based risk scoring (simple, no training required)</p>
+<p><strong>Trade-offs</strong>: Team chose gradient boosting for accuracy, accepting interpretability loss</p>
+<p><strong>Signals Defined</strong>:
+- Model accuracy (AUC-ROC on held-out test set)
+- Churn rate reduction (6-month trend)
+- Customer success team adoption (% of alerts acted on)</p>
+<p><strong>What Actually Happened</strong></p>
+<p>The model achieved 89% AUC-ROC and was deployed to production. The customer success team received alerts for high-risk accounts. After 3 months:</p>
+<ul>
+<li>Churn rate: unchanged</li>
+<li>CS team alert response rate: 23%</li>
+<li>Most common CS team feedback: "We already knew these customers were struggling"</li>
+</ul>
+<p><strong>Diagnosis Through Signals</strong></p>
+<p>The weak signal came not from model metrics (which looked excellent) but from user behavior: the CS team ignored most alerts. Interviews revealed:</p>
+<ul>
+<li>CS team already tracked usage patterns manually</li>
+<li>The model identified customers <em>currently</em> struggling, not those who <em>would</em> struggle soon</li>
+<li>By the time predictions triggered, CS team had exhausted intervention options</li>
+<li>The real constraint was <em>what intervention to apply</em>, not <em>who needs help</em></li>
+</ul>
+<p><strong>The Pivot</strong></p>
+<p>The team returned to The Loop with new understanding:</p>
+<p><strong>New Outcome</strong>: Enable CS team to intervene 60-90 days before risk escalates (not 30 days)</p>
+<p><strong>New Decomposition</strong>:
+- Identify <em>leading indicators</em> of future struggle (not current struggle)
+- Recommend specific interventions based on struggle type
+- Track intervention effectiveness to learn what works</p>
+<p><strong>New Alternatives</strong>:
+1. Early warning system (predict engagement decline before revenue impact)
+2. Intervention recommendation engine (match struggle patterns to proven interventions)
+3. Causal inference model (identify which interventions actually reduce churn vs. selection effects)</p>
+<p><strong>New Trade-offs</strong>: Accepted lower precision in early warnings in exchange for more lead time; prioritized actionable insights over prediction accuracy</p>
+<p><strong>Outcome After Pivot</strong></p>
+<p>The team built an early warning system that flagged accounts showing usage decline patterns 60 days before historical churn points, paired with recommended interventions based on similar past customers who were saved. Six months post-pivot:</p>
+<ul>
+<li>Churn reduction: 12% (close to original goal)</li>
+<li>CS team adoption: 81% of recommendations acted on</li>
+<li>New discovery: Product onboarding gaps were the #1 addressable churn driver</li>
+</ul>
+<p><strong>Key Lessons</strong></p>
+<ol>
+<li><strong>Prediction accuracy doesn't equal business value</strong>: The original model was technically excellent but strategically misaligned</li>
+<li><strong>User behavior is a signal, not noise</strong>: CS team ignoring alerts was data, not a training problem</li>
+<li><strong>Atomic unit matters</strong>: Moving from "at-risk customer" to "intervention opportunity" changed the entire problem structure</li>
+<li><strong>Leading indicators &gt; lagging indicators</strong>: Predicting current state is easier but less valuable than predicting future risk while it's preventable</li>
+</ol>
+<p><strong>Pattern</strong>: This case demonstrates the <strong>Prediction → Action</strong> pivot—moving from forecasting outcomes to enabling interventions.</p>
+<hr />
+<h3 id="case-study-2-fraud-detection-risk-scoring-and-adaptive-limits">Case Study 2: Fraud Detection → Risk Scoring and Adaptive Limits<a class="headerlink" href="#case-study-2-fraud-detection-risk-scoring-and-adaptive-limits" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Framing (Incorrect)</strong></p>
+<p>A fintech company framed payment fraud as: "We need to detect fraudulent transactions before they complete." The team built a binary classifier to approve or reject transactions in real-time based on historical fraud patterns.</p>
+<p><strong>Loop Analysis - Original Frame</strong></p>
+<p><strong>Outcome</strong>: Reduce fraud losses by 40% while maintaining customer experience</p>
+<p><strong>Atomic Unit</strong>: Individual transaction</p>
+<p><strong>Decomposition</strong>:
+- Extract transaction features (amount, merchant, location, time)
+- Train classifier on historical fraud labels
+- Deploy real-time prediction API
+- Block transactions predicted as fraud</p>
+<p><strong>Alternatives Considered</strong>:
+1. Rule-based system (high precision, low recall)
+2. Random forest (balanced performance)
+3. Neural network (highest accuracy potential)
+4. Anomaly detection (catch novel fraud patterns)</p>
+<p><strong>Trade-offs</strong>: Chose random forest for balance of accuracy and interpretability; accepted latency constraint of &lt;100ms</p>
+<p><strong>Signals Defined</strong>:
+- Fraud detection rate (% of fraud caught)
+- False positive rate (% of legitimate transactions blocked)
+- Customer complaint rate (proxy for UX impact)</p>
+<p><strong>What Actually Happened</strong></p>
+<p>The model achieved 94% fraud detection with 2% false positive rate—excellent by industry standards. But three months post-deployment:</p>
+<ul>
+<li>Fraud losses: reduced 35% (close to goal)</li>
+<li>Customer complaints: increased 300%</li>
+<li>Revenue impact: $2M monthly from abandoned purchases after false declines</li>
+<li>VIP customer churn: +8% quarter-over-quarter</li>
+</ul>
+<p><strong>Diagnosis Through Signals</strong></p>
+<p>The false positive <em>rate</em> looked low (2%), but the absolute <em>volume</em> was crushing customer experience. Analysis revealed:</p>
+<ul>
+<li>2% of 50M monthly transactions = 1M false declines</li>
+<li>Customers who experienced false declines had 40% cart abandonment on retry</li>
+<li>High-value customers (who spent more, triggering fraud signals) were disproportionately affected</li>
+<li>The binary approve/reject decision treated all risks equally</li>
+</ul>
+<p><strong>The Pivot</strong></p>
+<p><strong>New Outcome</strong>: Minimize total cost (fraud losses + customer friction + lost revenue) rather than just fraud losses</p>
+<p><strong>New Decomposition</strong>:
+- Estimate transaction risk on continuous scale (not binary)
+- Adjust friction level based on risk score (not blanket block)
+- Segment customers by value and risk tolerance
+- Monitor customer behavior post-friction</p>
+<p><strong>New Alternatives</strong>:
+1. Risk scoring + adaptive friction (step-up authentication for risky transactions)
+2. Customer-specific risk thresholds (VIP customers get higher limits)
+3. Velocity limits + real-time risk adjustment (dynamic fraud detection)
+4. Hybrid approach: rules for obvious fraud, ML for gray area, humans for VIPs</p>
+<p><strong>New Trade-offs</strong>: Accepted slightly higher fraud losses in exchange for better customer experience and revenue retention; prioritized precision over recall for high-friction interventions</p>
+<p><strong>Outcome After Pivot</strong></p>
+<p>The team rebuilt the system as a risk scoring platform with four response tiers:</p>
+<ol>
+<li>Very low risk: instant approval</li>
+<li>Low-medium risk: SMS verification</li>
+<li>Medium-high risk: additional authentication</li>
+<li>Very high risk: human review</li>
+</ol>
+<p>Customer segmentation allowed VIP customers higher risk thresholds before friction was introduced. Six months post-pivot:</p>
+<ul>
+<li>Total cost reduction: 52% (fraud + friction + revenue)</li>
+<li>Customer complaints: returned to baseline</li>
+<li>VIP churn: back to pre-deployment levels</li>
+<li>Fraud losses: reduced 31% (less than original goal but better total outcome)</li>
+</ul>
+<p><strong>Key Lessons</strong></p>
+<ol>
+<li><strong>Optimize the right objective</strong>: Minimizing fraud losses alone created greater total cost</li>
+<li><strong>Binary decisions are often wrong</strong>: Continuous risk scores enable proportional responses</li>
+<li><strong>Atomic unit drives solution</strong>: Moving from "transaction" to "customer transaction in context" enabled segmentation</li>
+<li><strong>Second-order effects matter</strong>: False positive <em>rate</em> was low but <em>impact</em> was devastating</li>
+</ol>
+<p><strong>Pattern</strong>: This case demonstrates the <strong>Classification → Scoring</strong> pivot—moving from binary decisions to continuous risk assessment with adaptive responses.</p>
+<hr />
+<h3 id="case-study-3-recommendation-engine-search-optimization">Case Study 3: Recommendation Engine → Search Optimization<a class="headerlink" href="#case-study-3-recommendation-engine-search-optimization" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Framing (Incorrect)</strong></p>
+<p>An e-commerce platform framed product discovery as: "We need to recommend products customers will buy." The team built a collaborative filtering recommendation system using purchase history and browsing behavior.</p>
+<p><strong>Loop Analysis - Original Frame</strong></p>
+<p><strong>Outcome</strong>: Increase conversion rate by 20% through personalized recommendations</p>
+<p><strong>Atomic Unit</strong>: User session</p>
+<p><strong>Decomposition</strong>:
+- Collect user behavior data (clicks, purchases, time-on-page)
+- Train collaborative filtering model
+- Display personalized recommendations on homepage and product pages
+- Track click-through and conversion rates</p>
+<p><strong>Alternatives Considered</strong>:
+1. Collaborative filtering (user-user similarity)
+2. Content-based filtering (item similarity)
+3. Matrix factorization (latent factors)
+4. Deep learning embeddings (learn complex patterns)</p>
+<p><strong>Trade-offs</strong>: Chose matrix factorization for scalability and cold-start performance; accepted lack of interpretability</p>
+<p><strong>Signals Defined</strong>:
+- Recommendation click-through rate (CTR)
+- Conversion rate from recommendations
+- Revenue attributed to recommendations
+- Coverage (% of products recommended)</p>
+<p><strong>What Actually Happened</strong></p>
+<p>The recommendation engine launched with strong initial metrics:</p>
+<ul>
+<li>Recommendation CTR: 8.3% (vs. 2.1% baseline for non-personalized)</li>
+<li>Conversion rate: +12% for users who clicked recommendations</li>
+</ul>
+<p>But after six months, concerning patterns emerged:</p>
+<ul>
+<li>Overall site conversion rate: +4% (far below 20% goal)</li>
+<li>Search usage: declining 15% quarter-over-quarter</li>
+<li>Customer surveys: "Hard to find what I'm looking for"</li>
+<li>Product catalog coverage: recommendations showed only 12% of inventory</li>
+</ul>
+<p><strong>Diagnosis Through Signals</strong></p>
+<p>The recommendation system was working <em>too well</em>—it optimized for engagement with familiar products at the expense of discovery. Deep dive analysis revealed:</p>
+<ul>
+<li>Recommendations reinforced past purchases (users who bought hammers saw more hammers)</li>
+<li>Search abandonment was high (users gave up when search didn't find specific needs)</li>
+<li>Conversion gains came from existing intent, not discovery</li>
+<li>Users with specific needs (search-driven) had worse experience than browsers (recommendation-driven)</li>
+</ul>
+<p>The real problem: customers already knew what they wanted, but search couldn't find it.</p>
+<p><strong>The Pivot</strong></p>
+<p><strong>New Outcome</strong>: Help customers find what they need, whether they know what it is or not</p>
+<p><strong>New Decomposition</strong>:
+- Intent-driven customers (searching for specific items) → improve search relevance
+- Discovery-driven customers (browsing, open to suggestions) → improve recommendations
+- Measure success separately for each journey</p>
+<p><strong>New Alternatives</strong>:
+1. Semantic search (understand query intent, not just keywords)
+2. Query expansion (suggest related terms for failed searches)
+3. Hybrid search-recommendation (recommend when search returns few results)
+4. Faceted navigation improvements (help customers filter effectively)</p>
+<p><strong>New Trade-offs</strong>: Redirected 60% of engineering effort to search quality; accepted that recommendations serve a narrower use case than originally assumed</p>
+<p><strong>Outcome After Pivot</strong></p>
+<p>The team implemented semantic search using product embeddings, query expansion for ambiguous searches, and better failure handling when search returned no results. Recommendations were repositioned as "inspiration" rather than primary discovery mechanism. Six months post-pivot:</p>
+<ul>
+<li>Overall conversion rate: +18% (close to original goal)</li>
+<li>Search success rate: +34%</li>
+<li>Search usage: recovered to baseline levels</li>
+<li>Customer satisfaction scores: +22 points</li>
+<li>Recommendation CTR: dropped to 4.1% (but total conversions still higher)</li>
+</ul>
+<p><strong>Key Lessons</strong></p>
+<ol>
+<li><strong>Success on proxies can mask failure on outcomes</strong>: Recommendation metrics looked good while site goals suffered</li>
+<li><strong>User segmentation matters</strong>: Different customer intents need different solutions</li>
+<li><strong>Optimization can create blindness</strong>: Focusing on recommendations prevented seeing search quality issues</li>
+<li><strong>Coverage metrics reveal bias</strong>: Only 12% catalog coverage was a red flag ignored during initial deployment</li>
+</ol>
+<p><strong>Pattern</strong>: This case demonstrates the <strong>Engagement Optimization → User Need Fulfillment</strong> pivot—moving from maximizing clicks to solving actual customer problems.</p>
+<hr />
+<h2 id="genai-pivot-case-studies">GenAI Pivot Case Studies<a class="headerlink" href="#genai-pivot-case-studies" title="Permanent link">&para;</a></h2>
+<h3 id="case-study-4-customer-support-chatbot-retrieval-augmented-knowledge-base">Case Study 4: Customer Support Chatbot → Retrieval-Augmented Knowledge Base<a class="headerlink" href="#case-study-4-customer-support-chatbot-retrieval-augmented-knowledge-base" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Framing (Incorrect)</strong></p>
+<p>A software company framed support automation as: "We need a chatbot that can answer customer questions to reduce support ticket volume." The team fine-tuned a language model on historical support tickets and documentation.</p>
+<p><strong>Loop Analysis - Original Frame</strong></p>
+<p><strong>Outcome</strong>: Reduce support ticket volume by 30% through automated responses</p>
+<p><strong>Atomic Unit</strong>: Customer question</p>
+<p><strong>Decomposition</strong>:
+- Collect training data (support tickets, documentation, FAQs)
+- Fine-tune LLM on company-specific language and solutions
+- Deploy chatbot interface on support portal
+- Measure deflection rate (questions answered without human)</p>
+<p><strong>Alternatives Considered</strong>:
+1. Rule-based FAQ matching (simple, limited coverage)
+2. Retrieval-only system (accurate but not conversational)
+3. Fine-tuned model (conversational, domain-aware)
+4. RAG (Retrieval-Augmented Generation) (combines retrieval accuracy with generation)</p>
+<p><strong>Trade-offs</strong>: Chose fine-tuning for end-to-end conversational experience; accepted higher compute cost and maintenance burden</p>
+<p><strong>Signals Defined</strong>:
+- Deflection rate (% of questions answered without escalation)
+- Answer accuracy (human evaluation sample)
+- User satisfaction (thumbs up/down)
+- Response latency</p>
+<p><strong>What Actually Happened</strong></p>
+<p>The chatbot launched with promising early metrics:</p>
+<ul>
+<li>Deflection rate: 38% (exceeded goal)</li>
+<li>User satisfaction: 72% thumbs-up rate</li>
+<li>Response latency: &lt;2 seconds</li>
+</ul>
+<p>But after three months, the signals deteriorated:</p>
+<ul>
+<li>Deflection rate: dropped to 19%</li>
+<li>User satisfaction: dropped to 51%</li>
+<li>Support team escalations: increasingly frustrated customers</li>
+<li>Common complaint: "The bot gave me outdated information"</li>
+</ul>
+<p><strong>Diagnosis Through Signals</strong></p>
+<p>The fine-tuned model had learned patterns from historical tickets, but couldn't adapt to:</p>
+<ul>
+<li>Product updates (features changed, but model training was static)</li>
+<li>Edge cases not in training data (hallucinated solutions)</li>
+<li>Multi-step troubleshooting (gave generic advice instead of systematic diagnosis)</li>
+</ul>
+<p>The real problem emerged from qualitative analysis: customers didn't want conversation—they wanted <em>correct, current, specific</em> answers.</p>
+<p><strong>The Pivot</strong></p>
+<p><strong>New Outcome</strong>: Help customers find accurate solutions faster (not necessarily through conversation)</p>
+<p><strong>New Decomposition</strong>:
+- Knowledge retrieval (find relevant documentation)
+- Answer synthesis (summarize retrieved content)
+- Confidence assessment (know when to escalate vs. answer)
+- Content freshness (detect when documentation is outdated)</p>
+<p><strong>New Alternatives</strong>:
+1. Pure retrieval (return documentation links, no generation)
+2. RAG with conservative generation (cite sources, admit uncertainty)
+3. Structured troubleshooting trees (guide diagnosis step-by-step)
+4. Hybrid: retrieval for known issues, human for edge cases</p>
+<p><strong>New Trade-offs</strong>: Accepted less conversational UX in exchange for accuracy and transparency; prioritized source citation over fluent generation</p>
+<p><strong>Outcome After Pivot</strong></p>
+<p>The team rebuilt the system using RAG with strict source citation requirements. When confidence was low, the system showed relevant documentation and offered human escalation. For common issues, it displayed step-by-step troubleshooting guides. Six months post-pivot:</p>
+<ul>
+<li>Deflection rate: 41% (sustained above goal)</li>
+<li>User satisfaction: 84% (higher than original peak)</li>
+<li>Escalation quality: support team reported better-informed customers</li>
+<li>Documentation coverage: system surfaced gaps in docs, leading to content improvements</li>
+<li>Hallucination rate: &lt;2% (vs. 18% with fine-tuned approach)</li>
+</ul>
+<p><strong>Key Lessons</strong></p>
+<ol>
+<li><strong>Conversational ≠ helpful</strong>: Users cared about accuracy, not chatbot personality</li>
+<li><strong>Fine-tuning creates staleness</strong>: Static training can't keep up with product evolution</li>
+<li><strong>Transparency builds trust</strong>: Showing sources increased confidence even when answers were uncertain</li>
+<li><strong>Failure modes matter more than success cases</strong>: 18% hallucination rate destroyed trust despite 82% accuracy</li>
+</ol>
+<p><strong>Pattern</strong>: This case demonstrates the <strong>Generation → Retrieval</strong> pivot—moving from learned responses to grounded information access.</p>
+<hr />
+<h3 id="case-study-5-document-summarization-structured-information-extraction">Case Study 5: Document Summarization → Structured Information Extraction<a class="headerlink" href="#case-study-5-document-summarization-structured-information-extraction" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Framing (Incorrect)</strong></p>
+<p>A legal services firm framed contract review as: "We need to summarize contracts so lawyers can review them faster." The team built a multi-document summarization system using LLMs to generate executive summaries of legal contracts.</p>
+<p><strong>Loop Analysis - Original Frame</strong></p>
+<p><strong>Outcome</strong>: Reduce contract review time by 50%</p>
+<p><strong>Atomic Unit</strong>: Individual contract document</p>
+<p><strong>Decomposition</strong>:
+- Ingest contract PDFs
+- Extract text and structure
+- Generate executive summary highlighting key terms
+- Display summary to reviewing lawyer</p>
+<p><strong>Alternatives Considered</strong>:
+1. Extractive summarization (select important sentences)
+2. Abstractive summarization (generate new summary text)
+3. Template-based extraction (fill standard contract fields)
+4. Clause classification (identify contract types)</p>
+<p><strong>Trade-offs</strong>: Chose abstractive summarization for readability and conciseness; accepted risk of missed details</p>
+<p><strong>Signals Defined</strong>:
+- Summary quality (lawyer rating 1-5)
+- Review time reduction (before/after comparison)
+- Lawyer adoption rate (% using summaries)
+- Error catch rate (missed critical terms)</p>
+<p><strong>What Actually Happened</strong></p>
+<p>Initial deployment showed mixed results:</p>
+<ul>
+<li>Summary quality: 3.8/5.0 average rating</li>
+<li>Review time: 20% reduction (far below 50% goal)</li>
+<li>Adoption rate: 62%</li>
+<li>Error catch rate: lawyers still read full contracts</li>
+</ul>
+<p>Qualitative feedback revealed the core issue: lawyers didn't need summaries—they needed specific information quickly.</p>
+<p>Typical lawyer workflow:
+1. Check liability cap amounts
+2. Verify termination clauses
+3. Compare payment terms to standard
+4. Flag unusual provisions</p>
+<p>Summaries provided narrative overview but didn't answer specific questions efficiently.</p>
+<p><strong>Diagnosis Through Signals</strong></p>
+<p>The 20% time reduction came from lawyers skimming summaries first, but they still needed to search the full document for specific clauses. The summarization framing assumed lawyers wanted to understand contracts generally, but the actual task was <em>finding specific provisions quickly</em>.</p>
+<p><strong>The Pivot</strong></p>
+<p><strong>New Outcome</strong>: Enable lawyers to extract specific contract provisions 10x faster than manual search</p>
+<p><strong>New Decomposition</strong>:
+- Clause identification (detect liability, termination, payment, etc.)
+- Structured extraction (pull specific values: dates, amounts, parties)
+- Comparison to standards (flag deviations from firm templates)
+- Search and navigation (jump to relevant sections)</p>
+<p><strong>New Alternatives</strong>:
+1. Structured extraction with validation (extract key fields, verify completeness)
+2. Clause-level QA (answer specific questions about contract terms)
+3. Comparison dashboard (show standard vs. actual terms side-by-side)
+4. Hybrid: extraction for standard clauses, QA for ad-hoc questions</p>
+<p><strong>New Trade-offs</strong>: Accepted higher upfront effort to define extraction schema; prioritized precision over coverage (extract fewer things correctly vs. everything approximately)</p>
+<p><strong>Outcome After Pivot</strong></p>
+<p>The team built a structured extraction system that identified 25 critical contract elements (liability caps, termination notice periods, payment terms, etc.) and displayed them in a standardized dashboard. When lawyers needed non-standard information, a QA interface allowed natural language questions grounded in the contract text. Six months post-pivot:</p>
+<ul>
+<li>Review time: 58% reduction (exceeded goal)</li>
+<li>Adoption rate: 94%</li>
+<li>Lawyer satisfaction: 4.6/5.0</li>
+<li>Error catch rate: improved (structured format made gaps obvious)</li>
+<li>New use case: automated contract comparison for negotiations</li>
+</ul>
+<p><strong>Key Lessons</strong></p>
+<ol>
+<li><strong>Summarization solves a different problem than search</strong>: Lawyers didn't need less text—they needed specific answers</li>
+<li><strong>Structured output &gt; narrative output</strong>: Standardized extraction enabled comparison and review workflows</li>
+<li><strong>Coverage/precision trade-off</strong>: Extracting 25 things correctly was better than 100 things approximately</li>
+<li><strong>User workflow determines UX</strong>: Understanding <em>how</em> lawyers use information shaped the interface</li>
+</ol>
+<p><strong>Pattern</strong>: This case demonstrates the <strong>Summarization → Extraction</strong> pivot—moving from condensed narrative to structured data retrieval.</p>
+<hr />
+<h3 id="case-study-6-content-generation-content-assistance">Case Study 6: Content Generation → Content Assistance<a class="headerlink" href="#case-study-6-content-generation-content-assistance" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Framing (Incorrect)</strong></p>
+<p>A marketing agency framed blog content creation as: "We need AI to generate blog posts automatically to scale content production." The team built a system that generated full blog articles from topic keywords and outlines.</p>
+<p><strong>Loop Analysis - Original Frame</strong></p>
+<p><strong>Outcome</strong>: Increase content production by 5x while maintaining quality</p>
+<p><strong>Atomic Unit</strong>: Individual blog post</p>
+<p><strong>Decomposition</strong>:
+- Input: topic keywords, target audience, desired length
+- Generation: produce full blog post with introduction, body, conclusion
+- Review: human editor approves or requests regeneration
+- Publish: deploy to CMS</p>
+<p><strong>Alternatives Considered</strong>:
+1. Template-based generation (fill structured templates)
+2. Full generative model (end-to-end article creation)
+3. Outline expansion (generate from detailed human outline)
+4. Section-by-section generation (break into chunks)</p>
+<p><strong>Trade-offs</strong>: Chose outline expansion for balance of quality and automation; accepted that human involvement was still needed</p>
+<p><strong>Signals Defined</strong>:
+- Content volume (posts per week)
+- First-pass approval rate (% of generations published without major edits)
+- Engagement metrics (traffic, time-on-page, shares)
+- Editorial time per post</p>
+<p><strong>What Actually Happened</strong></p>
+<p>The system increased output volume dramatically:</p>
+<ul>
+<li>Content volume: 6x baseline (exceeded goal)</li>
+<li>First-pass approval rate: 34%</li>
+<li>Editorial time: 45 minutes per post (down from 3 hours)</li>
+</ul>
+<p>But engagement metrics revealed problems:</p>
+<ul>
+<li>Traffic: unchanged (more content didn't attract more readers)</li>
+<li>Time-on-page: decreased 22%</li>
+<li>Shares: decreased 41%</li>
+<li>SEO rankings: declining for competitive keywords</li>
+</ul>
+<p><strong>Diagnosis Through Signals</strong></p>
+<p>The generated content was generic, lacked unique insights, and didn't match the agency's editorial voice. Editors spent most time rewriting for voice and adding original analysis—exactly the high-value work they hoped to automate.</p>
+<p>The fundamental misalignment: clients valued the agency for <em>unique perspective and expertise</em>, not just content volume. Generic AI-generated posts competed poorly with existing content and damaged the brand.</p>
+<p><strong>The Pivot</strong></p>
+<p><strong>New Outcome</strong>: Enable writers to produce higher-quality content faster (not more content automatically)</p>
+<p><strong>New Decomposition</strong>:
+- Research assistance (gather relevant sources and data)
+- Outline generation (suggest structure based on topic)
+- Draft sections (generate first drafts that writers refine)
+- Editing assistance (improve clarity, fix grammar, suggest rephrasings)</p>
+<p><strong>New Alternatives</strong>:
+1. Research + outline tool (help planning, writers do drafting)
+2. Section-level assistance (generate rough drafts for revision)
+3. Editing copilot (improve human-written drafts)
+4. Hybrid: AI for research and structure, humans for insights and voice</p>
+<p><strong>New Trade-offs</strong>: Accepted lower content volume in exchange for higher per-post quality; prioritized editorial control over automation</p>
+<p><strong>Outcome After Pivot</strong></p>
+<p>The team rebuilt the system as a writing assistant that helped with research (finding relevant studies, statistics, examples), generated structural outlines, and offered alternative phrasings during editing. Writers retained full creative control. Six months post-pivot:</p>
+<ul>
+<li>Content volume: 2.8x baseline (lower than auto-generation but sustainable)</li>
+<li>Editorial time: 1.5 hours per post (more than auto-generation, less than baseline)</li>
+<li>Engagement metrics: all exceeded baseline (traffic +18%, time-on-page +12%, shares +31%)</li>
+<li>Client retention: improved (content quality strengthened brand)</li>
+<li>SEO rankings: recovered and exceeded pre-AI levels</li>
+</ul>
+<p><strong>Key Lessons</strong></p>
+<ol>
+<li><strong>More ≠ better</strong>: Volume without quality damaged the brand</li>
+<li><strong>Augmentation &gt; automation</strong>: Helping experts was more valuable than replacing them</li>
+<li><strong>Voice and perspective matter</strong>: Generic content competed poorly with existing web content</li>
+<li><strong>User control is a feature</strong>: Writers trusted and adopted tools that enhanced rather than replaced their judgment</li>
+</ol>
+<p><strong>Pattern</strong>: This case demonstrates the <strong>Full Automation → Human-AI Collaboration</strong> pivot—moving from end-to-end generation to expert assistance.</p>
+<hr />
+<h2 id="pattern-bridges-common-pivot-patterns-across-domains">Pattern Bridges: Common Pivot Patterns Across Domains<a class="headerlink" href="#pattern-bridges-common-pivot-patterns-across-domains" title="Permanent link">&para;</a></h2>
+<p>The case studies above span different domains (B2B SaaS, fintech, e-commerce, support, legal, marketing) and different AI approaches (classification, recommendation, chatbot, summarization, generation). Yet they share recurring patterns—structural similarities that make pivots recognizable even in unfamiliar contexts.</p>
+<p>These <strong>pattern bridges</strong> are transferable mental models. When you encounter a new AI problem, recognizing which pattern it matches helps you anticipate likely failure modes and consider alternative framings proactively.</p>
+<h3 id="pattern-1-prediction-action-churn-case">Pattern 1: Prediction → Action (Churn Case)<a class="headerlink" href="#pattern-1-prediction-action-churn-case" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong>: Initial framing focuses on forecasting outcomes. Pivot shifts to enabling interventions.</p>
+<p><strong>Why It Recurs</strong>:
+- Prediction feels like the ML task (it's what models do)
+- But business value comes from <em>acting on predictions</em>, not just knowing them
+- Action requires lead time, specificity, and intervention options</p>
+<p><strong>Other Examples</strong>:
+- Equipment failure prediction → Maintenance scheduling optimization
+- Hospital readmission prediction → Discharge planning improvement
+- Employee attrition prediction → Retention program targeting</p>
+<p><strong>Recognition Signals</strong>:
+- Stakeholders ignore predictions they "already knew"
+- High prediction accuracy but no outcome improvement
+- Users ask "what should I do about this?" after seeing predictions</p>
+<p><strong>Framing Questions</strong>:
+- What action will stakeholders take with this prediction?
+- How much lead time do they need to intervene?
+- What interventions are available and effective?
+- Is the constraint prediction quality or intervention capacity?</p>
+<hr />
+<h3 id="pattern-2-classification-scoring-fraud-case">Pattern 2: Classification → Scoring (Fraud Case)<a class="headerlink" href="#pattern-2-classification-scoring-fraud-case" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong>: Initial framing uses binary decisions (approve/reject, fraud/legitimate). Pivot shifts to continuous risk scores with proportional responses.</p>
+<p><strong>Why It Recurs</strong>:
+- Classification is simpler to implement (binary threshold)
+- But real-world costs are non-uniform (false positives on VIP customers hurt more)
+- Proportional responses (more friction for higher risk) balance trade-offs better</p>
+<p><strong>Other Examples</strong>:
+- Loan approval (binary) → Credit risk scoring (tiered terms)
+- Content moderation (remove/allow) → Risk-based review queues (auto/review/escalate)
+- Applicant screening (hire/reject) → Interview prioritization (tiers)</p>
+<p><strong>Recognition Signals</strong>:
+- Low false positive rate but high impact from false positives
+- Uniform treatment causing outsized harm to important segments
+- Calls for "manual review" on edge cases</p>
+<p><strong>Framing Questions</strong>:
+- Are all errors equally costly?
+- Can we adjust response intensity to risk level?
+- What intermediate actions exist between accept and reject?
+- Which segments deserve different treatment?</p>
+<hr />
+<h3 id="pattern-3-engagement-need-fulfillment-recommendation-case">Pattern 3: Engagement → Need Fulfillment (Recommendation Case)<a class="headerlink" href="#pattern-3-engagement-need-fulfillment-recommendation-case" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong>: Initial framing optimizes for interaction metrics (clicks, time-on-site). Pivot shifts to solving user goals (find what they need).</p>
+<p><strong>Why It Recurs</strong>:
+- Engagement metrics are easy to measure and optimize
+- But engagement can be shallow (clicking without value)
+- User satisfaction comes from accomplishing goals, not just interacting</p>
+<p><strong>Other Examples</strong>:
+- Video recommendations (watch time) → Content satisfaction (completion, ratings)
+- News feed (scroll depth) → Information value (learned something useful)
+- Search results (CTR) → Query success (found answer)</p>
+<p><strong>Recognition Signals</strong>:
+- Metrics improving but user satisfaction declining
+- Users "engaging" more but accomplishing less
+- Surveys show frustration despite high usage</p>
+<p><strong>Framing Questions</strong>:
+- What is the user trying to accomplish?
+- Are engagement metrics proxies for that goal or distractions?
+- What would "success" look like from the user's perspective?
+- Are we optimizing the platform's goals or the user's goals?</p>
+<hr />
+<h3 id="pattern-4-generation-retrieval-chatbot-case">Pattern 4: Generation → Retrieval (Chatbot Case)<a class="headerlink" href="#pattern-4-generation-retrieval-chatbot-case" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong>: Initial framing uses learned generation (fine-tuning, training). Pivot shifts to grounded retrieval (RAG, search, citations).</p>
+<p><strong>Why It Recurs</strong>:
+- Generation feels more "AI-like" (creative, conversational)
+- But generation risks hallucination and staleness
+- Many use cases value accuracy over fluency</p>
+<p><strong>Other Examples</strong>:
+- Code generation → Code search with examples
+- Report writing → Template filling with data retrieval
+- Question answering → Source citation with excerpts</p>
+<p><strong>Recognition Signals</strong>:
+- Hallucination complaints (users catch factual errors)
+- Requests for "where did this come from?"
+- Accuracy degrading over time (model staleness)</p>
+<p><strong>Framing Questions</strong>:
+- Does the user need original content or access to existing knowledge?
+- How important is factual accuracy vs. conversational quality?
+- Can we ground responses in verifiable sources?
+- How will we keep information current?</p>
+<hr />
+<h3 id="pattern-5-summarization-extraction-legal-case">Pattern 5: Summarization → Extraction (Legal Case)<a class="headerlink" href="#pattern-5-summarization-extraction-legal-case" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong>: Initial framing condenses information (summaries, abstracts). Pivot shifts to structured extraction (specific fields, searchable data).</p>
+<p><strong>Why It Recurs</strong>:
+- Summarization seems helpful (less to read)
+- But users often want specific information, not shorter narrative
+- Structured extraction enables search, comparison, and automation</p>
+<p><strong>Other Examples</strong>:
+- Meeting summaries → Action item extraction
+- Research paper summaries → Method and results extraction
+- Financial document summaries → Numerical data extraction</p>
+<p><strong>Recognition Signals</strong>:
+- Users still search full documents after reading summaries
+- Requests for "Can you pull out X?" for specific fields
+- Need to compare across documents (easier with structured data)</p>
+<p><strong>Framing Questions</strong>:
+- What specific questions do users have about these documents?
+- Do they need narrative understanding or specific data points?
+- Will they compare multiple documents (suggesting structured output)?
+- What format makes the information most actionable?</p>
+<hr />
+<h3 id="pattern-6-full-automation-human-ai-collaboration-content-case">Pattern 6: Full Automation → Human-AI Collaboration (Content Case)<a class="headerlink" href="#pattern-6-full-automation-human-ai-collaboration-content-case" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong>: Initial framing replaces human work entirely. Pivot shifts to augmenting human expertise.</p>
+<p><strong>Why It Recurs</strong>:
+- Automation promises maximum efficiency (remove human bottleneck)
+- But expertise, judgment, and creativity are hard to automate
+- Augmentation leverages AI for drudgework, human for high-value decisions</p>
+<p><strong>Other Examples</strong>:
+- Automated diagnosis → Decision support for doctors
+- Automated code review → Suggestion tools for developers
+- Automated translation → Translation assistance for professional translators</p>
+<p><strong>Recognition Signals</strong>:
+- Quality issues (AI alone doesn't match expert output)
+- Experts reject or ignore the automated system
+- Value comes from unique perspective AI can't replicate</p>
+<p><strong>Framing Questions</strong>:
+- What parts of the workflow are tedious vs. requiring expertise?
+- Can AI handle routine cases while escalating edge cases?
+- Do humans trust fully automated outputs?
+- Where does irreplaceable human judgment matter?</p>
+<hr />
+<h3 id="pattern-recognition-in-practice">Pattern Recognition in Practice<a class="headerlink" href="#pattern-recognition-in-practice" title="Permanent link">&para;</a></h3>
+<p>When encountering a new AI problem, ask:</p>
+<ol>
+<li><strong>Does it match a known pattern?</strong> (Use the six above as starting templates)</li>
+<li><strong>What failure mode does this pattern predict?</strong> (Each has characteristic warning signs)</li>
+<li><strong>What alternative framing would avoid that failure?</strong> (Each pattern has an alternative structure)</li>
+<li><strong>What signals would tell you which framing is correct?</strong> (Design experiments to test)</li>
+</ol>
+<p>This pattern-based thinking accelerates problem framing by providing starting hypotheses rather than blank-slate exploration. You're not reinventing analysis for each new problem—you're applying structured frameworks informed by past failures.</p>
+<hr />
+<h2 id="the-monday-morning-checklist">The Monday Morning Checklist<a class="headerlink" href="#the-monday-morning-checklist" title="Permanent link">&para;</a></h2>
+<p>You walk into work Monday morning and someone says: "We need an AI solution for [business problem]." How do you respond?</p>
+<p>This checklist operationalizes The Loop framework into a repeatable routine for any AI problem framing scenario. Use it as a forcing function to slow down and ask upstream questions before committing to implementation.</p>
+<h3 id="phase-1-outcome-clarity-5-minutes">Phase 1: Outcome Clarity (5 minutes)<a class="headerlink" href="#phase-1-outcome-clarity-5-minutes" title="Permanent link">&para;</a></h3>
+<p><strong>Before you discuss solutions, establish the destination.</strong></p>
+<ul>
+<li>[ ] <strong>What is the measurable outcome we're pursuing?</strong></li>
+<li>Not: "improve customer experience"</li>
+<li>
+<p>Yes: "reduce support ticket volume by 25% while maintaining satisfaction &gt;4.0/5.0"</p>
+</li>
+<li>
+<p>[ ] <strong>Who defines success for this outcome?</strong></p>
+</li>
+<li>Is it the person asking for AI, or a different stakeholder?</li>
+<li>
+<p>Do they agree on what success looks like?</p>
+</li>
+<li>
+<p>[ ] <strong>What is the timeline and acceptable cost?</strong></p>
+</li>
+<li>When do we need to show results?</li>
+<li>
+<p>What resources (people, compute, data) are available?</p>
+</li>
+<li>
+<p>[ ] <strong>What happens if we don't pursue this?</strong></p>
+</li>
+<li>Is this urgent or aspirational?</li>
+<li>What's the opportunity cost of not solving it?</li>
+</ul>
+<p><strong>Red flags</strong>:
+- Multiple conflicting goals ("improve quality and reduce cost and ship faster")
+- Vague outcomes that can't be measured
+- Solution already decided ("we need a chatbot" instead of "we need better support")</p>
+<p><strong>If red flags appear</strong>: Stop and clarify outcome with stakeholders before proceeding.</p>
+<hr />
+<h3 id="phase-2-problem-deconstruction-15-minutes">Phase 2: Problem Deconstruction (15 minutes)<a class="headerlink" href="#phase-2-problem-deconstruction-15-minutes" title="Permanent link">&para;</a></h3>
+<p><strong>Before you explore solutions, understand the problem structure.</strong></p>
+<ul>
+<li>[ ] <strong>What is the atomic unit of this problem?</strong></li>
+<li>What is the smallest independently meaningful component?</li>
+<li>
+<p>Will we measure success at that granularity or aggregate?</p>
+</li>
+<li>
+<p>[ ] <strong>What are we assuming about the problem?</strong></p>
+</li>
+<li>What would have to be true for this framing to make sense?</li>
+<li>
+<p>Which assumptions can we validate quickly?</p>
+</li>
+<li>
+<p>[ ] <strong>Who are the stakeholders and users?</strong></p>
+</li>
+<li>Who will use the AI output?</li>
+<li>Who will be affected by it?</li>
+<li>
+<p>Whose behavior needs to change for success?</p>
+</li>
+<li>
+<p>[ ] <strong>What constraints exist?</strong></p>
+</li>
+<li>Data availability (do we have labels? volume? quality?)</li>
+<li>Latency requirements (real-time? batch?)</li>
+<li>Interpretability needs (black box acceptable? need explanations?)</li>
+<li>
+<p>Fairness/safety requirements (regulated domain? ethical risks?)</p>
+</li>
+<li>
+<p>[ ] <strong>What is the current workflow?</strong></p>
+</li>
+<li>How is this problem solved today?</li>
+<li>What's broken about the current approach?</li>
+<li>What works well that we shouldn't break?</li>
+</ul>
+<p><strong>Red flags</strong>:
+- No clear atomic unit (problem is too abstract)
+- Unvalidated assumptions presented as facts
+- Key stakeholders not identified or consulted
+- No understanding of current state (assuming AI is obviously better)</p>
+<p><strong>If red flags appear</strong>: Do discovery work (interviews, observation, data exploration) before proceeding.</p>
+<hr />
+<h3 id="phase-3-alternatives-menu-20-minutes">Phase 3: Alternatives Menu (20 minutes)<a class="headerlink" href="#phase-3-alternatives-menu-20-minutes" title="Permanent link">&para;</a></h3>
+<p><strong>Before you commit to a solution, explore the possibility space.</strong></p>
+<ul>
+<li>[ ] <strong>What are 5+ different ways to approach this?</strong></li>
+<li>Include non-ML alternatives (rules, heuristics, process changes)</li>
+<li>Include different ML archetypes (classification, ranking, generation, etc.)</li>
+<li>
+<p>Include hybrid approaches (ML + rules, human-in-loop)</p>
+</li>
+<li>
+<p>[ ] <strong>What is the simplest viable approach?</strong></p>
+</li>
+<li>What's the baseline (current state or naive solution)?</li>
+<li>What's the minimal ML solution that could work?</li>
+<li>
+<p>What would a rule-based system look like?</p>
+</li>
+<li>
+<p>[ ] <strong>What is the most sophisticated approach?</strong></p>
+</li>
+<li>What would we do with unlimited resources?</li>
+<li>
+<p>What emerging research could apply here?</p>
+</li>
+<li>
+<p>[ ] <strong>Do we even need AI for this?</strong></p>
+</li>
+<li>Can we solve it with better data, processes, or UX?</li>
+<li>Is the constraint actually technical?</li>
+</ul>
+<p><strong>Red flags</strong>:
+- Only one solution considered
+- Defaulting to whatever is trendy (LLMs, deep learning) without justification
+- Skipping simple baselines
+- "AI" is the goal rather than the outcome</p>
+<p><strong>If red flags appear</strong>: Force divergent thinking—research different approaches, consult experts in other domains, look for analogous solved problems.</p>
+<hr />
+<h3 id="phase-4-trade-off-analysis-20-minutes">Phase 4: Trade-off Analysis (20 minutes)<a class="headerlink" href="#phase-4-trade-off-analysis-20-minutes" title="Permanent link">&para;</a></h3>
+<p><strong>Before you choose, understand what you're giving up.</strong></p>
+<p>For each viable alternative, assess:</p>
+<ul>
+<li>[ ] <strong>Development cost</strong></li>
+<li>Data requirements (collection, labeling, cleaning)</li>
+<li>Engineering effort (person-months to build)</li>
+<li>
+<p>Compute cost (training and inference)</p>
+</li>
+<li>
+<p>[ ] <strong>Operational characteristics</strong></p>
+</li>
+<li>Latency (real-time? seconds? minutes?)</li>
+<li>Accuracy/quality (good enough for outcome?)</li>
+<li>
+<p>Reliability (failure modes? edge cases?)</p>
+</li>
+<li>
+<p>[ ] <strong>Maintenance burden</strong></p>
+</li>
+<li>How often must it be retrained?</li>
+<li>How much monitoring does it need?</li>
+<li>
+<p>What breaks when data distribution shifts?</p>
+</li>
+<li>
+<p>[ ] <strong>Organizational fit</strong></p>
+</li>
+<li>Do we have expertise to build and maintain this?</li>
+<li>Does it align with existing infrastructure?</li>
+<li>
+<p>Will stakeholders trust and adopt it?</p>
+</li>
+<li>
+<p>[ ] <strong>Risk profile</strong></p>
+</li>
+<li>What's the worst-case failure mode?</li>
+<li>Are there fairness, safety, or compliance risks?</li>
+<li>Can we mitigate or is risk inherent?</li>
+</ul>
+<p><strong>Create a comparison matrix</strong>: Rows = alternatives, Columns = criteria, Cells = qualitative assessment</p>
+<p><strong>Red flags</strong>:
+- Choosing solely on accuracy without considering cost/latency/maintenance
+- Ignoring organizational constraints (building what the team can't maintain)
+- Underestimating ongoing costs (training once vs. continuous retraining)</p>
+<p><strong>If red flags appear</strong>: Build trade-off matrix explicitly and review with stakeholders—make decisions transparent.</p>
+<hr />
+<h3 id="phase-5-signal-design-15-minutes">Phase 5: Signal Design (15 minutes)<a class="headerlink" href="#phase-5-signal-design-15-minutes" title="Permanent link">&para;</a></h3>
+<p><strong>Before you build, define how you'll know if you're on the right track.</strong></p>
+<ul>
+<li>[ ] <strong>What are the success metrics?</strong></li>
+<li>Model metrics (accuracy, precision, recall, etc.)</li>
+<li>Business metrics (conversion, retention, cost reduction)</li>
+<li>
+<p>User metrics (satisfaction, adoption, engagement)</p>
+</li>
+<li>
+<p>[ ] <strong>What are the leading indicators?</strong></p>
+</li>
+<li>What can we measure early that predicts long-term success?</li>
+<li>
+<p>What would tell us we're headed in the wrong direction?</p>
+</li>
+<li>
+<p>[ ] <strong>What are the kill signals?</strong></p>
+</li>
+<li>What threshold would make us stop or pivot?</li>
+<li>
+<p>What failure mode would invalidate the approach?</p>
+</li>
+<li>
+<p>[ ] <strong>How will we instrument this?</strong></p>
+</li>
+<li>What data do we need to collect to measure these signals?</li>
+<li>
+<p>Can we measure them in a pilot before full deployment?</p>
+</li>
+<li>
+<p>[ ] <strong>What is the evaluation timeline?</strong></p>
+</li>
+<li>When will we check signals? (weekly? monthly?)</li>
+<li>How long until we expect meaningful signal? (avoid premature judgment)</li>
+</ul>
+<p><strong>Red flags</strong>:
+- Only tracking model metrics (ignoring business outcomes)
+- No plan for measuring impact (assuming deployment = success)
+- No defined failure criteria (never considering stopping)</p>
+<p><strong>If red flags appear</strong>: Design instrumentation and evaluation plan before building—treat measurement as part of the product.</p>
+<hr />
+<h3 id="phase-6-commit-or-defer-5-minutes">Phase 6: Commit or Defer (5 minutes)<a class="headerlink" href="#phase-6-commit-or-defer-5-minutes" title="Permanent link">&para;</a></h3>
+<p><strong>Final check before proceeding.</strong></p>
+<ul>
+<li>[ ] <strong>Can we clearly answer all previous checklist items?</strong></li>
+<li>If not, what gaps remain?</li>
+<li>
+<p>Can we fill gaps quickly or do we need more discovery?</p>
+</li>
+<li>
+<p>[ ] <strong>Do stakeholders agree on the framing?</strong></p>
+</li>
+<li>Have we aligned on outcomes, constraints, and approach?</li>
+<li>
+<p>Are there unresolved conflicts?</p>
+</li>
+<li>
+<p>[ ] <strong>Do we have the resources to execute?</strong></p>
+</li>
+<li>Data, talent, compute, time</li>
+<li>
+<p>Or do we need to acquire them first?</p>
+</li>
+<li>
+<p>[ ] <strong>Is this the right priority?</strong></p>
+</li>
+<li>Given other projects, is this the best use of resources?</li>
+<li>What are we not doing if we pursue this?</li>
+</ul>
+<p><strong>Three possible outcomes</strong>:</p>
+<ol>
+<li><strong>Commit</strong>: Framing is clear, trade-offs understood, resources available → build it</li>
+<li><strong>Defer</strong>: Good framing but not the right time/priority → revisit later</li>
+<li><strong>Reframe</strong>: Gaps in understanding, misalignment, or better alternatives identified → return to earlier phases</li>
+</ol>
+<p><strong>Avoid</strong>: Proceeding when framing is unclear or stakeholders are misaligned. The cost of building the wrong thing exceeds the cost of more discovery.</p>
+<hr />
+<h3 id="checklist-in-practice-example-walkthrough">Checklist in Practice: Example Walkthrough<a class="headerlink" href="#checklist-in-practice-example-walkthrough" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario</strong>: "We need a recommendation system for our learning platform to personalize content."</p>
+<p><strong>Phase 1: Outcome Clarity</strong>
+- Measurable outcome: Increase course completion rate from 35% to 50% in 6 months
+- Success owner: VP of Product (measured via analytics dashboard)
+- Timeline: Pilot in 3 months, full rollout in 6 months
+- Cost: 2 engineers for 3 months, $10k compute budget
+- Opportunity cost: Delaying mobile app improvements</p>
+<p><strong>Phase 2: Problem Deconstruction</strong>
+- Atomic unit: Individual learner session (not learner or course)
+- Assumptions: (1) Personalization improves completion, (2) We have signal for good recommendations, (3) Learners will follow recommendations
+- Stakeholders: Learners (need relevant content), instructors (want completions), ops team (maintains system)
+- Constraints: Must work with cold-start (new users), &lt;500ms latency, explainable (learners want to know "why this?")
+- Current workflow: Manual course browsing, search, instructor recommendations</p>
+<p><strong>Phase 3: Alternatives Menu</strong>
+1. Collaborative filtering (user-user similarity)
+2. Content-based filtering (course similarity)
+3. Sequence modeling (what comes after course X?)
+4. Popularity + basic rules (trending + match user goals)
+5. Instructor-curated paths (no ML, just better UX)</p>
+<p><strong>Phase 4: Trade-off Analysis</strong></p>
+<table>
+<thead>
+<tr>
+<th>Alternative</th>
+<th>Dev Cost</th>
+<th>Latency</th>
+<th>Accuracy</th>
+<th>Maintenance</th>
+<th>Interpretability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collaborative</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Content-based</td>
+<td>Low</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Sequence model</td>
+<td>High</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Popularity</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Curated paths</td>
+<td>Low</td>
+<td>N/A</td>
+<td>Medium</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision</strong>: Start with content-based filtering (low cost, explainable, adequate accuracy) with plan to add collaborative signals if successful.</p>
+<p><strong>Phase 5: Signal Design</strong>
+- Success metrics: Completion rate (business), CTR on recommendations (proxy), user satisfaction survey
+- Leading indicators: Recommendation CTR (weekly), time-to-first-completion (monthly)
+- Kill signals: CTR &lt;5%, completion rate unchanged after 3 months, satisfaction &lt;3.5/5.0
+- Instrumentation: Log all recommendation impressions and clicks, track completion by source (organic vs. recommended)
+- Timeline: Weekly metric reviews, pivot decision at 3 months</p>
+<p><strong>Phase 6: Commit</strong>
+- All questions answered clearly
+- Stakeholders aligned (Product, Engineering, Instructors)
+- Resources available (engineers allocated, data exists)
+- High priority (completion rate is OKR)</p>
+<p><strong>Outcome</strong>: Commit to content-based recommendation pilot with defined success criteria and evaluation timeline.</p>
+<hr />
+<h2 id="reflection-questions">Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permanent link">&para;</a></h2>
+<p>These questions guide your synthesis of the chapter concepts:</p>
+<ol>
+<li>
+<p><strong>Case Study Analysis</strong>: Choose one case study from this chapter. What was the earliest signal that the original framing was wrong? Could that signal have been detected <em>before</em> deployment?</p>
+</li>
+<li>
+<p><strong>Pattern Recognition</strong>: Think of an AI project you've worked on or observed. Which pivot pattern (if any) does it match? If it succeeded, did it avoid the pattern's typical failure mode? If it failed, would the alternative framing have helped?</p>
+</li>
+<li>
+<p><strong>Monday Morning Application</strong>: Take a current or hypothetical AI problem in your domain. Walk through the Monday Morning Checklist. Where do you encounter gaps in your understanding? What questions can't you answer yet?</p>
+</li>
+<li>
+<p><strong>Trade-off Preferences</strong>: Across the case studies, different teams made different trade-off decisions (accuracy vs. latency, automation vs. control, engagement vs. satisfaction). What trade-off patterns do you notice in your organization? Are they explicit or implicit?</p>
+</li>
+<li>
+<p><strong>Signal Blindness</strong>: In the fraud detection case, the team tracked false positive <em>rate</em> but missed false positive <em>impact</em>. What metrics do you track that might suffer from similar abstraction? What signals are you not measuring?</p>
+</li>
+<li>
+<p><strong>Pivot Resistance</strong>: The content generation case showed reluctance to abandon full automation even when augmentation worked better. What psychological or organizational factors make pivoting difficult? How would you structure projects to make pivots easier?</p>
+</li>
+<li>
+<p><strong>Pattern Bridges Transfer</strong>: Take Pattern 2 (Classification → Scoring) and apply it to a domain not covered in the case studies. What problem might benefit from this pivot? What would the continuous scoring enable that binary classification prevents?</p>
+</li>
+<li>
+<p><strong>Checklist Customization</strong>: The Monday Morning Checklist provides a generic framework. What domain-specific questions would you add for your industry (healthcare, finance, education, etc.)? What constraints or stakeholders are always relevant in your context?</p>
+</li>
+</ol>
+<hr />
+<h2 id="final-portfolio-complete-problem-framing-portfolio">Final Portfolio: Complete Problem Framing Portfolio<a class="headerlink" href="#final-portfolio-complete-problem-framing-portfolio" title="Permanent link">&para;</a></h2>
+<p>This capstone assignment synthesizes all course concepts into a comprehensive problem framing portfolio demonstrating your ability to work systematically from ambiguity to actionable implementation plans.</p>
+<h3 id="portfolio-requirements">Portfolio Requirements<a class="headerlink" href="#portfolio-requirements" title="Permanent link">&para;</a></h3>
+<p>Your portfolio must include:</p>
+<h4 id="1-problem-selection-and-context-500-words">1. Problem Selection and Context (500 words)<a class="headerlink" href="#1-problem-selection-and-context-500-words" title="Permanent link">&para;</a></h4>
+<p>Select a real or realistic AI opportunity in a domain you understand well. Provide:</p>
+<ul>
+<li><strong>Business context</strong>: What organization, what challenge, what constraints exist</li>
+<li><strong>Current state</strong>: How is this problem addressed today (if at all)</li>
+<li><strong>Stakeholders</strong>: Who cares about solving this and why</li>
+<li><strong>Success criteria</strong>: What would "solved" look like</li>
+</ul>
+<p><strong>Quality indicators</strong>:
+- Sufficient complexity (not trivial, not unsolvable)
+- Clear business value (not AI for AI's sake)
+- Real constraints (not unconstrained thought experiment)</p>
+<h4 id="2-complete-loop-analysis-1500-words">2. Complete Loop Analysis (1500 words)<a class="headerlink" href="#2-complete-loop-analysis-1500-words" title="Permanent link">&para;</a></h4>
+<p>Apply all five Loop phases systematically:</p>
+<p><strong>Outcome Definition</strong>:
+- Specific, measurable outcome with timeline
+- Clarification of what success means quantitatively
+- Identification of whose definition of success matters</p>
+<p><strong>Problem Deconstruction</strong>:
+- Atomic unit identification with justification
+- Explicit statement of assumptions with validation plan
+- Stakeholder mapping and constraint catalog
+- Current workflow documentation</p>
+<p><strong>Alternatives Menu</strong>:
+- Minimum 5 distinct alternatives spanning different archetypes
+- Include at least one non-ML alternative
+- Brief description of each approach (2-3 sentences)
+- Explanation of why each is viable</p>
+<p><strong>Trade-off Analysis</strong>:
+- Comparison matrix with minimum 5 criteria (cost, latency, accuracy, maintenance, organizational fit)
+- Qualitative or quantitative assessment for each alternative
+- Clear recommendation with justification
+- Acknowledgment of what you're giving up with your choice</p>
+<p><strong>Signal Framework</strong>:
+- 3+ success metrics across model, business, and user dimensions
+- Leading indicators that predict outcome achievement
+- Kill signals with explicit thresholds
+- Instrumentation plan and evaluation timeline</p>
+<p><strong>Quality indicators</strong>:
+- Each phase builds logically on previous phases
+- Decisions are evidence-based and transparent
+- Alternatives are genuinely different (not minor variations)
+- Trade-offs are honest (acknowledging weaknesses of chosen approach)
+- Signals are measurable and actionable</p>
+<h4 id="3-anticipated-failure-modes-and-pivot-plan-500-words">3. Anticipated Failure Modes and Pivot Plan (500 words)<a class="headerlink" href="#3-anticipated-failure-modes-and-pivot-plan-500-words" title="Permanent link">&para;</a></h4>
+<p>Demonstrate proactive thinking about what could go wrong:</p>
+<ul>
+<li><strong>Most likely failure mode</strong>: What's the highest-probability way this framing could be wrong?</li>
+<li><strong>Pivot pattern match</strong>: Which pattern from this chapter (if any) matches your problem? What does that predict about failure modes?</li>
+<li><strong>Alternative framing</strong>: If your initial framing fails, what alternative framing would you pivot to?</li>
+<li><strong>Signal timeline</strong>: When would you expect to see signals of success or failure? What's your decision point for persist/pivot/stop?</li>
+</ul>
+<p><strong>Quality indicators</strong>:
+- Realistic failure modes (not strawman scenarios)
+- Clear connection to course patterns
+- Thoughtful alternative framing (not just "try harder")
+- Defined decision criteria (avoiding indefinite persistence)</p>
+<h4 id="4-stakeholder-communication-plan-300-words">4. Stakeholder Communication Plan (300 words)<a class="headerlink" href="#4-stakeholder-communication-plan-300-words" title="Permanent link">&para;</a></h4>
+<p>How would you present this framing to secure buy-in?</p>
+<ul>
+<li><strong>Executive summary</strong>: 3-4 sentences capturing the opportunity, approach, and expected outcome</li>
+<li><strong>Key trade-offs</strong>: What are you optimizing for and what are you accepting?</li>
+<li><strong>Risk mitigation</strong>: What's the biggest risk and how are you managing it?</li>
+<li><strong>Decision points</strong>: When will you update stakeholders on progress and what criteria determine success?</li>
+</ul>
+<p><strong>Quality indicators</strong>:
+- Accessible to non-technical audience
+- Honest about limitations and risks
+- Clear ask (resources, timeline, decision authority)
+- Realistic expectations</p>
+<h3 id="submission-format">Submission Format<a class="headerlink" href="#submission-format" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Length</strong>: 2800-3300 words total (excluding references)</li>
+<li><strong>Structure</strong>: Use the four sections above as headings</li>
+<li><strong>Visuals</strong>: Include at least one diagram (trade-off matrix, workflow diagram, or alternatives comparison)</li>
+<li><strong>Citations</strong>: Reference course concepts explicitly (e.g., "Using The Loop framework from Chapter 3...")</li>
+</ul>
+<h3 id="evaluation-rubric">Evaluation Rubric<a class="headerlink" href="#evaluation-rubric" title="Permanent link">&para;</a></h3>
+<p>Your portfolio will be evaluated on:</p>
+<h4 id="systematic-application-40">Systematic Application (40%)<a class="headerlink" href="#systematic-application-40" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Exemplary (36-40 points)</strong>: Every Loop phase executed thoroughly with clear reasoning; decisions build logically; framework applied correctly throughout</li>
+<li><strong>Proficient (32-35 points)</strong>: Loop phases mostly complete with minor gaps; generally sound reasoning; correct framework application</li>
+<li><strong>Developing (28-31 points)</strong>: Some Loop phases incomplete or superficial; occasional logical gaps; framework applied inconsistently</li>
+<li><strong>Beginning (0-27 points)</strong>: Missing critical Loop phases; unclear reasoning; framework misapplied or ignored</li>
+</ul>
+<h4 id="depth-of-analysis-30">Depth of Analysis (30%)<a class="headerlink" href="#depth-of-analysis-30" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Exemplary (27-30 points)</strong>: Explores second-order effects, hidden assumptions, edge cases; considers multiple perspectives; demonstrates sophisticated understanding</li>
+<li><strong>Proficient (24-26 points)</strong>: Addresses main considerations; identifies key assumptions; shows solid understanding</li>
+<li><strong>Developing (21-23 points)</strong>: Surface-level analysis; misses important considerations; limited perspective-taking</li>
+<li><strong>Beginning (0-20 points)</strong>: Minimal analysis; obvious gaps; single-perspective thinking</li>
+</ul>
+<h4 id="evidence-based-reasoning-20">Evidence-Based Reasoning (20%)<a class="headerlink" href="#evidence-based-reasoning-20" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Exemplary (18-20 points)</strong>: Claims grounded in data, examples, or case study patterns; acknowledges uncertainty appropriately; transparent about assumptions</li>
+<li><strong>Proficient (16-17 points)</strong>: Most claims supported; reasonable uncertainty handling; generally transparent</li>
+<li><strong>Developing (14-15 points)</strong>: Some unsupported claims; treats assumptions as facts; limited transparency</li>
+<li><strong>Beginning (0-13 points)</strong>: Mostly unsupported assertions; ignores uncertainty; opaque reasoning</li>
+</ul>
+<h4 id="communication-clarity-10">Communication Clarity (10%)<a class="headerlink" href="#communication-clarity-10" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Exemplary (9-10 points)</strong>: Clear structure; compelling narrative; appropriate visuals; accessible to diverse audiences</li>
+<li><strong>Proficient (8 points)</strong>: Organized; mostly clear; adequate visuals; generally accessible</li>
+<li><strong>Developing (7 points)</strong>: Somewhat disorganized; clarity issues; minimal visuals; assumes too much context</li>
+<li><strong>Beginning (0-6 points)</strong>: Disorganized; unclear writing; no visuals; inaccessible</li>
+</ul>
+<p><strong>Total: 100 points</strong></p>
+<p><strong>Passing threshold</strong>: 70 points (demonstrates competence in problem framing for professional practice)</p>
+<hr />
+<h3 id="peer-review-process-optional-but-recommended">Peer Review Process (Optional but Recommended)<a class="headerlink" href="#peer-review-process-optional-but-recommended" title="Permanent link">&para;</a></h3>
+<p>While not required for portfolio completion, peer feedback accelerates learning:</p>
+<h4 id="how-peer-review-works">How Peer Review Works<a class="headerlink" href="#how-peer-review-works" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Pairing</strong>: After submitting your portfolio, you'll be matched with 2-3 peers</li>
+<li><strong>Review Period</strong>: 1 week to read peer portfolios and provide written feedback</li>
+<li><strong>Feedback Format</strong>: Structured questions guide your review (provided separately)</li>
+<li><strong>Discussion</strong>: Optional live discussion session to deepen understanding</li>
+</ol>
+<h4 id="what-to-focus-on">What to Focus On<a class="headerlink" href="#what-to-focus-on" title="Permanent link">&para;</a></h4>
+<p>When reviewing peer work:</p>
+<ul>
+<li><strong>Completeness</strong>: Are all Loop phases addressed?</li>
+<li><strong>Alternatives</strong>: Are alternatives genuinely different or minor variations?</li>
+<li><strong>Trade-offs</strong>: Are trade-offs realistic or overly optimistic?</li>
+<li><strong>Signals</strong>: Are signals measurable and actionable or vague aspirations?</li>
+<li><strong>Failure modes</strong>: Has the person anticipated realistic failure modes?</li>
+</ul>
+<h4 id="how-to-give-useful-feedback">How to Give Useful Feedback<a class="headerlink" href="#how-to-give-useful-feedback" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Be specific</strong>: "The trade-off analysis ignores maintenance burden" &gt; "Trade-offs need work"</li>
+<li><strong>Be constructive</strong>: Suggest alternatives, don't just criticize</li>
+<li><strong>Be curious</strong>: Ask questions to understand reasoning rather than assuming it's wrong</li>
+<li><strong>Be humble</strong>: Your framing might have gaps too—peer review is collaborative learning</li>
+</ul>
+<h4 id="benefits-of-peer-review">Benefits of Peer Review<a class="headerlink" href="#benefits-of-peer-review" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Pattern recognition</strong>: See how others frame similar problems differently</li>
+<li><strong>Blind spot detection</strong>: Peers catch assumptions you didn't notice</li>
+<li><strong>Alternative approaches</strong>: Learn solution archetypes outside your expertise</li>
+<li><strong>Critical thinking</strong>: Evaluating others sharpens your self-evaluation</li>
+</ul>
+<hr />
+<h2 id="course-conclusion-from-frameworks-to-practice">Course Conclusion: From Frameworks to Practice<a class="headerlink" href="#course-conclusion-from-frameworks-to-practice" title="Permanent link">&para;</a></h2>
+<p>You've completed a graduate-level course in AI problem framing—a skill that will compound in value throughout your career.</p>
+<h3 id="what-youve-learned">What You've Learned<a class="headerlink" href="#what-youve-learned" title="Permanent link">&para;</a></h3>
+<p><strong>Chapter 1</strong> taught you to recognize the solution-first trap, embrace ambiguity, and activate System 2 thinking at critical moments.</p>
+<p><strong>Chapter 2</strong> built your mental model of the AI solution space—13 archetypes spanning classic ML and GenAI, with trade-offs and application contexts.</p>
+<p><strong>Chapter 3</strong> gave you The Loop, a systematic framework for moving from vague objectives to actionable plans through outcome clarity, deconstruction, alternatives, trade-offs, and signals.</p>
+<p><strong>Chapter 4</strong> developed your ability to read signals from live systems—distinguishing meaningful patterns from noise, identifying leading indicators, and designing instrumentation.</p>
+<p><strong>Chapter 5</strong> taught you when and how to pivot based on evidence, avoiding both premature abandonment and sunk-cost persistence.</p>
+<p><strong>Chapter 6</strong> synthesized these concepts through case studies, pattern recognition, and the Monday Morning Checklist—moving from theory to professional practice.</p>
+<h3 id="how-this-changes-your-work">How This Changes Your Work<a class="headerlink" href="#how-this-changes-your-work" title="Permanent link">&para;</a></h3>
+<p>Before this course, you might have approached AI problems reactively: someone asks for a solution, you build it, you deploy it, you hope it works.</p>
+<p>After this course, you approach AI problems systematically:</p>
+<ul>
+<li>You ask upstream questions before committing to solutions</li>
+<li>You explore diverse alternatives rather than defaulting to the obvious approach</li>
+<li>You make trade-offs explicit rather than discovering them post-deployment</li>
+<li>You design signals to detect misalignment early</li>
+<li>You pivot based on evidence rather than intuition or stubbornness</li>
+</ul>
+<p>This systematic approach has three benefits:</p>
+<ol>
+<li><strong>Fewer failures</strong>: You catch misaligned framings before investing months of engineering</li>
+<li><strong>Faster pivots</strong>: You recognize failure modes early and adjust course deliberately</li>
+<li><strong>Better stakeholder relationships</strong>: You communicate trade-offs transparently and manage expectations realistically</li>
+</ol>
+<h3 id="what-to-learn-next">What to Learn Next<a class="headerlink" href="#what-to-learn-next" title="Permanent link">&para;</a></h3>
+<p>This course focused on problem framing—the upstream decisions that determine what to build. To translate framings into deployed systems, consider deepening expertise in:</p>
+<p><strong>For Classic ML Practitioners</strong>:
+- <strong>MLOps and deployment</strong>: Moving models from notebooks to production reliably
+- <strong>Causal inference</strong>: Moving beyond correlation to understand intervention effects
+- <strong>Fairness and interpretability</strong>: Ensuring models work equitably and transparently
+- <strong>Data engineering</strong>: Building pipelines that provide high-quality training data at scale</p>
+<p><strong>For GenAI Practitioners</strong>:
+- <strong>Prompt engineering and evaluation</strong>: Systematic approaches to optimizing LLM behavior
+- <strong>RAG architectures</strong>: Building retrieval-augmented systems that ground generation
+- <strong>Fine-tuning and alignment</strong>: Adapting models to domain-specific needs safely
+- <strong>LLM evaluation frameworks</strong>: Measuring quality beyond toy examples</p>
+<p><strong>For Everyone</strong>:
+- <strong>Organizational change</strong>: Implementing AI in real organizations with real politics
+- <strong>Product management</strong>: Translating technical capabilities into user value
+- <strong>Ethics and policy</strong>: Navigating the societal implications of AI systems
+- <strong>Domain expertise</strong>: Deepening knowledge in your application area (healthcare, finance, education, etc.)</p>
+<p><strong>Recommended Next Courses</strong>:
+- <em>Production Machine Learning Systems</em> (focuses on deployment and operations)
+- <em>Causal Inference for Data Science</em> (teaches intervention analysis)
+- <em>Designing Human-AI Collaboration</em> (explores organizational and UX challenges)</p>
+<h3 id="continuing-the-practice">Continuing the Practice<a class="headerlink" href="#continuing-the-practice" title="Permanent link">&para;</a></h3>
+<p>Problem framing is a skill that improves with deliberate practice. To continue developing:</p>
+<ol>
+<li><strong>Use the Monday Morning Checklist</strong>: Apply it to every new AI problem you encounter</li>
+<li><strong>Study failures</strong>: When AI projects fail (yours or others'), diagnose the framing gaps</li>
+<li><strong>Build a pattern library</strong>: Document pivot patterns you encounter in your domain</li>
+<li><strong>Teach others</strong>: Explaining The Loop to colleagues deepens your understanding</li>
+<li><strong>Stay current</strong>: AI capabilities evolve—new solution archetypes emerge that expand the alternatives menu</li>
+</ol>
+<h3 id="a-final-note-on-humility">A Final Note on Humility<a class="headerlink" href="#a-final-note-on-humility" title="Permanent link">&para;</a></h3>
+<p>The Loop framework and Monday Morning Checklist are tools, not magic. They help you think systematically, but they don't guarantee success. You will still frame problems incorrectly. You will still miss signals. You will still build things that don't work.</p>
+<p>The difference is that you'll recognize these failures earlier, diagnose them more accurately, and pivot more deliberately. You'll waste fewer resources on doomed approaches and more quickly find framings that deliver value.</p>
+<p>Problem framing is not about perfection. It's about developing the habit of asking "Are we solving the right problem?" before asking "How do we solve it?" That habit—practiced consistently across projects and years—is what separates effective AI practitioners from those who build impressive solutions to irrelevant problems.</p>
+<p>You now have the frameworks, patterns, and checklists to practice that habit. The rest is up to you.</p>
+<p>Welcome to the upstream work of AI. The work that happens before the code, before the models, before the deployment. The work that determines whether everything that follows creates value or waste.</p>
+<p>Go build something worth building.</p>
+<hr />
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<h3 id="case-study-sources">Case Study Sources<a class="headerlink" href="#case-study-sources" title="Permanent link">&para;</a></h3>
+<p>The case studies in this chapter are synthesized from real projects, with details anonymized and composited to protect confidentiality. For deeper investigation of similar patterns:</p>
+<ul>
+<li><strong>Churn prediction</strong>: "Why Customer Analytics Fails: And How to Fix It" (Harvard Business Review)</li>
+<li><strong>Fraud detection</strong>: "Machine Learning for Fraud Detection: Lessons from the Field" (Stripe Engineering Blog)</li>
+<li><strong>Recommendations</strong>: "Exploration vs. Exploitation in Recommender Systems" (RecSys Conference Papers)</li>
+<li><strong>Chatbots</strong>: "The ROI of Conversational AI" (Gartner Research)</li>
+<li><strong>Summarization</strong>: "What Makes a Good Summary? Perspectives from Legal Tech" (LegalTech News)</li>
+</ul>
+<h3 id="pattern-recognition">Pattern Recognition<a class="headerlink" href="#pattern-recognition" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Christensen, C. (1997). <em>The Innovator's Dilemma</em> - discusses pattern recognition across industry pivots</li>
+<li>Gabriel, R. (2019). <em>Patterns of Software</em> - explores patterns in software architecture that parallel problem framing</li>
+</ul>
+<h3 id="frameworks-and-toolkits">Frameworks and Toolkits<a class="headerlink" href="#frameworks-and-toolkits" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Project retrospective templates: [add link to course resources]</li>
+<li>Trade-off analysis worksheets: [add link to course resources]</li>
+<li>Signal design canvas: [add link to course resources]</li>
+</ul>
+<hr />
+<p><strong>Congratulations on completing AI Problem Framing for AI Practitioners. You're now equipped to make better upstream decisions about AI projects. Go practice.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../05-pivot/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Quiz">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                5. Quiz
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

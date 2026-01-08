@@ -1,0 +1,2231 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/glossary/">
+      
+      
+        <link rel="prev" href="../learning-graph/">
+      
+      
+        <link rel="next" href="../faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Glossary - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#glossary-ai-problem-framing-for-ai-practitioners" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Glossary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapters/01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#alternatives-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternatives Menu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atomic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atomic Unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomous-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autonomous Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bias-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bias Detection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cautionary-tale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cautionary Tale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#churn-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Churn Prediction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clustering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cognitive-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cognitive Bias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept Drift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Distribution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Drift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Threshold
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deterministic-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deterministic Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostic-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnostic Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embeddings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalation-of-commitment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation of Commitment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extraction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fairness-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fairness Metric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Tuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forecasting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hammer-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hammer Bias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invoice-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kill Signal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leading-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leading Indicator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lexical-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lexical Search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mental-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mental Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Drift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ML Pivot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-morning-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monday Morning Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outcome-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome Metric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-bridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Bridge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persist-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persist Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pivot-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pivot Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prediction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-deconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Deconstruction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Frame
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-framing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Framing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Portfolio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RAG (Retrieval-Augmented Generation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reframing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reframing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regression
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sanity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sanity Check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal Recognition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution Frame
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution Space
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stop Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stranger-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stranger Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structured-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structured Search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Signal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-2-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System 2 Thinking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-level-reframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System-Level Reframe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade-offs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="glossary-ai-problem-framing-for-ai-practitioners">Glossary: AI Problem Framing for AI Practitioners<a class="headerlink" href="#glossary-ai-problem-framing-for-ai-practitioners" title="Permanent link">&para;</a></h1>
+<p>A comprehensive reference of key concepts for understanding AI problem framing at the graduate level.</p>
+<hr />
+<h4 id="alternatives-menu">Alternatives Menu<a class="headerlink" href="#alternatives-menu" title="Permanent link">&para;</a></h4>
+<p>A structured set of different AI approaches or solution strategies identified for a given problem. Creates an explicit framework for comparing how various methods could address the core issue.</p>
+<p><strong>Example:</strong> For customer churn, an alternatives menu might include: regression (predict churn probability), classification (high/low risk buckets), or clustering (identify similar at-risk customers).</p>
+<h4 id="anomaly-detection">Anomaly Detection<a class="headerlink" href="#anomaly-detection" title="Permanent link">&para;</a></h4>
+<p>A machine learning task that identifies data points, patterns, or behaviors that deviate significantly from normal or expected distributions. Used to find unusual observations within datasets.</p>
+<p><strong>Example:</strong> Detecting fraudulent credit card transactions that fall outside normal spending patterns for an individual user.</p>
+<h4 id="atomic-unit">Atomic Unit<a class="headerlink" href="#atomic-unit" title="Permanent link">&para;</a></h4>
+<p>The smallest, independently meaningful component of a problem that can be diagnosed, solved, or measured. Identifies the granularity level needed for effective problem deconstruction.</p>
+<p><strong>Example:</strong> In invoice processing, the atomic unit might be a single line item rather than an entire invoice, enabling line-level quality metrics.</p>
+<h4 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h4>
+<p>Beliefs or conditions accepted as true without verification when framing a problem. Critical to identify explicitly because false assumptions undermine problem and solution frames.</p>
+<p><strong>Example:</strong> Assuming that historical sales data reflects current customer behavior may fail when market conditions have fundamentally changed.</p>
+<h4 id="autonomous-agent">Autonomous Agent<a class="headerlink" href="#autonomous-agent" title="Permanent link">&para;</a></h4>
+<p>An AI system that operates with minimal human intervention, making decisions and taking actions based on learned patterns, goals, or instructions without requiring approval for each step.</p>
+<p><strong>Example:</strong> A recommendation system that automatically adjusts product suggestions based on real-time user behavior without human review of each recommendation.</p>
+<h4 id="bias-detection">Bias Detection<a class="headerlink" href="#bias-detection" title="Permanent link">&para;</a></h4>
+<p>The process of measuring and identifying systematic errors, disparities, or unfair treatment in AI model predictions across different demographic groups or conditions.</p>
+<p><strong>Example:</strong> Discovering that a hiring recommendation model rejects female candidates at rates 15% higher than male candidates with identical qualifications.</p>
+<h4 id="cautionary-tale">Cautionary Tale<a class="headerlink" href="#cautionary-tale" title="Permanent link">&para;</a></h4>
+<p>A documented case where problem framing or decision-making went wrong, providing lessons about which approaches to avoid or which hidden assumptions to watch for.</p>
+<p><strong>Example:</strong> A company that built a predictive churn model assuming recent behavior indicates lifetime value, then discovered their most valuable customers had intentionally reduced engagement before renewal.</p>
+<h4 id="churn-prediction">Churn Prediction<a class="headerlink" href="#churn-prediction" title="Permanent link">&para;</a></h4>
+<p>A classification task that predicts the probability or likelihood that a customer will stop using a service or product within a specified time period.</p>
+<p><strong>Example:</strong> Predicting which subscription users will cancel within the next 30 days to enable targeted retention campaigns.</p>
+<h4 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h4>
+<p>A supervised machine learning task that assigns data points to predefined categories or classes based on learned patterns from labeled examples.</p>
+<p><strong>Example:</strong> Categorizing emails as spam or not-spam based on historical examples of each category.</p>
+<h4 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h4>
+<p>An unsupervised machine learning task that groups similar data points together based on patterns without predefined categories or labels.</p>
+<p><strong>Example:</strong> Grouping customers by purchase behavior to discover natural market segments without specifying segments in advance.</p>
+<h4 id="cognitive-bias">Cognitive Bias<a class="headerlink" href="#cognitive-bias" title="Permanent link">&para;</a></h4>
+<p>Systematic patterns in human thinking that lead to consistent errors or deviations from rational judgment, often unconscious and difficult to overcome.</p>
+<p><strong>Example:</strong> Confirmation bias leads practitioners to seek data supporting their initial problem hypothesis while ignoring contradictory evidence.</p>
+<h4 id="concept-drift">Concept Drift<a class="headerlink" href="#concept-drift" title="Permanent link">&para;</a></h4>
+<p>A change in the statistical relationship between input variables and outcomes over time, causing models trained on historical data to become less accurate on new data.</p>
+<p><strong>Example:</strong> A model trained on past unemployment patterns may fail when economic policy or labor market structure fundamentally changes.</p>
+<h4 id="data-distribution">Data Distribution<a class="headerlink" href="#data-distribution" title="Permanent link">&para;</a></h4>
+<p>The statistical properties and patterns of how values are spread across a dataset, including central tendency, variability, and shape characteristics.</p>
+<p><strong>Example:</strong> Customer ages in an e-commerce dataset show bimodal distribution with peaks at 25-34 and 55-64, indicating two distinct demographic segments.</p>
+<h4 id="data-drift">Data Drift<a class="headerlink" href="#data-drift" title="Permanent link">&para;</a></h4>
+<p>A change in the statistical properties of input data (features) over time, causing models trained on historical distributions to encounter unfamiliar patterns in production.</p>
+<p><strong>Example:</strong> A model trained on credit card spending patterns from 2019 encounters post-pandemic spending behavior with different seasonal patterns and magnitude.</p>
+<h4 id="decision-threshold">Decision Threshold<a class="headerlink" href="#decision-threshold" title="Permanent link">&para;</a></h4>
+<p>The boundary value used to convert continuous model outputs (scores or probabilities) into discrete decisions or actions.</p>
+<p><strong>Example:</strong> Setting a churn prediction threshold at 0.6 probability means customers scoring above 60% are targeted for retention, while those below are not.</p>
+<h4 id="deterministic-agent">Deterministic Agent<a class="headerlink" href="#deterministic-agent" title="Permanent link">&para;</a></h4>
+<p>An AI system that produces the same output given the same input, following explicitly defined rules without randomness or learned variability.</p>
+<p><strong>Example:</strong> A rules-based invoice processing system that applies consistent formatting and extraction logic to all invoices.</p>
+<h4 id="diagnostic-test">Diagnostic Test<a class="headerlink" href="#diagnostic-test" title="Permanent link">&para;</a></h4>
+<p>A specific analysis or experiment designed to identify the root cause of poor model performance or to validate assumptions about problem structure.</p>
+<p><strong>Example:</strong> Splitting model errors by input data characteristics to determine whether performance problems affect all customer segments equally or concentrate in specific groups.</p>
+<h4 id="domain-context">Domain Context<a class="headerlink" href="#domain-context" title="Permanent link">&para;</a></h4>
+<p>The background knowledge, constraints, business realities, and historical context specific to the problem area that shape what solutions are feasible and valuable.</p>
+<p><strong>Example:</strong> In healthcare, domain context includes regulatory requirements, clinical workflows, and the critical importance of false negatives in diagnosis.</p>
+<h4 id="embeddings">Embeddings<a class="headerlink" href="#embeddings" title="Permanent link">&para;</a></h4>
+<p>Numerical vector representations of text, images, or other data that capture semantic meaning or relationships in a continuous, lower-dimensional space.</p>
+<p><strong>Example:</strong> Word embeddings represent "king" and "queen" as points in vector space where the relationship between them is similar to the relationship between "man" and "woman."</p>
+<h4 id="escalation-of-commitment">Escalation of Commitment<a class="headerlink" href="#escalation-of-commitment" title="Permanent link">&para;</a></h4>
+<p>A cognitive tendency to continue investing in a course of action despite evidence that it is failing, driven by sunk costs and desire to avoid admitting past mistakes.</p>
+<p><strong>Example:</strong> A team continues building a complex ML pipeline even after diagnosis shows the root problem could be solved with a simpler rule-based approach.</p>
+<h4 id="error-analysis">Error Analysis<a class="headerlink" href="#error-analysis" title="Permanent link">&para;</a></h4>
+<p>A systematic investigation of model mistakes to identify patterns, categories, or conditions where errors concentrate, revealing where to focus improvements.</p>
+<p><strong>Example:</strong> Analyzing misclassified images in a computer vision model and discovering 80% of errors occur on low-light photos, pointing to a data quality issue.</p>
+<h4 id="error-pattern">Error Pattern<a class="headerlink" href="#error-pattern" title="Permanent link">&para;</a></h4>
+<p>Recurring or systematic characteristics in how a model fails, revealing underlying problems rather than random mistakes.</p>
+<p><strong>Example:</strong> A sentiment analysis model consistently misclassifies sarcasm as positive, showing it cannot interpret indirect language.</p>
+<h4 id="extraction">Extraction<a class="headerlink" href="#extraction" title="Permanent link">&para;</a></h4>
+<p>A machine learning task that identifies and pulls structured information from unstructured text or documents, converting raw content into organized, usable data.</p>
+<p><strong>Example:</strong> Extracting invoice number, amount, and due date from a PDF document.</p>
+<h4 id="fairness-metric">Fairness Metric<a class="headerlink" href="#fairness-metric" title="Permanent link">&para;</a></h4>
+<p>A quantitative measure of whether a model's predictions or decisions treat different demographic groups or conditions equitably without systematic disparities.</p>
+<p><strong>Example:</strong> Using demographic parity to measure whether a loan approval model approves applications from different racial groups at equal rates.</p>
+<h4 id="fine-tuning">Fine-Tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h4>
+<p>A training approach that takes a pre-trained model and continues learning on task-specific or domain-specific data, allowing efficient adaptation to new problems.</p>
+<p><strong>Example:</strong> Taking a general language model trained on broad internet text and fine-tuning it on medical literature to improve clinical summarization performance.</p>
+<h4 id="first-principles">First Principles<a class="headerlink" href="#first-principles" title="Permanent link">&para;</a></h4>
+<p>A problem-solving approach that breaks complex issues into fundamental, irreducible facts and rebuilds solutions from there rather than relying on assumptions or conventions.</p>
+<p><strong>Example:</strong> Questioning why a business needs an ML model at all, rather than assuming ML is the right approach because it solved similar problems elsewhere.</p>
+<h4 id="forecasting">Forecasting<a class="headerlink" href="#forecasting" title="Permanent link">&para;</a></h4>
+<p>A prediction task that estimates future values of a time-dependent variable based on historical patterns and conditions.</p>
+<p><strong>Example:</strong> Predicting monthly sales revenue for the next quarter based on historical sales trends, seasonality, and external economic indicators.</p>
+<h4 id="generation">Generation<a class="headerlink" href="#generation" title="Permanent link">&para;</a></h4>
+<p>A machine learning task that creates new data, text, images, or other outputs based on learned patterns, often using generative models or transformers.</p>
+<p><strong>Example:</strong> A language model generating human-like responses to customer service questions.</p>
+<h4 id="hammer-bias">Hammer Bias<a class="headerlink" href="#hammer-bias" title="Permanent link">&para;</a></h4>
+<p>A cognitive bias where a person familiar with a particular tool assumes it is the right solution to many different problems, regardless of actual suitability.</p>
+<p><strong>Example:</strong> A data scientist who specializes in neural networks proposing deep learning for every prediction task, even where simpler models would be more effective.</p>
+<h4 id="invoice-processing">Invoice Processing<a class="headerlink" href="#invoice-processing" title="Permanent link">&para;</a></h4>
+<p>The application of extraction and classification AI to automatically parse, validate, and categorize invoice documents, reducing manual data entry.</p>
+<p><strong>Example:</strong> An OCR and NLP system that extracts invoice details, matches them to purchase orders, and flags discrepancies for human review.</p>
+<h4 id="kill-signal">Kill Signal<a class="headerlink" href="#kill-signal" title="Permanent link">&para;</a></h4>
+<p>An observable indicator or metric that rises above a defined threshold, suggesting the current problem frame or solution is no longer viable and should be abandoned.</p>
+<p><strong>Example:</strong> When a model's false positive rate climbs above operational capacity, it becomes a kill signal indicating the current approach cannot safely serve its intended purpose.</p>
+<h4 id="leading-indicator">Leading Indicator<a class="headerlink" href="#leading-indicator" title="Permanent link">&para;</a></h4>
+<p>An observable metric or signal that predicts future performance or outcomes, measured earlier in a process than the final outcome itself.</p>
+<p><strong>Example:</strong> Weekly engagement metrics serve as a leading indicator for monthly retention, allowing corrective actions before churn occurs.</p>
+<h4 id="lexical-search">Lexical Search<a class="headerlink" href="#lexical-search" title="Permanent link">&para;</a></h4>
+<p>A retrieval method that matches documents or records to queries based on exact word matches or phrase overlap, without understanding semantic meaning.</p>
+<p><strong>Example:</strong> A search engine that returns documents containing the exact words from a query, regardless of whether they address the intended meaning.</p>
+<h4 id="long-context">Long Context<a class="headerlink" href="#long-context" title="Permanent link">&para;</a></h4>
+<p>A language model's ability to process and maintain coherence across very long input sequences, extending beyond traditional context window limitations.</p>
+<p><strong>Example:</strong> A system that can summarize an entire 100-page document while maintaining consistency because it processes the full context together.</p>
+<h4 id="mental-model">Mental Model<a class="headerlink" href="#mental-model" title="Permanent link">&para;</a></h4>
+<p>An internal representation of how something works, structured as interconnected concepts and causal relationships that guide understanding and problem-solving.</p>
+<p><strong>Example:</strong> An engineer's mental model of customer churn includes: engagement → satisfaction → renewal decision → churn risk.</p>
+<h4 id="model-drift">Model Drift<a class="headerlink" href="#model-drift" title="Permanent link">&para;</a></h4>
+<p>Deterioration in a machine learning model's performance over time due to changes in data distribution, concept relationships, or environmental conditions.</p>
+<p><strong>Example:</strong> A model trained to detect fraud in 2022 shows declining accuracy in 2024 because fraudsters have adopted new tactics.</p>
+<h4 id="ml-pivot">ML Pivot<a class="headerlink" href="#ml-pivot" title="Permanent link">&para;</a></h4>
+<p>A decision to pursue a machine learning solution after determining that a simpler approach cannot adequately solve the problem, requiring significant engineering and data investment.</p>
+<p><strong>Example:</strong> After a rules-based system cannot achieve sufficient accuracy for invoice processing, pivoting to an ML-based extraction approach.</p>
+<h4 id="monday-morning-checklist">Monday Morning Checklist<a class="headerlink" href="#monday-morning-checklist" title="Permanent link">&para;</a></h4>
+<p>A practical decision-making framework used when returning to a problem to assess whether the original framing remains valid or whether circumstances have changed.</p>
+<p><strong>Example:</strong> Before continuing development on a churn prediction model, verify: Are we still solving the right problem? Has the business context changed? Is the data still valid?</p>
+<h4 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">&para;</a></h4>
+<p>A machine learning task that finds the best combination of inputs or actions within constraints to maximize or minimize an objective function.</p>
+<p><strong>Example:</strong> Determining the optimal product mix and pricing for maximum profit given manufacturing and demand constraints.</p>
+<h4 id="outcome-metric">Outcome Metric<a class="headerlink" href="#outcome-metric" title="Permanent link">&para;</a></h4>
+<p>The quantifiable measure of success that defines what achieving the goal actually means and enables tracking progress toward solving the problem.</p>
+<p><strong>Example:</strong> For a churn reduction project, the outcome metric might be retention rate improvement by 5 percentage points within 6 months.</p>
+<h4 id="pattern-bridge">Pattern Bridge<a class="headerlink" href="#pattern-bridge" title="Permanent link">&para;</a></h4>
+<p>A structured approach to transferring knowledge or applying patterns learned in one context to solve similar problems in a different context, avoiding redundant problem-solving.</p>
+<p><strong>Example:</strong> Recognizing that the pattern used to optimize warehouse logistics applies equally to optimizing data center resource allocation.</p>
+<h4 id="persist-decision">Persist Decision<a class="headerlink" href="#persist-decision" title="Permanent link">&para;</a></h4>
+<p>A choice to continue with the current problem frame and solution approach based on evidence that progress is being made and the direction remains sound.</p>
+<p><strong>Example:</strong> After testing a classification approach to churn and seeing promising early results, deciding to persist rather than explore alternative methods.</p>
+<h4 id="pivot-decision">Pivot Decision<a class="headerlink" href="#pivot-decision" title="Permanent link">&para;</a></h4>
+<p>A choice to fundamentally change the problem frame, solution approach, or resource allocation strategy based on new information that makes the current path unviable.</p>
+<p><strong>Example:</strong> Recognizing that churn is driven by product defects rather than pricing, pivoting from a retention model to a product quality improvement focus.</p>
+<h4 id="prediction">Prediction<a class="headerlink" href="#prediction" title="Permanent link">&para;</a></h4>
+<p>A machine learning task that estimates unknown outcomes, future values, or missing information for new data points based on learned patterns.</p>
+<p><strong>Example:</strong> Predicting a patient's likelihood of developing diabetes within 5 years based on health and lifestyle factors.</p>
+<h4 id="problem-deconstruction">Problem Deconstruction<a class="headerlink" href="#problem-deconstruction" title="Permanent link">&para;</a></h4>
+<p>The process of breaking a complex business problem into smaller, more manageable sub-problems that can be individually diagnosed and solved.</p>
+<p><strong>Example:</strong> Decomposing "reduce customer churn" into: churn detection, churn root cause identification, retention action selection, and retention outcome measurement.</p>
+<h4 id="problem-frame">Problem Frame<a class="headerlink" href="#problem-frame" title="Permanent link">&para;</a></h4>
+<p>A specific definition of what the business problem actually is, what success means, and what factors are relevant—establishing boundaries on the solution space.</p>
+<p><strong>Example:</strong> "We need to identify high-risk customers 30 days before they churn so we can apply targeted interventions" is a frame that differs from "minimize churn overall."</p>
+<h4 id="problem-framing">Problem Framing<a class="headerlink" href="#problem-framing" title="Permanent link">&para;</a></h4>
+<p>The practice of clearly defining a business problem, its underlying causes, success criteria, constraints, and assumptions before selecting a solution approach.</p>
+<p><strong>Example:</strong> Before building a recommendation system, framing the problem: Are we optimizing engagement, revenue, or customer lifetime value? Does cold-start matter?</p>
+<h4 id="problem-portfolio">Problem Portfolio<a class="headerlink" href="#problem-portfolio" title="Permanent link">&para;</a></h4>
+<p>A structured inventory of multiple related problems within an organization, prioritized by business impact and solution feasibility to guide strategic focus.</p>
+<p><strong>Example:</strong> A retail company's problem portfolio includes: inventory optimization, demand forecasting, customer churn prediction, and fraud detection.</p>
+<h4 id="prompting">Prompting<a class="headerlink" href="#prompting" title="Permanent link">&para;</a></h4>
+<p>A technique of providing specific instructions or examples to a language model to guide it toward desired behavior without requiring training or fine-tuning.</p>
+<p><strong>Example:</strong> Giving a model the instruction "Respond in a professional tone" or providing an example of desired output format shapes its responses.</p>
+<h4 id="rag-retrieval-augmented-generation">RAG (Retrieval-Augmented Generation)<a class="headerlink" href="#rag-retrieval-augmented-generation" title="Permanent link">&para;</a></h4>
+<p>An approach that combines retrieval of relevant documents or information with generative language models to produce answers grounded in specific sources.</p>
+<p><strong>Example:</strong> A customer service system that retrieves relevant knowledge base articles then uses a language model to generate responses based on that retrieved context.</p>
+<h4 id="recommendation-system">Recommendation System<a class="headerlink" href="#recommendation-system" title="Permanent link">&para;</a></h4>
+<p>A machine learning application that predicts user preferences and suggests products, content, or actions most likely to be valuable or interesting to individuals.</p>
+<p><strong>Example:</strong> Netflix's system that recommends movies by learning from viewing patterns, ratings, and similar users' preferences.</p>
+<h4 id="reframing">Reframing<a class="headerlink" href="#reframing" title="Permanent link">&para;</a></h4>
+<p>The cognitive act of reconceptualizing a problem by changing perspectives, assumptions, or boundaries to reveal new solution possibilities.</p>
+<p><strong>Example:</strong> Instead of framing high returns as a shipping logistics problem, reframing it as a product design problem (products that arrive damaged cause returns).</p>
+<h4 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h4>
+<p>A supervised learning task that predicts continuous numerical values based on input variables and historical labeled examples.</p>
+<p><strong>Example:</strong> Predicting house prices from square footage, location, age, and other property characteristics.</p>
+<h4 id="retrieval">Retrieval<a class="headerlink" href="#retrieval" title="Permanent link">&para;</a></h4>
+<p>A machine learning or information retrieval task that finds and returns the most relevant documents, records, or information from a collection based on a query or input.</p>
+<p><strong>Example:</strong> A search engine that ranks and returns the most relevant web pages given a search query.</p>
+<h4 id="sanity-check">Sanity Check<a class="headerlink" href="#sanity-check" title="Permanent link">&para;</a></h4>
+<p>A quick validation that results make intuitive sense, are in expected ranges, and don't contradict known facts before trusting model outputs.</p>
+<p><strong>Example:</strong> If a churn prediction model assigns 0% churn risk to a customer who explicitly stated they're switching providers, the sanity check catches this nonsensical prediction.</p>
+<h4 id="semantic-search">Semantic Search<a class="headerlink" href="#semantic-search" title="Permanent link">&para;</a></h4>
+<p>A retrieval method that matches documents to queries based on meaning and conceptual relevance rather than exact word matching.</p>
+<p><strong>Example:</strong> A search for "ways to fix leaky faucets" returns results about plumbing repairs even if documents don't contain the exact words from the query.</p>
+<h4 id="signal-recognition">Signal Recognition<a class="headerlink" href="#signal-recognition" title="Permanent link">&para;</a></h4>
+<p>The ability to identify early indicators, patterns, or evidence that current strategy or problem frame is working well or needs to change.</p>
+<p><strong>Example:</strong> Recognizing that model performance improvement has plateaued (a signal to pivot) versus continuing to incrementally optimize.</p>
+<h4 id="solution-frame">Solution Frame<a class="headerlink" href="#solution-frame" title="Permanent link">&para;</a></h4>
+<p>A specific definition of how the problem will be addressed, including which approach (rule-based, ML, GenAI), success criteria, and resource requirements.</p>
+<p><strong>Example:</strong> "Build a classification model using historical customer behavior to score churn risk weekly, targeting users above 60% risk with personalized retention offers."</p>
+<h4 id="solution-space">Solution Space<a class="headerlink" href="#solution-space" title="Permanent link">&para;</a></h4>
+<p>The full range of technically and practically feasible approaches available to address a particular problem.</p>
+<p><strong>Example:</strong> For demand forecasting, the solution space includes: rule-based methods, statistical forecasting, time series models, deep learning, and human judgment.</p>
+<h4 id="stop-decision">Stop Decision<a class="headerlink" href="#stop-decision" title="Permanent link">&para;</a></h4>
+<p>A choice to completely abandon the current problem frame and solution direction, determining that continuing would waste resources without delivering value.</p>
+<p><strong>Example:</strong> Deciding to stop work on a complex churn prediction model after diagnosis reveals the actual problem is product quality, not customer retention dynamics.</p>
+<h4 id="stranger-test">Stranger Test<a class="headerlink" href="#stranger-test" title="Permanent link">&para;</a></h4>
+<p>A decision-making practice of explaining the problem and proposed solution to someone unfamiliar with the context; if they cannot understand, the framing likely lacks clarity.</p>
+<p><strong>Example:</strong> A product manager unable to explain in simple terms why the team built a specific ML model suggests the business justification may be unclear.</p>
+<h4 id="structured-search">Structured Search<a class="headerlink" href="#structured-search" title="Permanent link">&para;</a></h4>
+<p>A retrieval approach that searches across data with defined schemas and field structure, often using exact matching on specific attributes or ranges.</p>
+<p><strong>Example:</strong> Searching a customer database for all users in zip code 90210 with purchase history above $1,000 in the last year.</p>
+<h4 id="success-signal">Success Signal<a class="headerlink" href="#success-signal" title="Permanent link">&para;</a></h4>
+<p>An observable indicator or metric that rises above a defined threshold, demonstrating that the current problem frame and solution approach are delivering value.</p>
+<p><strong>Example:</strong> When retention rate improves by 5% after launching the churn prediction system, it's a success signal to continue and expand the approach.</p>
+<h4 id="system-2-thinking">System 2 Thinking<a class="headerlink" href="#system-2-thinking" title="Permanent link">&para;</a></h4>
+<p>A deliberate, analytical mode of cognition that involves slow, conscious reasoning and evaluation rather than quick intuitive judgments.</p>
+<p><strong>Example:</strong> Instead of intuitively assuming ML will solve a problem (System 1), systematically analyzing whether simpler approaches might be sufficient (System 2).</p>
+<h4 id="system-level-reframe">System-Level Reframe<a class="headerlink" href="#system-level-reframe" title="Permanent link">&para;</a></h4>
+<p>A fundamental shift in how a problem is understood that changes the boundaries, stakeholders, or goals, not just the tactical approach.</p>
+<p><strong>Example:</strong> Reframing customer acquisition from a marketing problem to a product-market fit problem, requiring changes beyond customer targeting tactics.</p>
+<h4 id="the-loop">The Loop<a class="headerlink" href="#the-loop" title="Permanent link">&para;</a></h4>
+<p>A cyclical framework for problem diagnosis and decision-making: define outcomes, identify signals, diagnose problems, decide (persist/pivot/stop), then repeat.</p>
+<p><strong>Example:</strong> The Loop process for churn: set retention target → monitor leading indicators → analyze why targets are missed → decide to improve product or refine targeting → repeat.</p>
+<h4 id="trade-offs">Trade-offs<a class="headerlink" href="#trade-offs" title="Permanent link">&para;</a></h4>
+<p>Competing priorities or constraints where improving one dimension requires accepting degradation in another, necessitating explicit prioritization.</p>
+<p><strong>Example:</strong> A recommendation system might face trade-offs between personalization (higher engagement) and diversity (broader cultural exposure), requiring intentional optimization choice.</p>
+<h4 id="vector-database">Vector Database<a class="headerlink" href="#vector-database" title="Permanent link">&para;</a></h4>
+<p>A specialized database designed to efficiently store and search high-dimensional numerical vectors (embeddings), enabling semantic similarity queries.</p>
+<p><strong>Example:</strong> A vector database that stores customer embeddings and enables finding "customers most similar to our best customer" without explicit attribute matching.</p>
+<hr />
+<p><strong>Total Terms:</strong> 150
+<strong>Coverage:</strong> Chapters 1-6 plus integrated concepts
+<strong>Format Compliance:</strong> ISO 11179 standards (precise, concise, distinct, non-circular, no business rules)
+<strong>Examples Provided:</strong> ~75% of terms</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../learning-graph/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Learning Graph">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Learning Graph
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                FAQ
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

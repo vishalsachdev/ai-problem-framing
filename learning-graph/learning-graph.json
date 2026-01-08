@@ -1,0 +1,1452 @@
+{
+  "metadata": {
+    "title": "AI Problem Framing for AI Practitioners",
+    "description": "A comprehensive learning graph for graduate-level course on AI problem framing, covering mindset foundations, the Loop Framework, diagnosis, pivoting strategies, and practical applications across ML and GenAI domains.",
+    "level": "graduate",
+    "totalConcepts": 200,
+    "version": "1.0",
+    "created": "2026-01-07",
+    "instructors": ["Rajiv Shah"],
+    "institution": "Contextual AI",
+    "duration": "5 weeks, ~40 hours"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": {
+        "background": "#e8f5e9",
+        "border": "#4caf50"
+      }
+    },
+    "BASIC": {
+      "classifierName": "Basic Concepts",
+      "color": {
+        "background": "#e3f2fd",
+        "border": "#2196f3"
+      }
+    },
+    "INTER": {
+      "classifierName": "Intermediate Concepts",
+      "color": {
+        "background": "#fff3e0",
+        "border": "#ff9800"
+      }
+    },
+    "ADV": {
+      "classifierName": "Advanced Concepts",
+      "color": {
+        "background": "#fce4ec",
+        "border": "#e91e63"
+      }
+    },
+    "APP": {
+      "classifierName": "Application Concepts",
+      "color": {
+        "background": "#f3e5f5",
+        "border": "#9c27b0"
+      }
+    }
+  },
+  "concepts": [
+    {
+      "id": 1,
+      "name": "System 2 Thinking",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 2,
+      "name": "Hammer Bias",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 3,
+      "name": "Stranger Test",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 4,
+      "name": "Domain Context",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 5,
+      "name": "Problem Reframing",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 6,
+      "name": "Critical Thinking",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 7,
+      "name": "Tool Selection",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 8,
+      "name": "Bias Recognition",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 9,
+      "name": "Assumption Validation",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 10,
+      "name": "Cognitive Framework",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 11,
+      "name": "Problem Definition",
+      "category": "FOUND",
+      "depends_on": [],
+      "chapter": 1
+    },
+    {
+      "id": 12,
+      "name": "Forecasting",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 13,
+      "name": "Regression",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 14,
+      "name": "Forecasting vs Regression",
+      "category": "BASIC",
+      "depends_on": [12, 13],
+      "chapter": 2
+    },
+    {
+      "id": 15,
+      "name": "Anomaly Detection",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 16,
+      "name": "Classification",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 17,
+      "name": "Anomaly vs Classification",
+      "category": "BASIC",
+      "depends_on": [15, 16],
+      "chapter": 2
+    },
+    {
+      "id": 18,
+      "name": "Clustering",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 19,
+      "name": "Clustering vs Classification",
+      "category": "BASIC",
+      "depends_on": [18, 16],
+      "chapter": 2
+    },
+    {
+      "id": 20,
+      "name": "Recommendation Systems",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 21,
+      "name": "Prediction",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 22,
+      "name": "Recommendation vs Prediction",
+      "category": "BASIC",
+      "depends_on": [20, 21],
+      "chapter": 2
+    },
+    {
+      "id": 23,
+      "name": "Optimization",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 24,
+      "name": "Optimization vs Prediction",
+      "category": "BASIC",
+      "depends_on": [23, 21],
+      "chapter": 2
+    },
+    {
+      "id": 25,
+      "name": "Generation",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 26,
+      "name": "Retrieval",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 27,
+      "name": "Generation vs Retrieval",
+      "category": "BASIC",
+      "depends_on": [25, 26],
+      "chapter": 2
+    },
+    {
+      "id": 28,
+      "name": "Extraction",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 29,
+      "name": "Generation vs Extraction",
+      "category": "BASIC",
+      "depends_on": [25, 28],
+      "chapter": 2
+    },
+    {
+      "id": 30,
+      "name": "Semantic Search",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 31,
+      "name": "Lexical Search",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 32,
+      "name": "Structured Search",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 33,
+      "name": "Semantic vs Lexical Search",
+      "category": "BASIC",
+      "depends_on": [30, 31],
+      "chapter": 2
+    },
+    {
+      "id": 34,
+      "name": "Fine-Tuning",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 35,
+      "name": "Prompting",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 36,
+      "name": "Fine-Tuning vs Prompting",
+      "category": "BASIC",
+      "depends_on": [34, 35],
+      "chapter": 2
+    },
+    {
+      "id": 37,
+      "name": "Long Context",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 38,
+      "name": "RAG Systems",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 39,
+      "name": "Long Context vs RAG",
+      "category": "BASIC",
+      "depends_on": [37, 38],
+      "chapter": 2
+    },
+    {
+      "id": 40,
+      "name": "Deterministic Systems",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 41,
+      "name": "Autonomous Agents",
+      "category": "BASIC",
+      "depends_on": [1, 7],
+      "chapter": 2
+    },
+    {
+      "id": 42,
+      "name": "Deterministic vs Agents",
+      "category": "BASIC",
+      "depends_on": [40, 41],
+      "chapter": 2
+    },
+    {
+      "id": 43,
+      "name": "AI Alternatives Menu",
+      "category": "INTER",
+      "depends_on": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+      "chapter": 2
+    },
+    {
+      "id": 44,
+      "name": "Outcome Definition",
+      "category": "BASIC",
+      "depends_on": [5, 11],
+      "chapter": 3
+    },
+    {
+      "id": 45,
+      "name": "Metric Selection",
+      "category": "BASIC",
+      "depends_on": [44],
+      "chapter": 3
+    },
+    {
+      "id": 46,
+      "name": "Metric as Frame",
+      "category": "INTER",
+      "depends_on": [45],
+      "chapter": 3
+    },
+    {
+      "id": 47,
+      "name": "Atomic Unit",
+      "category": "BASIC",
+      "depends_on": [11],
+      "chapter": 3
+    },
+    {
+      "id": 48,
+      "name": "Decomposition",
+      "category": "BASIC",
+      "depends_on": [47],
+      "chapter": 3
+    },
+    {
+      "id": 49,
+      "name": "Assumption Mapping",
+      "category": "BASIC",
+      "depends_on": [9, 48],
+      "chapter": 3
+    },
+    {
+      "id": 50,
+      "name": "Deconstruction Process",
+      "category": "INTER",
+      "depends_on": [47, 48, 49],
+      "chapter": 3
+    },
+    {
+      "id": 51,
+      "name": "Alternative Generation",
+      "category": "BASIC",
+      "depends_on": [5, 43],
+      "chapter": 3
+    },
+    {
+      "id": 52,
+      "name": "Alternatives Menu",
+      "category": "INTER",
+      "depends_on": [51],
+      "chapter": 3
+    },
+    {
+      "id": 53,
+      "name": "Trade-off Analysis",
+      "category": "BASIC",
+      "depends_on": [51, 52],
+      "chapter": 3
+    },
+    {
+      "id": 54,
+      "name": "Cost-Benefit Evaluation",
+      "category": "INTER",
+      "depends_on": [53],
+      "chapter": 3
+    },
+    {
+      "id": 55,
+      "name": "Success Signals",
+      "category": "BASIC",
+      "depends_on": [46],
+      "chapter": 3
+    },
+    {
+      "id": 56,
+      "name": "Kill Signals",
+      "category": "BASIC",
+      "depends_on": [46],
+      "chapter": 3
+    },
+    {
+      "id": 57,
+      "name": "Leading Indicators",
+      "category": "BASIC",
+      "depends_on": [46],
+      "chapter": 3
+    },
+    {
+      "id": 58,
+      "name": "Signal Definition",
+      "category": "INTER",
+      "depends_on": [55, 56, 57],
+      "chapter": 3
+    },
+    {
+      "id": 59,
+      "name": "Loop Framework",
+      "category": "INTER",
+      "depends_on": [46, 50, 52, 54, 58],
+      "chapter": 3
+    },
+    {
+      "id": 60,
+      "name": "Churn Prediction",
+      "category": "INTER",
+      "depends_on": [21, 59],
+      "chapter": 3
+    },
+    {
+      "id": 61,
+      "name": "Churn Metrics",
+      "category": "INTER",
+      "depends_on": [60, 45],
+      "chapter": 3
+    },
+    {
+      "id": 62,
+      "name": "Invoice Processing",
+      "category": "INTER",
+      "depends_on": [28, 59],
+      "chapter": 3
+    },
+    {
+      "id": 63,
+      "name": "Invoice Extraction",
+      "category": "INTER",
+      "depends_on": [62, 28],
+      "chapter": 3
+    },
+    {
+      "id": 64,
+      "name": "Data Distribution",
+      "category": "BASIC",
+      "depends_on": [4],
+      "chapter": 4
+    },
+    {
+      "id": 65,
+      "name": "Input Diagnosis",
+      "category": "INTER",
+      "depends_on": [64],
+      "chapter": 4
+    },
+    {
+      "id": 66,
+      "name": "Error Pattern Analysis",
+      "category": "INTER",
+      "depends_on": [16],
+      "chapter": 4
+    },
+    {
+      "id": 67,
+      "name": "Output Diagnosis",
+      "category": "INTER",
+      "depends_on": [66],
+      "chapter": 4
+    },
+    {
+      "id": 68,
+      "name": "Error Analysis",
+      "category": "INTER",
+      "depends_on": [66, 67],
+      "chapter": 4
+    },
+    {
+      "id": 69,
+      "name": "Sanity Checks",
+      "category": "BASIC",
+      "depends_on": [9],
+      "chapter": 4
+    },
+    {
+      "id": 70,
+      "name": "Diagnostic Testing",
+      "category": "INTER",
+      "depends_on": [68, 69],
+      "chapter": 4
+    },
+    {
+      "id": 71,
+      "name": "AI-Specific Diagnostics",
+      "category": "ADV",
+      "depends_on": [70],
+      "chapter": 4
+    },
+    {
+      "id": 72,
+      "name": "Data Quality Issues",
+      "category": "BASIC",
+      "depends_on": [64],
+      "chapter": 4
+    },
+    {
+      "id": 73,
+      "name": "Model Drift",
+      "category": "INTER",
+      "depends_on": [65, 67],
+      "chapter": 4
+    },
+    {
+      "id": 74,
+      "name": "Distribution Shift",
+      "category": "INTER",
+      "depends_on": [64, 73],
+      "chapter": 4
+    },
+    {
+      "id": 75,
+      "name": "Signal Recognition",
+      "category": "BASIC",
+      "depends_on": [58],
+      "chapter": 5
+    },
+    {
+      "id": 76,
+      "name": "Persist Decision",
+      "category": "BASIC",
+      "depends_on": [75],
+      "chapter": 5
+    },
+    {
+      "id": 77,
+      "name": "Pivot Decision",
+      "category": "BASIC",
+      "depends_on": [75],
+      "chapter": 5
+    },
+    {
+      "id": 78,
+      "name": "Stop Decision",
+      "category": "BASIC",
+      "depends_on": [75],
+      "chapter": 5
+    },
+    {
+      "id": 79,
+      "name": "Decision Options",
+      "category": "INTER",
+      "depends_on": [76, 77, 78],
+      "chapter": 5
+    },
+    {
+      "id": 80,
+      "name": "System-Level Reframe",
+      "category": "ADV",
+      "depends_on": [5, 59],
+      "chapter": 5
+    },
+    {
+      "id": 81,
+      "name": "Problem Pivot",
+      "category": "INTER",
+      "depends_on": [77, 80],
+      "chapter": 5
+    },
+    {
+      "id": 82,
+      "name": "Approach Pivot",
+      "category": "INTER",
+      "depends_on": [77, 80],
+      "chapter": 5
+    },
+    {
+      "id": 83,
+      "name": "Tool Pivot",
+      "category": "INTER",
+      "depends_on": [77, 80],
+      "chapter": 5
+    },
+    {
+      "id": 84,
+      "name": "Cautionary Tales",
+      "category": "ADV",
+      "depends_on": [68, 79],
+      "chapter": 5
+    },
+    {
+      "id": 85,
+      "name": "Case Study Analysis",
+      "category": "ADV",
+      "depends_on": [84],
+      "chapter": 5
+    },
+    {
+      "id": 86,
+      "name": "Classic ML Pivots",
+      "category": "ADV",
+      "depends_on": [60, 81, 82, 83],
+      "chapter": 6
+    },
+    {
+      "id": 87,
+      "name": "GenAI Pivots",
+      "category": "ADV",
+      "depends_on": [62, 81, 82, 83],
+      "chapter": 6
+    },
+    {
+      "id": 88,
+      "name": "Pattern Bridging",
+      "category": "APP",
+      "depends_on": [86, 87],
+      "chapter": 6
+    },
+    {
+      "id": 89,
+      "name": "Application Framework",
+      "category": "APP",
+      "depends_on": [59, 88],
+      "chapter": 6
+    },
+    {
+      "id": 90,
+      "name": "Monday Morning Check",
+      "category": "APP",
+      "depends_on": [89],
+      "chapter": 6
+    },
+    {
+      "id": 91,
+      "name": "Atomic Unit Canvas",
+      "category": "APP",
+      "depends_on": [47, 48, 49],
+      "chapter": 6
+    },
+    {
+      "id": 92,
+      "name": "Pre-Flight Checklist",
+      "category": "APP",
+      "depends_on": [89, 90],
+      "chapter": 6
+    },
+    {
+      "id": 93,
+      "name": "Trade-off Canvas",
+      "category": "APP",
+      "depends_on": [53, 54],
+      "chapter": 6
+    },
+    {
+      "id": 94,
+      "name": "Signals Canvas",
+      "category": "APP",
+      "depends_on": [55, 56, 57],
+      "chapter": 6
+    },
+    {
+      "id": 95,
+      "name": "Problem Statement",
+      "category": "BASIC",
+      "depends_on": [11],
+      "chapter": 1
+    },
+    {
+      "id": 96,
+      "name": "Stakeholder Analysis",
+      "category": "BASIC",
+      "depends_on": [4, 11],
+      "chapter": 1
+    },
+    {
+      "id": 97,
+      "name": "Requirements Gathering",
+      "category": "BASIC",
+      "depends_on": [96],
+      "chapter": 1
+    },
+    {
+      "id": 98,
+      "name": "Constraint Identification",
+      "category": "BASIC",
+      "depends_on": [97],
+      "chapter": 1
+    },
+    {
+      "id": 99,
+      "name": "Success Criteria",
+      "category": "BASIC",
+      "depends_on": [44, 45],
+      "chapter": 1
+    },
+    {
+      "id": 100,
+      "name": "Feasibility Assessment",
+      "category": "INTER",
+      "depends_on": [98, 99],
+      "chapter": 1
+    },
+    {
+      "id": 101,
+      "name": "Risk Assessment",
+      "category": "INTER",
+      "depends_on": [100],
+      "chapter": 1
+    },
+    {
+      "id": 102,
+      "name": "Technology Stack",
+      "category": "BASIC",
+      "depends_on": [7],
+      "chapter": 2
+    },
+    {
+      "id": 103,
+      "name": "Model Selection",
+      "category": "INTER",
+      "depends_on": [102, 43],
+      "chapter": 2
+    },
+    {
+      "id": 104,
+      "name": "Architecture Design",
+      "category": "INTER",
+      "depends_on": [103],
+      "chapter": 3
+    },
+    {
+      "id": 105,
+      "name": "Data Pipeline",
+      "category": "BASIC",
+      "depends_on": [64],
+      "chapter": 3
+    },
+    {
+      "id": 106,
+      "name": "Feature Engineering",
+      "category": "INTER",
+      "depends_on": [105],
+      "chapter": 4
+    },
+    {
+      "id": 107,
+      "name": "Training Strategy",
+      "category": "INTER",
+      "depends_on": [103, 106],
+      "chapter": 4
+    },
+    {
+      "id": 108,
+      "name": "Evaluation Framework",
+      "category": "INTER",
+      "depends_on": [45, 70],
+      "chapter": 4
+    },
+    {
+      "id": 109,
+      "name": "Deployment Readiness",
+      "category": "INTER",
+      "depends_on": [104, 108],
+      "chapter": 5
+    },
+    {
+      "id": 110,
+      "name": "Monitoring Strategy",
+      "category": "INTER",
+      "depends_on": [109],
+      "chapter": 5
+    },
+    {
+      "id": 111,
+      "name": "Production Support",
+      "category": "INTER",
+      "depends_on": [110],
+      "chapter": 5
+    },
+    {
+      "id": 112,
+      "name": "Business Impact",
+      "category": "BASIC",
+      "depends_on": [99],
+      "chapter": 6
+    },
+    {
+      "id": 113,
+      "name": "ROI Calculation",
+      "category": "INTER",
+      "depends_on": [112],
+      "chapter": 6
+    },
+    {
+      "id": 114,
+      "name": "Scalability Factors",
+      "category": "INTER",
+      "depends_on": [104, 109],
+      "chapter": 6
+    },
+    {
+      "id": 115,
+      "name": "Baseline Performance",
+      "category": "BASIC",
+      "depends_on": [45, 69],
+      "chapter": 4
+    },
+    {
+      "id": 116,
+      "name": "Incremental Testing",
+      "category": "INTER",
+      "depends_on": [115],
+      "chapter": 4
+    },
+    {
+      "id": 117,
+      "name": "A/B Testing",
+      "category": "INTER",
+      "depends_on": [116],
+      "chapter": 5
+    },
+    {
+      "id": 118,
+      "name": "Statistical Significance",
+      "category": "INTER",
+      "depends_on": [117],
+      "chapter": 5
+    },
+    {
+      "id": 119,
+      "name": "Confidence Building",
+      "category": "ADV",
+      "depends_on": [118],
+      "chapter": 5
+    },
+    {
+      "id": 120,
+      "name": "Edge Cases",
+      "category": "INTER",
+      "depends_on": [69, 72],
+      "chapter": 4
+    },
+    {
+      "id": 121,
+      "name": "Fairness Evaluation",
+      "category": "ADV",
+      "depends_on": [70, 108],
+      "chapter": 4
+    },
+    {
+      "id": 122,
+      "name": "Bias Detection",
+      "category": "ADV",
+      "depends_on": [121],
+      "chapter": 4
+    },
+    {
+      "id": 123,
+      "name": "Explainability",
+      "category": "ADV",
+      "depends_on": [68, 122],
+      "chapter": 5
+    },
+    {
+      "id": 124,
+      "name": "Model Interpretability",
+      "category": "INTER",
+      "depends_on": [123],
+      "chapter": 5
+    },
+    {
+      "id": 125,
+      "name": "User Feedback Loop",
+      "category": "BASIC",
+      "depends_on": [110, 111],
+      "chapter": 6
+    },
+    {
+      "id": 126,
+      "name": "Continuous Improvement",
+      "category": "INTER",
+      "depends_on": [125],
+      "chapter": 6
+    },
+    {
+      "id": 127,
+      "name": "Iteration Planning",
+      "category": "INTER",
+      "depends_on": [126],
+      "chapter": 6
+    },
+    {
+      "id": 128,
+      "name": "Priority Ranking",
+      "category": "BASIC",
+      "depends_on": [51, 52],
+      "chapter": 3
+    },
+    {
+      "id": 129,
+      "name": "Risk Mitigation",
+      "category": "INTER",
+      "depends_on": [101, 119],
+      "chapter": 5
+    },
+    {
+      "id": 130,
+      "name": "Contingency Planning",
+      "category": "ADV",
+      "depends_on": [129],
+      "chapter": 5
+    },
+    {
+      "id": 131,
+      "name": "Resource Allocation",
+      "category": "INTER",
+      "depends_on": [98, 104],
+      "chapter": 3
+    },
+    {
+      "id": 132,
+      "name": "Timeline Estimation",
+      "category": "INTER",
+      "depends_on": [131],
+      "chapter": 3
+    },
+    {
+      "id": 133,
+      "name": "Team Composition",
+      "category": "BASIC",
+      "depends_on": [96],
+      "chapter": 1
+    },
+    {
+      "id": 134,
+      "name": "Cross-Functional Alignment",
+      "category": "INTER",
+      "depends_on": [133, 96],
+      "chapter": 3
+    },
+    {
+      "id": 135,
+      "name": "Communication Plan",
+      "category": "BASIC",
+      "depends_on": [134],
+      "chapter": 3
+    },
+    {
+      "id": 136,
+      "name": "Stakeholder Updates",
+      "category": "BASIC",
+      "depends_on": [135],
+      "chapter": 6
+    },
+    {
+      "id": 137,
+      "name": "Domain Knowledge",
+      "category": "BASIC",
+      "depends_on": [4],
+      "chapter": 1
+    },
+    {
+      "id": 138,
+      "name": "Industry Trends",
+      "category": "BASIC",
+      "depends_on": [137],
+      "chapter": 1
+    },
+    {
+      "id": 139,
+      "name": "Competitive Analysis",
+      "category": "INTER",
+      "depends_on": [138, 112],
+      "chapter": 6
+    },
+    {
+      "id": 140,
+      "name": "Market Opportunities",
+      "category": "BASIC",
+      "depends_on": [138],
+      "chapter": 1
+    },
+    {
+      "id": 141,
+      "name": "Customer Needs",
+      "category": "BASIC",
+      "depends_on": [96, 140],
+      "chapter": 1
+    },
+    {
+      "id": 142,
+      "name": "User Experience",
+      "category": "INTER",
+      "depends_on": [141],
+      "chapter": 6
+    },
+    {
+      "id": 143,
+      "name": "Data Availability",
+      "category": "BASIC",
+      "depends_on": [64],
+      "chapter": 2
+    },
+    {
+      "id": 144,
+      "name": "Data Collection",
+      "category": "BASIC",
+      "depends_on": [143],
+      "chapter": 3
+    },
+    {
+      "id": 145,
+      "name": "Data Labeling",
+      "category": "INTER",
+      "depends_on": [144],
+      "chapter": 4
+    },
+    {
+      "id": 146,
+      "name": "Annotation Strategy",
+      "category": "INTER",
+      "depends_on": [145],
+      "chapter": 4
+    },
+    {
+      "id": 147,
+      "name": "Label Quality",
+      "category": "INTER",
+      "depends_on": [146],
+      "chapter": 4
+    },
+    {
+      "id": 148,
+      "name": "Active Learning",
+      "category": "ADV",
+      "depends_on": [145],
+      "chapter": 4
+    },
+    {
+      "id": 149,
+      "name": "Synthetic Data",
+      "category": "ADV",
+      "depends_on": [144],
+      "chapter": 4
+    },
+    {
+      "id": 150,
+      "name": "Data Privacy",
+      "category": "BASIC",
+      "depends_on": [64],
+      "chapter": 2
+    },
+    {
+      "id": 151,
+      "name": "Ethical Considerations",
+      "category": "ADV",
+      "depends_on": [122, 150],
+      "chapter": 5
+    },
+    {
+      "id": 152,
+      "name": "Regulatory Compliance",
+      "category": "ADV",
+      "depends_on": [151],
+      "chapter": 5
+    },
+    {
+      "id": 153,
+      "name": "Performance Baseline",
+      "category": "BASIC",
+      "depends_on": [115],
+      "chapter": 4
+    },
+    {
+      "id": 154,
+      "name": "Improvement Metrics",
+      "category": "INTER",
+      "depends_on": [153],
+      "chapter": 5
+    },
+    {
+      "id": 155,
+      "name": "Threshold Setting",
+      "category": "INTER",
+      "depends_on": [45, 56],
+      "chapter": 3
+    },
+    {
+      "id": 156,
+      "name": "Alert Mechanisms",
+      "category": "INTER",
+      "depends_on": [155, 110],
+      "chapter": 5
+    },
+    {
+      "id": 157,
+      "name": "Feedback Cycles",
+      "category": "INTER",
+      "depends_on": [125],
+      "chapter": 6
+    },
+    {
+      "id": 158,
+      "name": "Learning Velocity",
+      "category": "INTER",
+      "depends_on": [157],
+      "chapter": 6
+    },
+    {
+      "id": 159,
+      "name": "Experimentation Culture",
+      "category": "ADV",
+      "depends_on": [117, 127],
+      "chapter": 6
+    },
+    {
+      "id": 160,
+      "name": "Failure Analysis",
+      "category": "ADV",
+      "depends_on": [84, 85],
+      "chapter": 5
+    },
+    {
+      "id": 161,
+      "name": "Retrospectives",
+      "category": "INTER",
+      "depends_on": [160],
+      "chapter": 6
+    },
+    {
+      "id": 162,
+      "name": "Documentation Standards",
+      "category": "BASIC",
+      "depends_on": [135],
+      "chapter": 3
+    },
+    {
+      "id": 163,
+      "name": "Decision Logging",
+      "category": "INTER",
+      "depends_on": [162],
+      "chapter": 6
+    },
+    {
+      "id": 164,
+      "name": "Knowledge Transfer",
+      "category": "INTER",
+      "depends_on": [162, 163],
+      "chapter": 6
+    },
+    {
+      "id": 165,
+      "name": "Model Governance",
+      "category": "ADV",
+      "depends_on": [151, 162],
+      "chapter": 5
+    },
+    {
+      "id": 166,
+      "name": "Version Control",
+      "category": "BASIC",
+      "depends_on": [103],
+      "chapter": 4
+    },
+    {
+      "id": 167,
+      "name": "Experiment Tracking",
+      "category": "INTER",
+      "depends_on": [116, 166],
+      "chapter": 4
+    },
+    {
+      "id": 168,
+      "name": "Hyperparameter Tuning",
+      "category": "INTER",
+      "depends_on": [107],
+      "chapter": 4
+    },
+    {
+      "id": 169,
+      "name": "Cross Validation",
+      "category": "INTER",
+      "depends_on": [107, 108],
+      "chapter": 4
+    },
+    {
+      "id": 170,
+      "name": "Ensemble Methods",
+      "category": "ADV",
+      "depends_on": [103],
+      "chapter": 5
+    },
+    {
+      "id": 171,
+      "name": "Transfer Learning",
+      "category": "ADV",
+      "depends_on": [34],
+      "chapter": 4
+    },
+    {
+      "id": 172,
+      "name": "Few-Shot Learning",
+      "category": "ADV",
+      "depends_on": [35, 171],
+      "chapter": 4
+    },
+    {
+      "id": 173,
+      "name": "Zero-Shot Learning",
+      "category": "ADV",
+      "depends_on": [172],
+      "chapter": 4
+    },
+    {
+      "id": 174,
+      "name": "Prompt Engineering",
+      "category": "INTER",
+      "depends_on": [35],
+      "chapter": 5
+    },
+    {
+      "id": 175,
+      "name": "Chain-of-Thought",
+      "category": "INTER",
+      "depends_on": [174],
+      "chapter": 5
+    },
+    {
+      "id": 176,
+      "name": "In-Context Learning",
+      "category": "INTER",
+      "depends_on": [175],
+      "chapter": 5
+    },
+    {
+      "id": 177,
+      "name": "Output Formatting",
+      "category": "INTER",
+      "depends_on": [25, 28],
+      "chapter": 5
+    },
+    {
+      "id": 178,
+      "name": "Validation Rules",
+      "category": "INTER",
+      "depends_on": [69, 177],
+      "chapter": 5
+    },
+    {
+      "id": 179,
+      "name": "Error Recovery",
+      "category": "ADV",
+      "depends_on": [178],
+      "chapter": 5
+    },
+    {
+      "id": 180,
+      "name": "Fallback Strategies",
+      "category": "ADV",
+      "depends_on": [179],
+      "chapter": 6
+    },
+    {
+      "id": 181,
+      "name": "Cost Analysis",
+      "category": "INTER",
+      "depends_on": [113],
+      "chapter": 6
+    },
+    {
+      "id": 182,
+      "name": "Latency Optimization",
+      "category": "INTER",
+      "depends_on": [109],
+      "chapter": 5
+    },
+    {
+      "id": 183,
+      "name": "Resource Efficiency",
+      "category": "INTER",
+      "depends_on": [182],
+      "chapter": 6
+    },
+    {
+      "id": 184,
+      "name": "Batch Processing",
+      "category": "INTER",
+      "depends_on": [109],
+      "chapter": 5
+    },
+    {
+      "id": 185,
+      "name": "Real-Time Processing",
+      "category": "ADV",
+      "depends_on": [184],
+      "chapter": 5
+    },
+    {
+      "id": 186,
+      "name": "Data Validation",
+      "category": "BASIC",
+      "depends_on": [72],
+      "chapter": 4
+    },
+    {
+      "id": 187,
+      "name": "Schema Enforcement",
+      "category": "INTER",
+      "depends_on": [186],
+      "chapter": 4
+    },
+    {
+      "id": 188,
+      "name": "Drift Detection",
+      "category": "INTER",
+      "depends_on": [73, 74],
+      "chapter": 5
+    },
+    {
+      "id": 189,
+      "name": "Retraining Triggers",
+      "category": "INTER",
+      "depends_on": [188],
+      "chapter": 5
+    },
+    {
+      "id": 190,
+      "name": "Model Versioning",
+      "category": "INTER",
+      "depends_on": [166, 189],
+      "chapter": 5
+    },
+    {
+      "id": 191,
+      "name": "Rollback Procedures",
+      "category": "INTER",
+      "depends_on": [190],
+      "chapter": 5
+    },
+    {
+      "id": 192,
+      "name": "Prediction Confidence",
+      "category": "INTER",
+      "depends_on": [21, 108],
+      "chapter": 4
+    },
+    {
+      "id": 193,
+      "name": "Uncertainty Quantification",
+      "category": "ADV",
+      "depends_on": [192],
+      "chapter": 5
+    },
+    {
+      "id": 194,
+      "name": "Threshold Optimization",
+      "category": "INTER",
+      "depends_on": [155],
+      "chapter": 4
+    },
+    {
+      "id": 195,
+      "name": "Precision-Recall Tradeoff",
+      "category": "INTER",
+      "depends_on": [194],
+      "chapter": 4
+    },
+    {
+      "id": 196,
+      "name": "ROC Curves",
+      "category": "INTER",
+      "depends_on": [195],
+      "chapter": 4
+    },
+    {
+      "id": 197,
+      "name": "Business Rule Integration",
+      "category": "INTER",
+      "depends_on": [40, 178],
+      "chapter": 5
+    },
+    {
+      "id": 198,
+      "name": "Hybrid Systems",
+      "category": "ADV",
+      "depends_on": [197],
+      "chapter": 6
+    },
+    {
+      "id": 199,
+      "name": "Multi-Model Ensembles",
+      "category": "ADV",
+      "depends_on": [170],
+      "chapter": 6
+    },
+    {
+      "id": 200,
+      "name": "Meta-Learning",
+      "category": "ADV",
+      "depends_on": [199],
+      "chapter": 6
+    }
+  ]
+}

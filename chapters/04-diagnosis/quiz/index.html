@@ -1,0 +1,1656 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/chapters/04-diagnosis/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../05-pivot/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>4. Quiz - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-diagnosis-quiz" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-vs-output-diagnosis-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Input vs Output Diagnosis [Remember]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sanity-check-applications-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Sanity Check Applications [Remember]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-types-of-drift-definition-understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Types of Drift - Definition [Understand]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-error-pattern-recognition-understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Error Pattern Recognition [Understand]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bias-detection-methods-understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Bias Detection Methods [Understand]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-diagnosis-scenario-model-performance-drop-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Diagnosis Scenario - Model Performance Drop [Apply]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-error-analysis-in-production-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Error Analysis in Production [Apply]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-concept-drift-detection-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Concept Drift Detection [Apply]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-integrated-diagnosis-multiple-drift-types-analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Integrated Diagnosis - Multiple Drift Types [Analyze]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-sanity-check-design-analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Sanity Check Design [Analyze]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-key-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answer Key &amp; Scoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discussion Prompts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4-diagnosis-quiz">Chapter 4: Diagnosis Quiz<a class="headerlink" href="#chapter-4-diagnosis-quiz" title="Permanent link">&para;</a></h1>
+<p><strong>Difficulty Level:</strong> Intermediate
+<strong>Total Questions:</strong> 10
+<strong>Estimated Time:</strong> 20-25 minutes</p>
+<hr />
+<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
+<p>Answer each question based on the concepts from Chapter 4: Diagnosis. Questions progress through different cognitive levels (Remember → Understand → Apply → Analyze) to test your comprehension and ability to apply diagnostic techniques in real-world scenarios.</p>
+<hr />
+<h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h2>
+<h3 id="1-input-vs-output-diagnosis-remember">1. <strong>Input vs Output Diagnosis</strong> [Remember]<a class="headerlink" href="#1-input-vs-output-diagnosis-remember" title="Permanent link">&para;</a></h3>
+<p>When diagnosing a machine learning system's failures, what is the primary difference between <strong>Input Diagnosis</strong> and <strong>Output Diagnosis</strong>?</p>
+<p>A) Input Diagnosis checks if features are correctly preprocessed; Output Diagnosis evaluates prediction quality
+B) Input Diagnosis looks at raw data distribution; Output Diagnosis only examines model weights
+C) Input Diagnosis is performed before training; Output Diagnosis is performed after deployment
+D) Input Diagnosis detects feature engineering errors; Output Diagnosis detects hardware failures</p>
+<p><strong>Correct Answer:</strong> A</p>
+<p><strong>Explanation:</strong> Input Diagnosis examines whether the data being fed into the model is correct (features, distributions, data quality), while Output Diagnosis evaluates whether the model's predictions are reasonable and of sufficient quality. This distinction is crucial for narrowing down where problems originate.</p>
+<hr />
+<h3 id="2-sanity-check-applications-remember">2. <strong>Sanity Check Applications</strong> [Remember]<a class="headerlink" href="#2-sanity-check-applications-remember" title="Permanent link">&para;</a></h3>
+<p>Which of the following is an appropriate use of a <strong>Sanity Check</strong>?</p>
+<p>A) Verifying that predicted prices never exceed the maximum historical price in training data
+B) Ensuring model accuracy improves with every new batch of data
+C) Confirming that feature distributions are perfectly normal
+D) Testing that the model architecture matches the research paper exactly</p>
+<p><strong>Correct Answer:</strong> A</p>
+<p><strong>Explanation:</strong> Sanity checks establish basic boundary conditions and expected behavior patterns. Checking that predictions stay within reasonable ranges is a classic sanity check that catches obvious failures before deeper analysis.</p>
+<hr />
+<h3 id="3-types-of-drift-definition-understand">3. <strong>Types of Drift - Definition</strong> [Understand]<a class="headerlink" href="#3-types-of-drift-definition-understand" title="Permanent link">&para;</a></h3>
+<p>Explain the relationship between <strong>Data Drift</strong>, <strong>Model Drift</strong>, and <strong>Concept Drift</strong>. Which statement correctly describes them?</p>
+<p>A) Data Drift occurs in features; Concept Drift occurs in the target variable's relationship to features; Model Drift is when the model becomes outdated
+B) They are three names for the same phenomenon
+C) Data Drift and Model Drift are the same thing; Concept Drift is different
+D) Data Drift only affects training; Concept Drift only affects deployment</p>
+<p><strong>Correct Answer:</strong> A</p>
+<p><strong>Explanation:</strong> These three types of drift represent different failure modes: Data Drift (P(X) changes), Concept Drift (P(Y|X) changes), and Model Drift (the model was good but is now outdated relative to new data). Understanding these distinctions helps target solutions appropriately.</p>
+<hr />
+<h3 id="4-error-pattern-recognition-understand">4. <strong>Error Pattern Recognition</strong> [Understand]<a class="headerlink" href="#4-error-pattern-recognition-understand" title="Permanent link">&para;</a></h3>
+<p>You notice your classification model performs well on normal cases but fails consistently on edge cases (extreme values). This error pattern suggests:</p>
+<p>A) The model has high bias and needs more complex features
+B) There is likely <strong>data distribution mismatch</strong> between training and edge cases
+C) The model is overfitting to the training set
+D) Input Diagnosis is unnecessary; this is purely an Output Diagnosis problem</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Systematic failures on edge cases indicate that the model wasn't exposed to these cases during training (Data Drift or distribution mismatch). This is an Input Diagnosis problem showing that the training distribution doesn't match the production distribution.</p>
+<hr />
+<h3 id="5-bias-detection-methods-understand">5. <strong>Bias Detection Methods</strong> [Understand]<a class="headerlink" href="#5-bias-detection-methods-understand" title="Permanent link">&para;</a></h3>
+<p>Which diagnostic approach is most effective for detecting <strong>systemic bias</strong> in a model's predictions across different demographic groups?</p>
+<p>A) Comparing overall model accuracy to individual group accuracies
+B) Running a single sanity check on the aggregate dataset
+C) Analyzing error distributions separately for each protected attribute
+D) Checking that the training data is balanced in size</p>
+<p><strong>Correct Answer:</strong> C</p>
+<p><strong>Explanation:</strong> Detecting bias requires analyzing error patterns within each group separately. Aggregate metrics can hide group-specific problems. This allows you to see if certain groups experience systematically higher errors.</p>
+<hr />
+<h3 id="6-diagnosis-scenario-model-performance-drop-apply">6. <strong>Diagnosis Scenario - Model Performance Drop</strong> [Apply]<a class="headerlink" href="#6-diagnosis-scenario-model-performance-drop-apply" title="Permanent link">&para;</a></h3>
+<p>Your fraud detection model was deployed 6 months ago with 95% accuracy. Today it shows 78% accuracy on the same test set. Which type of drift is MOST likely, and what's your first diagnostic step?</p>
+<p>A) Concept Drift is most likely; retraining the model immediately is the first step
+B) Data Drift is most likely; compare the feature distributions of recent data to training data
+C) Model Drift; the model weights have corrupted and need to be reset
+D) This is a hardware failure; check server logs first</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> A dramatic accuracy drop over time with changing real-world data suggests Data Drift. The first diagnostic step is Input Diagnosis: check if feature distributions have shifted. This guides whether retraining, feature engineering changes, or data cleaning is needed.</p>
+<hr />
+<h3 id="7-error-analysis-in-production-apply">7. <strong>Error Analysis in Production</strong> [Apply]<a class="headerlink" href="#7-error-analysis-in-production-apply" title="Permanent link">&para;</a></h3>
+<p>You're analyzing error logs from your recommendation system and notice that 85% of errors occur in a specific user segment (new users with sparse interaction history). What's the most appropriate diagnostic approach?</p>
+<p>A) Blame the feature engineering team for not creating interaction-based features
+B) Perform an Error Analysis on this segment and check if the training data included this distribution
+C) Immediately apply output post-processing rules to hide errors from this segment
+D) Assume this is inevitable and accept the high error rate</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Segment-specific error patterns are a key diagnostic signal. You should investigate whether the training data included new users with sparse data and whether your features are appropriate for this distribution. This is Input Diagnosis focused on identifying data distribution issues.</p>
+<hr />
+<h3 id="8-concept-drift-detection-apply">8. <strong>Concept Drift Detection</strong> [Apply]<a class="headerlink" href="#8-concept-drift-detection-apply" title="Permanent link">&para;</a></h3>
+<p>Your loan default prediction model has stable feature distributions and model weights haven't changed, yet prediction accuracy is declining. Which scenario best explains this?</p>
+<p>A) This is impossible—if features and model are stable, performance must be stable
+B) This indicates Concept Drift: the relationship between features and target (likelihood of default) has changed
+C) The test set is corrupted
+D) This indicates Model Drift but not Concept Drift</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> If features haven't changed but the relationship between features and the target has shifted (e.g., economic conditions affecting default likelihood), this is Concept Drift: P(Y|X) changed while P(X) stayed stable. This requires different solutions than Data Drift.</p>
+<hr />
+<h3 id="9-integrated-diagnosis-multiple-drift-types-analyze">9. <strong>Integrated Diagnosis - Multiple Drift Types</strong> [Analyze]<a class="headerlink" href="#9-integrated-diagnosis-multiple-drift-types-analyze" title="Permanent link">&para;</a></h3>
+<p>You're diagnosing a computer vision model for product quality inspection. You observe:
+- Feature distributions have shifted from historical data (edge colors changed due to lighting upgrades)
+- The model's decision boundary is no longer optimal for the new distributions
+- The underlying product quality requirements have become stricter (fewer defects acceptable)</p>
+<p>Which types of drift are present, and what is the correct diagnostic priority?</p>
+<p>A) Only Data Drift; retrain immediately
+B) Data Drift, Concept Drift, and potentially Model Drift; diagnose Input (features) first, then Output (prediction patterns)
+C) Only Concept Drift; no retraining needed
+D) Model Drift exclusively; check hardware and model serving infrastructure</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> This scenario involves multiple drift types occurring simultaneously. Input Diagnosis (Data Drift from lighting changes) should be priority one. Then analyze Output Diagnosis for Concept Drift (stricter quality standards change P(Y|X)). Model Drift may also be at play. A layered diagnostic approach handles this complexity.</p>
+<hr />
+<h3 id="10-sanity-check-design-analyze">10. <strong>Sanity Check Design</strong> [Analyze]<a class="headerlink" href="#10-sanity-check-design-analyze" title="Permanent link">&para;</a></h3>
+<p>You're building sanity checks for a stock price prediction model. Which of the following represents an effective, practical sanity check for detecting issues early?</p>
+<p>A) Verify that predicted prices stay within the historical price range of each stock, and alert if ±20% threshold is exceeded
+B) Ensure that every prediction is more accurate than a naive baseline
+C) Check that predicted volatility never decreases from one day to the next
+D) Confirm that R² score on test data is above 0.95</p>
+<p><strong>Correct Answer:</strong> A</p>
+<p><strong>Explanation:</strong> Effective sanity checks should (1) be computationally cheap, (2) catch obvious failures, and (3) be actionable. Option A creates a practical boundary check that's fast to compute and provides early warning of distribution shift or model failure. Options B, C, and D are either too expensive or too permissive as sanity checks.</p>
+<hr />
+<h2 id="answer-key-scoring">Answer Key &amp; Scoring<a class="headerlink" href="#answer-key-scoring" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+<th>Bloom's Level</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>Remember</td>
+<td>Input vs Output Diagnosis</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>Remember</td>
+<td>Sanity Checks</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A</td>
+<td>Understand</td>
+<td>Types of Drift</td>
+</tr>
+<tr>
+<td>4</td>
+<td>B</td>
+<td>Understand</td>
+<td>Data Distribution &amp; Error Patterns</td>
+</tr>
+<tr>
+<td>5</td>
+<td>C</td>
+<td>Understand</td>
+<td>Bias Detection</td>
+</tr>
+<tr>
+<td>6</td>
+<td>B</td>
+<td>Apply</td>
+<td>Diagnosis Scenario (Model Performance)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>B</td>
+<td>Apply</td>
+<td>Error Analysis</td>
+</tr>
+<tr>
+<td>8</td>
+<td>B</td>
+<td>Apply</td>
+<td>Concept Drift</td>
+</tr>
+<tr>
+<td>9</td>
+<td>B</td>
+<td>Analyze</td>
+<td>Integrated Multi-Drift Diagnosis</td>
+</tr>
+<tr>
+<td>10</td>
+<td>A</td>
+<td>Analyze</td>
+<td>Sanity Check Design</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scoring:</strong>
+- <strong>9-10 correct:</strong> Mastery (90-100%)
+- <strong>8 correct:</strong> Proficient (80%)
+- <strong>6-7 correct:</strong> Developing (60-70%)
+- <strong>Below 6:</strong> Review Chapter 4 material</p>
+<hr />
+<h2 id="discussion-prompts">Discussion Prompts<a class="headerlink" href="#discussion-prompts" title="Permanent link">&para;</a></h2>
+<p>Use these questions for classroom discussion or deeper reflection:</p>
+<ol>
+<li>
+<p><strong>Input vs Output Tradeoff:</strong> In practice, why might it be easier to fix Input Diagnosis problems than Output Diagnosis problems?</p>
+</li>
+<li>
+<p><strong>Drift in Your Domain:</strong> Think of an ML system in your field of work. How might Data Drift, Concept Drift, or Model Drift manifest?</p>
+</li>
+<li>
+<p><strong>Sanity Check Effectiveness:</strong> What are three sanity checks you would design for a healthcare prediction model? What properties make them effective?</p>
+</li>
+<li>
+<p><strong>Bias and Fairness:</strong> How does understanding drift help in detecting and addressing bias? Can a model be biased without drift?</p>
+</li>
+</ol>
+<hr />
+<h2 id="key-concepts-review">Key Concepts Review<a class="headerlink" href="#key-concepts-review" title="Permanent link">&para;</a></h2>
+<p>Before taking this quiz, ensure you understand:</p>
+<ul>
+<li><strong>Input Diagnosis:</strong> Examines feature quality, distributions, and data integrity</li>
+<li><strong>Output Diagnosis:</strong> Evaluates prediction quality, error patterns, and model behavior</li>
+<li><strong>Data Drift:</strong> P(X) changes—feature distributions shift over time</li>
+<li><strong>Concept Drift:</strong> P(Y|X) changes—relationship between features and target shifts</li>
+<li><strong>Model Drift:</strong> Model becomes outdated relative to current performance requirements</li>
+<li><strong>Sanity Checks:</strong> Fast, cheap checks to catch obvious failures before deeper analysis</li>
+<li><strong>Error Analysis:</strong> Breaking down errors by segment, pattern, or feature to understand root causes</li>
+<li><strong>Bias Detection:</strong> Analyzing performance metrics separately for protected attributes and subgroups</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Diagnosis">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4. Diagnosis
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../05-pivot/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Pivot">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Pivot
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

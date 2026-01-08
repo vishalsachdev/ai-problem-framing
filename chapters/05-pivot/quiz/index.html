@@ -1,0 +1,1628 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/chapters/05-pivot/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../06-application/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>5. Quiz - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-5-pivot-quiz" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-1-remember-decision-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 1 (Remember) | Decision Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-2-remember-signal-recognition-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2 (Remember) | Signal Recognition Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-3-understand-sunk-cost-fallacy-in-decision-making" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 3 (Understand) | Sunk Cost Fallacy in Decision-Making
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-4-understand-decision-threshold-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 4 (Understand) | Decision Threshold Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-5-apply-recognizing-a-pivot-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 5 (Apply) | Recognizing a Pivot Signal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-6-apply-sunk-cost-vs-sound-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 6 (Apply) | Sunk Cost vs. Sound Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-7-analyze-system-level-reframe-in-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 7 (Analyze) | System-Level Reframe in Pivoting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-8-analyze-multiple-pivot-types-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 8 (Analyze) | Multiple Pivot Types Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-9-analyze-evaluating-conflicting-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 9 (Analyze) | Evaluating Conflicting Signals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-10-evaluate-justifying-a-pivot-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 10 (Evaluate) | Justifying a Pivot Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-key-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answer Key Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution-achieved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribution Achieved
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-5-pivot-quiz">Chapter 5: Pivot - Quiz<a class="headerlink" href="#chapter-5-pivot-quiz" title="Permanent link">&para;</a></h1>
+<p><strong>Chapter Type:</strong> Advanced | <strong>Difficulty:</strong> Graduate-level | <strong>Total Questions:</strong> 10</p>
+<p>This quiz assesses your understanding of when and how to make persist, pivot, and stop decisions in AI problem framing. Focus areas include signal recognition, decision thresholds, sunk cost fallacy awareness, and system-level reframes.</p>
+<hr />
+<h2 id="question-1-remember-decision-options">Question 1 (Remember) | Decision Options<a class="headerlink" href="#question-1-remember-decision-options" title="Permanent link">&para;</a></h2>
+<p>Your team has spent 6 weeks building a classification model to predict which customers will churn. Early performance metrics show 78% accuracy, but stakeholder feedback indicates the business needs 85% accuracy to act on predictions reliably.</p>
+<p><strong>What are the three core decision options your team faces at this point?</strong></p>
+<p>A) Build a more complex model, hire more data scientists, or abandon the project entirely
+B) Persist with optimization, pivot to a different approach, or stop the project
+C) Collect more data, improve feature engineering, or switch to a regression model
+D) Deploy immediately, wait for more data, or consult with executives</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> The three fundamental decision options in The Loop are:
+- <strong>Persist:</strong> Continue with the current problem frame and solution approach
+- <strong>Pivot:</strong> Change the problem frame, approach, or resource allocation
+- <strong>Stop:</strong> Abandon the current direction as unviable</p>
+<p>Options A and C confuse specific tactics with strategic decision choices. Option D conflates decision-making with stakeholder management.</p>
+<hr />
+<h2 id="question-2-remember-signal-recognition-definition">Question 2 (Remember) | Signal Recognition Definition<a class="headerlink" href="#question-2-remember-signal-recognition-definition" title="Permanent link">&para;</a></h2>
+<p>Which of the following best describes <strong>Signal Recognition</strong> in the context of pivot decisions?</p>
+<p>A) The ability to statistically detect anomalies in data streams
+B) The ability to identify early indicators that current strategy is working or needs to change
+C) The process of collecting metrics from production models
+D) The technique of filtering out noise from sensor data</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Signal recognition is the cognitive skill of identifying early indicators or patterns that suggest whether the current approach should continue (success signal) or change (kill signal). It's distinct from data anomaly detection or production monitoring, though those activities may feed signal recognition.</p>
+<hr />
+<h2 id="question-3-understand-sunk-cost-fallacy-in-decision-making">Question 3 (Understand) | Sunk Cost Fallacy in Decision-Making<a class="headerlink" href="#question-3-understand-sunk-cost-fallacy-in-decision-making" title="Permanent link">&para;</a></h2>
+<p>A team has invested 8 weeks and $120,000 in building an end-to-end ML pipeline for demand forecasting. During a sprint retrospective, they discover that a simple statistical baseline (which takes 2 hours to build) would achieve 89% of the pipeline's accuracy at a fraction of the cost.</p>
+<p><strong>What cognitive bias is most at play if the team decides to continue with the ML pipeline despite this discovery?</strong></p>
+<p>A) Confirmation bias—they only see evidence supporting their original approach
+B) Escalation of commitment—continuing to invest despite evidence the current path is suboptimal
+C) Hammer bias—they're overreliant on machine learning as a tool
+D) Anchoring bias—they're fixated on the original 8-week timeline</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Escalation of commitment describes the tendency to continue investing in a course of action despite evidence it is failing or suboptimal, driven by sunk costs and desire to avoid admitting past mistakes. The team has already "spent" the $120,000 and 8 weeks; the rational decision (pivot to the simpler approach) is emotionally difficult because it feels like acknowledging waste. This is the definition of sunk cost fallacy in action.</p>
+<hr />
+<h2 id="question-4-understand-decision-threshold-concept">Question 4 (Understand) | Decision Threshold Concept<a class="headerlink" href="#question-4-understand-decision-threshold-concept" title="Permanent link">&para;</a></h2>
+<p>You're building a model to identify patients at high risk for hospital readmission. Your model outputs a probability between 0 and 1. The hospital can only accommodate intensive follow-up interventions for 15% of patients due to resource constraints.</p>
+<p><strong>How does understanding Decision Threshold inform your pivot/persist decision?</strong></p>
+<p>A) It determines which algorithm (neural networks vs. random forest) you should use
+B) It establishes the boundary probability value used to convert continuous model outputs into actionable decisions
+C) It tells you how much data you need to collect
+D) It measures whether your training data is representative of production</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> A decision threshold is the boundary value that converts the model's continuous output (probability) into a discrete action (intervene or don't intervene). In this case, you'd set the threshold so that the top 15% of patients by risk score are targeted. If the model cannot distinguish patients sharply enough to enable meaningful action at that threshold, it becomes a signal to pivot away from prediction and toward other approaches.</p>
+<hr />
+<h2 id="question-5-apply-recognizing-a-pivot-signal">Question 5 (Apply) | Recognizing a Pivot Signal<a class="headerlink" href="#question-5-apply-recognizing-a-pivot-signal" title="Permanent link">&para;</a></h2>
+<p>A recommendation system has been in production for 6 months. Initial metrics showed a 12% increase in user engagement. However, you notice:
+- Engagement gains have plateaued for 8 weeks despite weekly model retraining
+- User satisfaction surveys show engagement is increasingly driven by novelty shock rather than genuine preference matches
+- A/B tests of competing recommendation strategies show no statistical difference</p>
+<p><strong>Which decision best reflects the signal your data is sending?</strong></p>
+<p>A) Persist—you should continue optimizing the model parameters to break through the plateau
+B) Pivot—the current frame (accuracy-driven recommendations) may not address why engagement is stalling
+C) Stop—recommendation systems cannot sustain engagement improvements over time
+D) Persist with more data—collect user feedback to improve the training signal</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> The plateau, lack of improvement despite effort, and user satisfaction data all suggest the current problem frame (predict what users will engage with) may not be addressing the underlying issue (sustained preference matching). A pivot might reframe the problem toward: diversity, serendipity, preference discovery, or longer-term satisfaction rather than immediate engagement. Continuing to optimize a fundamentally limited approach (Answer A) represents escalation of commitment.</p>
+<hr />
+<h2 id="question-6-apply-sunk-cost-vs-sound-decision">Question 6 (Apply) | Sunk Cost vs. Sound Decision<a class="headerlink" href="#question-6-apply-sunk-cost-vs-sound-decision" title="Permanent link">&para;</a></h2>
+<p>Your team built a sophisticated NLP pipeline for analyzing customer support tickets (3 months of work, high complexity). A new intern asks: "Why don't we just use the off-the-shelf sentiment analysis API? It's $500/month, handles our volume, and would save us massive maintenance overhead."</p>
+<p>Initial reaction from senior engineers: "We've already invested so much in our custom pipeline—we can't throw away all that work."</p>
+<p><strong>How should leadership evaluate this intern's suggestion?</strong></p>
+<p>A) Reject it outright—the sunk cost of 3 months of work justifies continuing with the pipeline
+B) Evaluate based on forward-looking factors (cost, accuracy, maintenance, time to deploy improvements) independent of past investment
+C) Implement a hybrid approach combining both systems to recoup the sunk investment
+D) Conduct a full rewrite of the custom pipeline to prove its superiority before considering alternatives</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Rational decision-making requires evaluating options based on <em>forward-looking</em> factors: future cost, performance, maintainability, and time to value. The 3 months already spent is a sunk cost—it doesn't change whether the intern's alternative is better going forward. Good leaders make this distinction explicit and protect teams from escalation of commitment bias by asking: "If we were starting today with this choice, which would we pick?" If the answer is the API, that's a strong pivot signal.</p>
+<hr />
+<h2 id="question-7-analyze-system-level-reframe-in-pivoting">Question 7 (Analyze) | System-Level Reframe in Pivoting<a class="headerlink" href="#question-7-analyze-system-level-reframe-in-pivoting" title="Permanent link">&para;</a></h2>
+<p>A bank built a model to detect fraudulent credit card transactions. The model achieves 95% accuracy but creates operational problems: legitimate transactions are blocked at high rates, customer frustration is mounting, and support costs are rising.</p>
+<p>Tactical pivots attempted:
+- Adjusted the decision threshold (still too many false positives)
+- Added new features to improve precision (marginal gains)
+- Switched to different algorithms (similar results)</p>
+<p><strong>Why might a System-Level Reframe be necessary here? Which reframe makes most sense?</strong></p>
+<p>A) The problem frame is still "identify fraud with high accuracy"—a System-Level Reframe might shift to "minimize fraud AND customer friction" or "balance fraud loss with operational cost"
+B) The system architecture is outdated and needs modernization
+C) The bank should build separate models for different customer segments
+D) The team needs to hire fraud domain experts to improve feature engineering</p>
+<p><strong>Correct Answer:</strong> A</p>
+<p><strong>Explanation:</strong> A system-level reframe changes the <em>boundaries, stakeholders, or goals</em> of the problem, not just the tactical approach. The team has been optimizing within a narrow frame (accuracy), but the system-level problem includes multiple competing objectives: fraud prevention, customer trust, operational efficiency, and business cost. Reframing to explicitly balance these creates room for new solutions—like risk-tiered interventions (high-confidence fraud blocks, medium-confidence challenges, low-confidence approvals), real-time customer contact, or fraud scoring without hard blocks.</p>
+<hr />
+<h2 id="question-8-analyze-multiple-pivot-types-decision">Question 8 (Analyze) | Multiple Pivot Types Decision<a class="headerlink" href="#question-8-analyze-multiple-pivot-types-decision" title="Permanent link">&para;</a></h2>
+<p>You're working on a churn prediction project where diagnosis revealed: "Customers leave because of unresolved support tickets, not product dissatisfaction."</p>
+<p>Your team is debating how to respond:
+- <strong>Person A:</strong> Pivot the Problem—move from predicting churn to solving support quality
+- <strong>Person B:</strong> Pivot the Approach—use the churn model but add support ticket features
+- <strong>Person C:</strong> Pivot the Tool—switch from ML classification to a rules-based support escalation system</p>
+<p><strong>Which pivot type(s) directly address the root cause you've identified?</strong></p>
+<p>A) Only Person A's Problem Pivot
+B) Person B's Approach Pivot alone addresses it best
+C) Persons A and C; pivoting the problem and/or tool aligns with the diagnosis
+D) All three pivots are equally valid responses</p>
+<p><strong>Correct Answer:</strong> C</p>
+<p><strong>Explanation:</strong>
+- <strong>Problem Pivot</strong> (Person A): Directly reframes from "predict churn" to "prevent unresolved tickets," addressing root cause
+- <strong>Approach Pivot</strong> (Person B): Optimizes the original frame rather than addressing the root cause—this is escalation of commitment
+- <strong>Tool Pivot</strong> (Person C): A rules-based escalation system might be more appropriate than ML classification for a deterministic support problem</p>
+<p>Either the problem or tool pivot (or both) align with your diagnosis. The approach pivot keeps you in the original frame.</p>
+<hr />
+<h2 id="question-9-analyze-evaluating-conflicting-signals">Question 9 (Analyze) | Evaluating Conflicting Signals<a class="headerlink" href="#question-9-analyze-evaluating-conflicting-signals" title="Permanent link">&para;</a></h2>
+<p>Your demand forecasting model is showing mixed signals:
+- Production accuracy has remained stable at 87% for 12 weeks
+- Stakeholders are increasingly frustrated that the model misses seasonal patterns (e.g., Black Friday spike)
+- A/B testing shows the model-driven inventory decisions outperform human judgment by 4% in waste reduction
+- The model is computationally expensive (requires 6 hours to retrain daily)
+- New competitors are using real-time pricing signals your model doesn't incorporate</p>
+<p><strong>How should you prioritize these conflicting signals when deciding persist/pivot/stop?</strong></p>
+<p>A) Persist because overall accuracy is stable and business impact is positive
+B) Stop because competitors have newer approaches
+C) Systematically weight signals by business impact and feasibility—the seasonal pattern misses and real-time data gaps may signal a pivot toward ensemble or hybrid approaches
+D) Pivot immediately without further analysis because 6 hours of computation is unacceptable</p>
+<p><strong>Correct Answer:</strong> C</p>
+<p><strong>Explanation:</strong> Real-world decisions involve conflicting signals. The framework asks you to:
+1. Weight signals by business impact (customer frustration from seasonal misses, competitive threat from missing real-time data)
+2. Assess feasibility of addressing each signal
+3. Determine if the current frame is sufficient or needs reframing</p>
+<p>The positive business impact argues for persistence in the core idea, but the unaddressed seasonal and real-time patterns suggest a pivot toward more sophisticated approaches (ensemble with seasonal models, real-time data integration) rather than stop.</p>
+<hr />
+<h2 id="question-10-evaluate-justifying-a-pivot-decision">Question 10 (Evaluate) | Justifying a Pivot Decision<a class="headerlink" href="#question-10-evaluate-justifying-a-pivot-decision" title="Permanent link">&para;</a></h2>
+<p>You're presenting a decision to pivot away from a supervised learning approach to churn prediction and instead adopt a system redesign focused on reducing the friction points causing churn (based on recent user research).</p>
+<p>A skeptical VP asks: "We spent $300K building the ML system. Why should we trust your diagnosis over the work we've already done?"</p>
+<p><strong>Which justification most directly addresses the VP's legitimate concern and demonstrates sound reasoning?</strong></p>
+<p>A) "The new approach will cost less and deploy faster, so the ROI will be better"
+B) "The user research identified root causes that the data alone cannot reveal; the ML model optimizes for a symptom (churn prediction) rather than the underlying problem (friction). We're pivoting because the problem frame itself was incomplete"
+C) "The old approach was based on flawed assumptions that your team didn't catch during initial design"
+D) "New machine learning techniques have become available that will definitely work better"</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> This answer demonstrates:
+- <strong>Clear problem reframing:</strong> Distinguishes between the symptom (churn events) and root cause (system friction)
+- <strong>Reasoning transparency:</strong> Explains why the original frame was incomplete, not attacking the team's competence
+- <strong>Forward-looking perspective:</strong> Focuses on what will actually solve the business problem, not on justifying past investment
+- <strong>Diagnostic confidence:</strong> Grounds the pivot in additional evidence (user research) that the original problem frame missed</p>
+<p>Answers A and D appeal to cost/novelty without addressing root cause. Answer C attacks the original team, creating defensiveness rather than alignment. Answer B invites the VP to understand why the pivot is necessary, converting skepticism into support.</p>
+<hr />
+<h2 id="answer-key-summary">Answer Key Summary<a class="headerlink" href="#answer-key-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Type</th>
+<th>Answer</th>
+<th>Concept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Remember</td>
+<td>B</td>
+<td>Decision Options (Persist/Pivot/Stop)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Remember</td>
+<td>B</td>
+<td>Signal Recognition</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Understand</td>
+<td>B</td>
+<td>Escalation of Commitment / Sunk Cost</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Understand</td>
+<td>B</td>
+<td>Decision Threshold</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Apply</td>
+<td>B</td>
+<td>Recognizing Pivot Signals</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Apply</td>
+<td>B</td>
+<td>Sunk Cost Fallacy in Decision-Making</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Analyze</td>
+<td>A</td>
+<td>System-Level Reframe</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Analyze</td>
+<td>C</td>
+<td>Pivot Types (Problem/Approach/Tool)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Analyze</td>
+<td>C</td>
+<td>Conflicting Signal Prioritization</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Evaluate</td>
+<td>B</td>
+<td>Justifying Pivot with Sound Reasoning</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="distribution-achieved">Distribution Achieved<a class="headerlink" href="#distribution-achieved" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Remember:</strong> 2 questions (20%)</li>
+<li><strong>Understand:</strong> 2 questions (20%)</li>
+<li><strong>Apply:</strong> 2 questions (20%)</li>
+<li><strong>Analyze:</strong> 3 questions (30%)</li>
+<li><strong>Evaluate:</strong> 1 question (10%)</li>
+<li><strong>Create:</strong> 0 questions (0%)</li>
+</ul>
+<p><strong>Total:</strong> 10 questions aligned to Advanced chapter requirements and core teaching focus areas.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Pivot">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                5. Pivot
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../06-application/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Application &amp; Case Studies">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. Application & Case Studies
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

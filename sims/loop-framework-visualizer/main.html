@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOP Framework Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+        #canvas-container {
+            flex: 1;
+            min-width: 400px;
+        }
+        #controls-panel {
+            width: 320px;
+            padding: 15px;
+            background: #fafafa;
+            border-left: 1px solid #ddd;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .step-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .step-dot.active {
+            background: #4A90D9;
+            color: white;
+        }
+        .step-dot.completed {
+            background: #5cb85c;
+            color: white;
+        }
+        .step-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .step-description {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            margin-bottom: 12px;
+        }
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .input-group input[type="text"],
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .input-group textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .item-list {
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .item-entry {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        .item-entry:last-child {
+            border-bottom: none;
+        }
+        .item-entry .remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 6px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+        .add-btn {
+            background: #4A90D9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 12px;
+            width: 100%;
+            margin-top: 5px;
+        }
+        .add-btn:hover {
+            background: #357abd;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .nav-btn.prev {
+            background: #6c757d;
+            color: white;
+        }
+        .nav-btn.next {
+            background: #5cb85c;
+            color: white;
+        }
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .priority-select {
+            width: 60px !important;
+            padding: 4px !important;
+        }
+        .tag-select {
+            width: 80px !important;
+            padding: 4px !important;
+        }
+        .inline-inputs {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        .inline-inputs input {
+            flex: 1;
+        }
+        /* Tradeoff axis labels */
+        .axis-config {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .axis-config input {
+            flex: 1;
+        }
+        /* Signal type indicator */
+        .signal-type {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .signal-type.success { background: #5cb85c; }
+        .signal-type.kill { background: #dc3545; }
+        .signal-type.leading { background: #f0ad4e; }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="canvas-container"></div>
+        <div id="controls-panel">
+            <!-- Step Indicator -->
+            <div class="step-indicator">
+                <div class="step-dot active" data-step="1">1</div>
+                <div class="step-dot" data-step="2">2</div>
+                <div class="step-dot" data-step="3">3</div>
+                <div class="step-dot" data-step="4">4</div>
+                <div class="step-dot" data-step="5">5</div>
+            </div>
+
+            <!-- Step 1: Outcome -->
+            <div id="step1-panel" class="step-panel">
+                <div class="step-title">Step 1: Outcome</div>
+                <div class="step-description">Define what success looks like. Be specific about the measurable outcome you're optimizing for.</div>
+
+                <div class="input-group">
+                    <label>Problem Statement</label>
+                    <textarea id="problemStatement" placeholder="Describe the problem you're trying to solve..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Desired Outcome</label>
+                    <textarea id="desiredOutcome" placeholder="What does success look like? Be specific and measurable..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Sample Problems</label>
+                    <select id="sampleProblems" onchange="loadSampleProblem()">
+                        <option value="">-- Select a sample --</option>
+                        <option value="customer-churn">Customer Churn Prediction</option>
+                        <option value="content-moderation">Content Moderation</option>
+                        <option value="inventory-optimization">Inventory Optimization</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 2: Deconstruction -->
+            <div id="step2-panel" class="step-panel" style="display:none;">
+                <div class="step-title">Step 2: Deconstruction</div>
+                <div class="step-description">Break down the problem into 3-5 key components. Assign priority levels (H/M/L).</div>
+
+                <div class="item-list" id="componentsList"></div>
+
+                <div class="inline-inputs">
+                    <input type="text" id="newComponent" placeholder="Add component...">
+                    <select class="priority-select" id="componentPriority">
+                        <option value="H">H</option>
+                        <option value="M" selected>M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+                <button class="add-btn" onclick="addComponent()">Add Component</button>
+            </div>
+
+            <!-- Step 3: Alternatives -->
+            <div id="step3-panel" class="step-panel" style="display:none;">
+                <div class="step-title">Step 3: Alternatives</div>
+                <div class="step-description">Generate 3-5 solution approaches. Tag each as AI, Non-AI, or Hybrid.</div>
+
+                <div class="item-list" id="alternativesList"></div>
+
+                <div class="inline-inputs">
+                    <input type="text" id="newAlternative" placeholder="Add alternative...">
+                    <select class="tag-select" id="alternativeTag">
+                        <option value="AI">AI</option>
+                        <option value="Non-AI">Non-AI</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <button class="add-btn" onclick="addAlternative()">Add Alternative</button>
+            </div>
+
+            <!-- Step 4: Trade-offs -->
+            <div id="step4-panel" class="step-panel" style="display:none;">
+                <div class="step-title">Step 4: Trade-offs</div>
+                <div class="step-description">Position alternatives on the 2x2 matrix. Drag points to adjust positions.</div>
+
+                <div class="axis-config">
+                    <div class="input-group" style="flex:1; margin-bottom:0;">
+                        <label>X-Axis</label>
+                        <input type="text" id="xAxisLabel" value="Effort" onchange="updateAxisLabels()">
+                    </div>
+                    <div class="input-group" style="flex:1; margin-bottom:0;">
+                        <label>Y-Axis</label>
+                        <input type="text" id="yAxisLabel" value="Impact" onchange="updateAxisLabels()">
+                    </div>
+                </div>
+
+                <div class="step-description" style="margin-top:10px;">
+                    Click an alternative below to select it, then click on the matrix to position it.
+                </div>
+
+                <div class="item-list" id="tradeoffsList"></div>
+            </div>
+
+            <!-- Step 5: Signals -->
+            <div id="step5-panel" class="step-panel" style="display:none;">
+                <div class="step-title">Step 5: Signals</div>
+                <div class="step-description">Define success metrics, kill criteria, and leading indicators with thresholds.</div>
+
+                <div class="item-list" id="signalsList"></div>
+
+                <div class="input-group">
+                    <label>Signal Name</label>
+                    <input type="text" id="signalName" placeholder="e.g., Customer Satisfaction Score">
+                </div>
+                <div class="inline-inputs">
+                    <select id="signalType" style="width:100px;">
+                        <option value="success">Success</option>
+                        <option value="kill">Kill</option>
+                        <option value="leading">Leading</option>
+                    </select>
+                    <input type="number" id="signalThreshold" placeholder="Threshold" style="width:80px;">
+                    <input type="text" id="signalUnit" placeholder="Unit" style="width:60px;">
+                </div>
+                <button class="add-btn" onclick="addSignal()">Add Signal</button>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevStep()" id="prevBtn" disabled>Previous</button>
+                <button class="nav-btn next" onclick="nextStep()" id="nextBtn">Next</button>
+            </div>
+        </div>
+    </main>
+    <script src="sketch.js"></script>
+</body>
+</html>

@@ -1,0 +1,3555 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/chapters/03-the-loop-framework/">
+      
+      
+        <link rel="prev" href="../02-ai-alternatives/quiz/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>3. The Loop Framework - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-the-loop-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. The Loop Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Loop: Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Loop: Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why "The Loop"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-five-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Five Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-canvases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Canvases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use The Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Outcome
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Outcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-idea-outcome-clarity-creates-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Idea: Outcome Clarity Creates Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-churn-metric-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Churn Metric Choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-outcome-definition-for-your-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try It: Outcome Definition for Your Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-deconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Deconstruction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Deconstruction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identifying-the-atomic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifying the Atomic Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-atomic-unit-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Atomic Unit Canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surfacing-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surfacing Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-surface-assumptions-early" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Surface Assumptions Early?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-deconstruct-your-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try It: Deconstruct Your Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Alternatives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Alternatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-alternatives-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the Alternatives Menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-churn-prediction-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Churn Prediction Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-invoice-processing-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Invoice Processing Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pre-flight-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Pre-Flight Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-generate-your-alternatives-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try It: Generate Your Alternatives Menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Trade-Offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Trade-Offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-trade-off-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Trade-Off Dimensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-trade-off-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Trade-Off Canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-churn-prediction-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Churn Prediction Trade-Offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-the-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making the Choice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-evaluate-your-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try It: Evaluate Your Trade-Offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kill Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leading-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leading Indicators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-signals-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Signals Canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-signals-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Signals Matter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-design-your-signal-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try It: Design Your Signal Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-churn-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Example: Churn Prediction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Example: Churn Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-outcome_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-deconstruction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Deconstruction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-alternatives_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-trade-offs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Trade-Offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-signals_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-invoice-processing-genai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Example: Invoice Processing (GenAI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Example: Invoice Processing (GenAI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-outcome_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-deconstruction_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Deconstruction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-alternatives_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-trade-offs_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Trade-Offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-signals_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-plan_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portfolio-project-apply-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portfolio Project: Apply The Loop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portfolio Project: Apply The Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliverable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-3-the-loop-framework">Chapter 3: The Loop Framework<a class="headerlink" href="#chapter-3-the-loop-framework" title="Permanent link">&para;</a></h1>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><strong>Apply</strong> the 5-step Loop framework systematically to any AI problem, from initial ambiguity to actionable implementation plan</li>
+<li><strong>Define</strong> outcome metrics that properly frame problems and distinguish between vanity metrics and meaningful business outcomes</li>
+<li><strong>Deconstruct</strong> complex problems into atomic units and surface hidden assumptions that constrain solution approaches</li>
+<li><strong>Generate</strong> comprehensive alternative menus by systematically mapping solution archetypes to problem characteristics</li>
+<li><strong>Evaluate</strong> trade-offs between alternatives across multiple dimensions including cost, latency, accuracy, interpretability, maintenance burden, and organizational fit</li>
+<li><strong>Design</strong> signal systems that enable early detection of success, failure, and leading indicators of project health</li>
+<li><strong>Synthesize</strong> complete problem framings that demonstrate systematic thinking from outcome clarity through signal-based decision making</li>
+</ol>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>In 1986, the Space Shuttle Challenger exploded 73 seconds after launch, killing all seven crew members. The Rogers Commission investigation revealed that engineers had identified O-ring vulnerability to cold temperatures but lacked a systematic framework for escalating concerns and making go/no-go decisions. NASA had checklist culture for technical operations but no equivalent framework for strategic decision-making under uncertainty.</p>
+<p>The tragedy illustrates a broader truth: humans are poor at systematic decision-making without explicit frameworks. We skip steps, follow intuition, succumb to pressure, and rationalize away warning signs. AI problem framing suffers from the same challenges. Teams jump from vague business objectives directly to implementation without systematic analysis. They choose solutions based on familiarity rather than fit. They miss early warning signals until projects are too far committed to pivot.</p>
+<p><strong>The Loop framework provides what NASA's pre-flight checklist provides for launches: a systematic, repeatable process that forces deliberate thinking at each critical decision point.</strong> You cannot skip steps. You must explicitly surface assumptions. You generate alternatives before committing. You define success and failure criteria upfront. You establish leading indicators that catch problems early.</p>
+<p>This chapter introduces The Loop—a five-step framework that transforms ambiguous business problems into actionable AI initiatives:</p>
+<ol>
+<li><strong>OUTCOME</strong>: Define the metric that operationalizes success</li>
+<li><strong>DECONSTRUCTION</strong>: Identify the atomic unit and surface assumptions</li>
+<li><strong>ALTERNATIVES</strong>: Build a comprehensive menu of solution approaches</li>
+<li><strong>TRADE-OFFS</strong>: Choose between alternatives using explicit criteria</li>
+<li><strong>SIGNALS</strong>: Define success indicators, kill signals, and leading metrics</li>
+</ol>
+<p>The Loop is not a one-time analysis. You cycle through it repeatedly as you learn from implementation. Initial outcome definitions get refined. Assumptions get validated or disproven. Alternatives get added or eliminated. Trade-off priorities shift with changing constraints. Signals get recalibrated based on what actually predicts success.</p>
+<p>Think of The Loop as a diagnostic and navigation tool. When projects feel stuck, working through The Loop reveals where the framing broke down. When stakeholders disagree, The Loop provides structured language for articulating differences. When new information arrives, The Loop helps you decide whether to persist, pivot, or stop.</p>
+<p>By the end of this chapter, you'll have applied The Loop to two complete case studies—one classic ML problem (churn prediction) and one GenAI application (invoice processing). You'll understand not just what The Loop is, but how to use it as a practical problem-solving tool in messy, real-world contexts.</p>
+<h2 id="the-loop-overview">The Loop: Overview<a class="headerlink" href="#the-loop-overview" title="Permanent link">&para;</a></h2>
+<p>The Loop framework consists of five interconnected steps, each building on the previous one:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OUTCOME → DECONSTRUCTION → ALTERNATIVES → TRADE-OFFS → SIGNALS
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ↑                                                        ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   ←←←←←←←←←←←←←← LEARN &amp; ITERATE ←←←←←←←←←←←←←←←←←←←←←←←←←←
+</code></pre></div>
+<h3 id="why-the-loop">Why "The Loop"?<a class="headerlink" href="#why-the-loop" title="Permanent link">&para;</a></h3>
+<p>The framework is called "The Loop" because it's cyclical, not linear. You don't execute steps 1-5 once and declare victory. Instead:</p>
+<ul>
+<li><strong>Initial framing</strong> is based on incomplete information and assumptions</li>
+<li><strong>Implementation</strong> generates new data about what works and what doesn't</li>
+<li><strong>Signals</strong> reveal whether your framing was correct or needs adjustment</li>
+<li><strong>Learning</strong> feeds back into refined outcome definitions, reconsidered assumptions, and updated alternatives</li>
+</ul>
+<p>The best AI teams cycle through The Loop quickly, using each iteration to test assumptions and refine understanding. Weak teams treat initial framing as gospel and ignore signals that contradict their original frame.</p>
+<h3 id="the-five-steps">The Five Steps<a class="headerlink" href="#the-five-steps" title="Permanent link">&para;</a></h3>
+<p><strong>Step 1: OUTCOME</strong> — The metric IS the frame. Choosing "reduce churn by 10%" versus "increase lifetime value by 20%" fundamentally changes what problem you're solving. This step forces explicit articulation of what success means, making disagreements visible before you commit resources.</p>
+<p><strong>Step 2: DECONSTRUCTION</strong> — Complex problems hide multiple sub-problems. This step breaks monolithic business objectives into atomic units (the smallest meaningful component) and surfaces hidden assumptions (the beliefs that, if false, invalidate your entire approach). Deconstruction reveals where your frame is fragile.</p>
+<p><strong>Step 3: ALTERNATIVES</strong> — Most teams converge on a single solution too quickly. This step forces generation of a comprehensive menu by systematically mapping solution archetypes to your problem characteristics. The goal is breadth before depth—creating options before committing.</p>
+<p><strong>Step 4: TRADE-OFFS</strong> — No solution dominates across all dimensions. This step makes trade-offs explicit: cost vs. accuracy, latency vs. personalization, interpretability vs. performance, organizational fit vs. technical elegance. Transparent trade-offs enable better decisions and clearer communication.</p>
+<p><strong>Step 5: SIGNALS</strong> — How will you know if you're succeeding, failing, or heading toward trouble? This step defines three types of signals: success indicators (we're on track), kill signals (we should stop), and leading indicators (early predictors of outcomes). Clear signals enable fast pivots before sunk costs become overwhelming.</p>
+<h3 id="the-canvases">The Canvases<a class="headerlink" href="#the-canvases" title="Permanent link">&para;</a></h3>
+<p>Throughout this chapter, you'll encounter four structured canvases that operationalize The Loop:</p>
+<ol>
+<li><strong>Atomic Unit Canvas</strong> — Helps identify the smallest meaningful problem component and associated assumptions</li>
+<li><strong>Pre-Flight Checklist</strong> — Ensures all critical framing questions are answered before implementation</li>
+<li><strong>Trade-off Canvas</strong> — Structures evaluation of alternatives across key dimensions</li>
+<li><strong>Signals Canvas</strong> — Documents success metrics, kill signals, and leading indicators</li>
+</ol>
+<p>These aren't bureaucratic paperwork—they're thinking tools. Filling them out forces explicit reasoning that reveals gaps in your framing. Teams that skip the canvases consistently miss important considerations.</p>
+<h3 id="how-to-use-the-loop">How to Use The Loop<a class="headerlink" href="#how-to-use-the-loop" title="Permanent link">&para;</a></h3>
+<p><strong>For new problems</strong>: Work through steps 1-5 sequentially, using canvases to document your reasoning. Share with stakeholders to surface disagreements early.</p>
+<p><strong>For in-flight projects</strong>: Use The Loop diagnostically. If a project feels stuck, work backward through the steps to find where framing broke down. Often the root cause is an invalid assumption (Step 2) or an unstated trade-off (Step 4).</p>
+<p><strong>For learning</strong>: After implementation, cycle back through The Loop with new data. Update your outcome definition, validate assumptions, reconsider alternatives, adjust trade-offs, and recalibrate signals. Each iteration makes your framing more robust.</p>
+<p>Let's examine each step in detail.</p>
+<hr />
+<h2 id="step-1-outcome">Step 1: Outcome<a class="headerlink" href="#step-1-outcome" title="Permanent link">&para;</a></h2>
+<p><strong>The outcome metric IS the problem frame.</strong> This is the most important insight in problem framing: different metrics imply fundamentally different problems, even when stakeholders use the same casual language.</p>
+<p>Consider "reduce customer churn." What does this actually mean?</p>
+<ul>
+<li><strong>Reduce churn rate by 10%</strong> → Focus on preventing departures across all customers</li>
+<li><strong>Reduce churn among high-value customers by 15%</strong> → Focus on a specific segment</li>
+<li><strong>Increase customer lifetime value by 20%</strong> → Focus on value, not just retention</li>
+<li><strong>Reduce time-to-churn after negative events by 30 days</strong> → Focus on recovery windows</li>
+<li><strong>Increase successful intervention rate from 20% to 40%</strong> → Focus on action effectiveness</li>
+</ul>
+<p>Each metric frames a different problem requiring different solutions. The first optimizes for broad retention. The second requires customer segmentation and prioritization. The third might accept higher churn if remaining customers spend more. The fourth focuses on detecting and responding to trigger events. The fifth evaluates intervention quality, not churn directly.</p>
+<p><strong>Most AI projects fail because teams never explicitly chose which outcome metric they're optimizing.</strong> Different stakeholders have different implicit metrics in mind. Engineers optimize for accuracy. Product managers optimize for adoption. Executives optimize for revenue impact. Without explicit alignment on THE metric, teams build technically sound systems that fail to deliver business value.</p>
+<h3 id="key-idea-outcome-clarity-creates-constraints">Key Idea: Outcome Clarity Creates Constraints<a class="headerlink" href="#key-idea-outcome-clarity-creates-constraints" title="Permanent link">&para;</a></h3>
+<p>A well-defined outcome metric constrains the solution space in productive ways:</p>
+<ul>
+<li><strong>Time horizon</strong>: "30-day churn prediction" implies different features and models than "12-month churn prediction"</li>
+<li><strong>Granularity</strong>: "Customer-level churn" differs from "subscription-level churn" when customers have multiple subscriptions</li>
+<li><strong>Actionability</strong>: "Predict churn 60 days early" differs from "predict churn probability" if you need lead time for interventions</li>
+<li><strong>Segments</strong>: "Reduce churn in enterprise customers" may require different approaches than "reduce churn in SMB customers"</li>
+</ul>
+<p>Vague outcomes ("improve customer retention") provide no constraints. Teams waste time building solutions that might not matter. Specific outcomes ("increase 90-day retention rate among enterprise customers from 75% to 82% within 6 months") immediately clarify what you're optimizing for, what the baseline is, what success means, and what timeframe matters.</p>
+<h3 id="example-churn-metric-choices">Example: Churn Metric Choices<a class="headerlink" href="#example-churn-metric-choices" title="Permanent link">&para;</a></h3>
+<p>Let's examine how different outcome metrics lead to different problem frames for a SaaS company:</p>
+<p><strong>Scenario A: Minimize overall churn rate</strong>
+- <strong>Metric</strong>: Reduce monthly churn from 5% to 4%
+- <strong>Implication</strong>: Optimize for breadth across all customer segments
+- <strong>Solution direction</strong>: Identify common churn patterns, broad retention campaigns
+- <strong>Data needs</strong>: Historical churn across all customers, shared characteristics
+- <strong>Success</strong>: Any customer retained counts equally</p>
+<p><strong>Scenario B: Maximize customer lifetime value</strong>
+- <strong>Metric</strong>: Increase average LTV from $1,200 to $1,500
+- <strong>Implication</strong>: High-value retention matters more than preventing all churn
+- <strong>Solution direction</strong>: Focus retention efforts on high-value or high-potential customers
+- <strong>Data needs</strong>: Revenue data, growth trajectories, segment profitability
+- <strong>Success</strong>: Losing low-value customers may be acceptable if high-value customers stay</p>
+<p><strong>Scenario C: Reduce preventable churn</strong>
+- <strong>Metric</strong>: Increase save rate for at-risk customers from 20% to 35%
+- <strong>Implication</strong>: Focus on customers where intervention can make a difference
+- <strong>Solution direction</strong>: Identify actionable signals, optimize intervention effectiveness
+- <strong>Data needs</strong>: Historical intervention attempts and outcomes, trigger events
+- <strong>Success</strong>: Not all churn is preventable—optimize for cases where you have leverage</p>
+<p><strong>Scenario D: Extend customer engagement window</strong>
+- <strong>Metric</strong>: Increase median time-to-churn from 8 months to 11 months
+- <strong>Implication</strong>: Focus on onboarding, habit formation, value realization
+- <strong>Solution direction</strong>: Identify and accelerate paths to product-market fit
+- <strong>Data needs</strong>: Engagement patterns, feature adoption, time-series behavior
+- <strong>Success</strong>: Customers who eventually churn but stay longer still count as wins</p>
+<p>Each metric implies different features, different models, different interventions, and different definitions of success. <strong>Choosing the wrong metric means solving the wrong problem—no amount of technical excellence compensates.</strong></p>
+<h3 id="try-it-outcome-definition-for-your-problem">Try It: Outcome Definition for Your Problem<a class="headerlink" href="#try-it-outcome-definition-for-your-problem" title="Permanent link">&para;</a></h3>
+<p>Before moving forward, apply outcome thinking to a problem you're facing:</p>
+<ol>
+<li><strong>State the vague business objective</strong> (e.g., "improve customer satisfaction")</li>
+<li><strong>Generate 4-5 specific outcome metrics</strong> that could operationalize this objective</li>
+<li><strong>For each metric, articulate</strong>:</li>
+<li>What behavior or result it optimizes for</li>
+<li>What constraints it implies (time horizon, granularity, segments)</li>
+<li>What trade-offs it accepts (what it's willing to sacrifice)</li>
+<li><strong>Choose one metric and justify</strong> why it's the right frame for your context</li>
+</ol>
+<p>This exercise reveals how much interpretation lies hidden in casual business language. Make these interpretations explicit before choosing solutions.</p>
+<hr />
+<h2 id="step-2-deconstruction">Step 2: Deconstruction<a class="headerlink" href="#step-2-deconstruction" title="Permanent link">&para;</a></h2>
+<p>Once you've defined the outcome, the next step is <strong>problem deconstruction</strong>—breaking the complex business problem into its atomic parts and surfacing the assumptions that hold your frame together.</p>
+<p>Deconstruction serves three purposes:</p>
+<ol>
+<li><strong>Reveals hidden complexity</strong>: What seems like one problem is often multiple interrelated problems</li>
+<li><strong>Identifies the atomic unit</strong>: The smallest meaningful component you can diagnose, solve, or measure</li>
+<li><strong>Surfaces assumptions</strong>: The beliefs that, if false, invalidate your approach</li>
+</ol>
+<h3 id="identifying-the-atomic-unit">Identifying the Atomic Unit<a class="headerlink" href="#identifying-the-atomic-unit" title="Permanent link">&para;</a></h3>
+<p>The <strong>atomic unit</strong> is the smallest independently meaningful component of your problem. Getting granularity right is critical—too coarse and you miss important patterns, too fine and you drown in noise.</p>
+<p><strong>Example: Invoice Processing</strong></p>
+<p>Consider an AI system that processes invoices:</p>
+<ul>
+<li><strong>Too coarse</strong>: "Process invoice" — You can't diagnose problems at invoice level because some line items may be correct while others fail</li>
+<li><strong>Just right</strong>: "Process line item" — Each line item can be extracted, validated, and categorized independently</li>
+<li><strong>Too fine</strong>: "Process individual character" — Character-level analysis misses the semantic meaning of fields</li>
+</ul>
+<p>The atomic unit determines:
+- <strong>What you measure</strong>: Line-item accuracy vs. invoice-level accuracy
+- <strong>Where you diagnose problems</strong>: Which types of line items cause errors?
+- <strong>How you iterate</strong>: Fix line-item extraction vs. reprocess entire invoices</p>
+<p><strong>Example: Churn Prediction</strong></p>
+<p>Consider a subscription service with multiple products:</p>
+<ul>
+<li><strong>Too coarse</strong>: "Customer churns" — Misses that customers might drop one subscription but keep others</li>
+<li><strong>Just right</strong>: "Subscription cancellation" — Each subscription has independent churn risk</li>
+<li><strong>Too fine</strong>: "Feature usage session" — Individual sessions don't directly determine churn</li>
+</ul>
+<p>Choosing "subscription" as the atomic unit means:
+- Predicting churn per subscription, not per customer
+- Analyzing subscription-level engagement and value
+- Recognizing that customers with multiple subscriptions have complex retention dynamics</p>
+<h3 id="the-atomic-unit-canvas">The Atomic Unit Canvas<a class="headerlink" href="#the-atomic-unit-canvas" title="Permanent link">&para;</a></h3>
+<p>Use this canvas to identify your atomic unit:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Your Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is the business outcome we're optimizing?</td>
+<td></td>
+</tr>
+<tr>
+<td>What is the largest unit we could analyze?</td>
+<td></td>
+</tr>
+<tr>
+<td>What is the smallest unit we could analyze?</td>
+<td></td>
+</tr>
+<tr>
+<td>At what granularity can we independently diagnose problems?</td>
+<td></td>
+</tr>
+<tr>
+<td>At what granularity do we take actions?</td>
+<td></td>
+</tr>
+<tr>
+<td>At what granularity do we measure success?</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>What is our atomic unit?</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="surfacing-assumptions">Surfacing Assumptions<a class="headerlink" href="#surfacing-assumptions" title="Permanent link">&para;</a></h3>
+<p>Every problem frame rests on assumptions—beliefs about how the world works that, if false, invalidate your entire approach. The problem is that assumptions are usually implicit. Teams don't articulate them until something breaks.</p>
+<p><strong>Types of critical assumptions:</strong></p>
+<ol>
+<li><strong>Data assumptions</strong>: "Historical patterns predict future behavior"</li>
+<li><strong>Causal assumptions</strong>: "Feature X causes outcome Y"</li>
+<li><strong>Stability assumptions</strong>: "The environment won't change significantly"</li>
+<li><strong>Capacity assumptions</strong>: "We have resources to implement this solution"</li>
+<li><strong>Adoption assumptions</strong>: "Users will engage with our intervention"</li>
+<li><strong>Measurement assumptions</strong>: "We can accurately measure the outcome"</li>
+</ol>
+<p><strong>Example: Churn Prediction Assumptions</strong></p>
+<p>For a subscription churn prediction system:</p>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>If false, then...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Historical churn patterns predict future churn</td>
+<td>Model becomes unreliable when market conditions change</td>
+</tr>
+<tr>
+<td>We can detect churn risk 30+ days in advance</td>
+<td>We lack time for effective interventions</td>
+</tr>
+<tr>
+<td>Retention interventions influence churn decisions</td>
+<td>We're just predicting inevitable outcomes</td>
+</tr>
+<tr>
+<td>Users who reduce engagement are at higher risk</td>
+<td>Power users taking breaks get incorrectly targeted</td>
+</tr>
+<tr>
+<td>Churn is primarily driven by product experience</td>
+<td>External factors (budget cuts, competitors) dominate</td>
+</tr>
+<tr>
+<td>We have capacity to intervene on 10% of customers</td>
+<td>System generates more leads than we can handle</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: Invoice Processing Assumptions</strong></p>
+<p>For an automated invoice processing system:</p>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>If false, then...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invoices follow consistent formatting patterns</td>
+<td>Extraction model fails on non-standard formats</td>
+</tr>
+<tr>
+<td>Line items contain sufficient context for categorization</td>
+<td>Ambiguous items require human judgment</td>
+</tr>
+<tr>
+<td>Vendors provide accurate information</td>
+<td>Extraction accuracy doesn't guarantee correctness</td>
+</tr>
+<tr>
+<td>Processing errors can be detected automatically</td>
+<td>Bad data enters system without flags</td>
+</tr>
+<tr>
+<td>Cost savings justify accuracy trade-offs</td>
+<td>Manual verification overhead exceeds automation benefit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-surface-assumptions-early">Why Surface Assumptions Early?<a class="headerlink" href="#why-surface-assumptions-early" title="Permanent link">&para;</a></h3>
+<p>Articulating assumptions upfront provides three benefits:</p>
+<ol>
+<li><strong>Risk identification</strong>: You can evaluate which assumptions are fragile and might break</li>
+<li><strong>Validation planning</strong>: You can design tests or experiments to validate critical assumptions</li>
+<li><strong>Monitoring strategy</strong>: You can track metrics that indicate when assumptions break</li>
+</ol>
+<p>Teams that skip assumption identification learn about invalid assumptions only after expensive failures. Teams that surface assumptions early can test them cheaply and pivot before overcommitting.</p>
+<h3 id="try-it-deconstruct-your-problem">Try It: Deconstruct Your Problem<a class="headerlink" href="#try-it-deconstruct-your-problem" title="Permanent link">&para;</a></h3>
+<p>For the problem you're working on:</p>
+<ol>
+<li><strong>Identify three possible atomic units</strong> (coarse, just right, fine)</li>
+<li><strong>Evaluate each</strong> based on: Can you diagnose problems at this level? Can you measure success at this level? Does it match how you'll take actions?</li>
+<li><strong>Choose your atomic unit</strong> and justify the choice</li>
+<li><strong>List 5-7 critical assumptions</strong> your problem frame relies on</li>
+<li><strong>For each assumption</strong>, describe what breaks if it's false</li>
+<li><strong>Identify which assumptions are most fragile</strong> and need early validation</li>
+</ol>
+<p>This exercise transforms implicit thinking into explicit analysis. When projects fail, root causes often trace back to invalid assumptions that were never articulated.</p>
+<hr />
+<h2 id="step-3-alternatives">Step 3: Alternatives<a class="headerlink" href="#step-3-alternatives" title="Permanent link">&para;</a></h2>
+<p>Most teams suffer from premature convergence—they identify one solution approach and immediately move to implementation without considering alternatives. This happens because:</p>
+<ul>
+<li><strong>Familiarity bias</strong>: We choose solutions we've used before</li>
+<li><strong>Hammer bias</strong>: We apply our favorite tool to every problem</li>
+<li><strong>Authority bias</strong>: We defer to the loudest voice in the room</li>
+<li><strong>Effort aversion</strong>: Generating alternatives feels like wasted work when we "already know" the answer</li>
+</ul>
+<p>The problem is that your first idea is rarely your best idea. Systematically generating alternatives:</p>
+<ul>
+<li><strong>Reveals better solutions</strong> you wouldn't have considered</li>
+<li><strong>Clarifies trade-offs</strong> by providing explicit comparison points</li>
+<li><strong>Reduces regret</strong> by ensuring you explored the option space</li>
+<li><strong>Enables pivots</strong> by maintaining awareness of other paths</li>
+</ul>
+<h3 id="building-the-alternatives-menu">Building the Alternatives Menu<a class="headerlink" href="#building-the-alternatives-menu" title="Permanent link">&para;</a></h3>
+<p>The goal of Step 3 is to create a <strong>comprehensive menu of solution approaches</strong> before committing to any single path. Think of this as expanding the solution space before narrowing it.</p>
+<p>Use the solution archetypes from Chapter 2 as a systematic prompt:</p>
+<ol>
+<li><strong>Rule-based approaches</strong>: Could explicit logic solve this?</li>
+<li><strong>Classical ML</strong>: Regression, classification, clustering, forecasting?</li>
+<li><strong>Retrieval systems</strong>: RAG, semantic search, vector databases?</li>
+<li><strong>Fine-tuned models</strong>: Adapt pre-trained models to domain-specific data?</li>
+<li><strong>Prompt engineering</strong>: Achieve behavior through instructions alone?</li>
+<li><strong>Agents</strong>: Multi-step reasoning and tool use?</li>
+<li><strong>RLHF</strong>: Learn from human preference feedback?</li>
+<li><strong>Hybrid systems</strong>: Combine multiple approaches?</li>
+</ol>
+<p>For each archetype, ask: "Could this work? What would it require? What are the trade-offs?"</p>
+<h3 id="example-churn-prediction-alternatives">Example: Churn Prediction Alternatives<a class="headerlink" href="#example-churn-prediction-alternatives" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: Predict which customers will churn within 30 days</p>
+<p><strong>Alternative 1: Rule-based scoring</strong>
+- Assign points for negative signals (support tickets, declining usage, payment failures)
+- Flag customers above threshold as high-risk
+- <strong>Pros</strong>: Interpretable, easy to implement, no training data needed
+- <strong>Cons</strong>: Doesn't capture complex patterns, requires manual rule tuning</p>
+<p><strong>Alternative 2: Logistic regression</strong>
+- Train model on historical churn with engagement features
+- Predict churn probability for each customer
+- <strong>Pros</strong>: Interpretable coefficients, well-understood, fast inference
+- <strong>Cons</strong>: Assumes linear relationships, limited feature interactions</p>
+<p><strong>Alternative 3: Gradient boosted trees (XGBoost)</strong>
+- Train ensemble model on rich feature set
+- Capture non-linear patterns and interactions
+- <strong>Pros</strong>: High accuracy, handles mixed data types, less feature engineering
+- <strong>Cons</strong>: Less interpretable, requires more data, longer training time</p>
+<p><strong>Alternative 4: Survival analysis</strong>
+- Model time-to-churn rather than binary outcome
+- Predict churn hazard over time
+- <strong>Pros</strong>: Captures temporal dynamics, predicts when not just if
+- <strong>Cons</strong>: More complex to implement, requires time-series features</p>
+<p><strong>Alternative 5: Clustering + classification</strong>
+- First cluster customers by behavior
+- Train separate classifiers per cluster
+- <strong>Pros</strong>: Captures segment-specific patterns, interpretable segments
+- <strong>Cons</strong>: More complex pipeline, requires sufficient data per cluster</p>
+<p><strong>Alternative 6: Deep learning (neural network)</strong>
+- Train neural network on raw interaction sequences
+- Learn representations automatically
+- <strong>Pros</strong>: Minimal feature engineering, captures complex patterns
+- <strong>Cons</strong>: Data-hungry, hard to interpret, longer training time</p>
+<p>Notice that the alternatives span:
+- <strong>Complexity</strong>: Rule-based → logistic regression → gradient boosting → neural networks
+- <strong>Interpretability</strong>: Rule-based (high) → neural networks (low)
+- <strong>Data requirements</strong>: Rule-based (low) → deep learning (high)
+- <strong>Development effort</strong>: Rule-based (low) → hybrid systems (high)</p>
+<h3 id="example-invoice-processing-alternatives">Example: Invoice Processing Alternatives<a class="headerlink" href="#example-invoice-processing-alternatives" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: Automatically extract and categorize line items from invoices</p>
+<p><strong>Alternative 1: Template matching</strong>
+- Define templates for common invoice formats
+- Extract fields based on position and patterns
+- <strong>Pros</strong>: Fast, deterministic, works well for consistent formats
+- <strong>Cons</strong>: Brittle to format changes, requires template maintenance</p>
+<p><strong>Alternative 2: OCR + rule-based extraction</strong>
+- Use OCR to extract text
+- Apply regex and heuristics to identify fields
+- <strong>Pros</strong>: Handles multiple formats, explainable, quick to implement
+- <strong>Cons</strong>: Requires extensive rule tuning, fails on edge cases</p>
+<p><strong>Alternative 3: Fine-tuned document extraction model</strong>
+- Fine-tune LayoutLM or similar on labeled invoices
+- Extract structured data from document images
+- <strong>Pros</strong>: Handles format variation, learns from examples
+- <strong>Cons</strong>: Requires labeled training data, longer development time</p>
+<p><strong>Alternative 4: GPT-4 with prompt engineering</strong>
+- Extract text via OCR, pass to GPT-4 with structured prompt
+- Request JSON output with required fields
+- <strong>Pros</strong>: Minimal training data, flexible, handles edge cases
+- <strong>Cons</strong>: Per-invoice API cost, latency, less predictable</p>
+<p><strong>Alternative 5: Multimodal LLM (GPT-4 Vision)</strong>
+- Pass invoice image directly to multimodal model
+- Extract structured data from visual layout
+- <strong>Pros</strong>: No separate OCR step, handles complex layouts
+- <strong>Cons</strong>: Higher API cost, newer technology, less mature tooling</p>
+<p><strong>Alternative 6: Hybrid: extraction model + LLM verification</strong>
+- Use fine-tuned model for extraction
+- Use LLM to validate and correct errors
+- <strong>Pros</strong>: Balances cost/accuracy, handles edge cases gracefully
+- <strong>Cons</strong>: More complex pipeline, requires orchestration</p>
+<h3 id="the-pre-flight-checklist">The Pre-Flight Checklist<a class="headerlink" href="#the-pre-flight-checklist" title="Permanent link">&para;</a></h3>
+<p>Before committing to implementation, use this checklist to ensure you've adequately explored alternatives:</p>
+<ul>
+<li>[ ] Have we identified at least 3-5 distinct solution approaches?</li>
+<li>[ ] Have we considered both simple and complex alternatives?</li>
+<li>[ ] Have we included at least one non-ML approach as a baseline?</li>
+<li>[ ] Have we articulated pros/cons for each alternative?</li>
+<li>[ ] Have we estimated data, cost, and development effort for each?</li>
+<li>[ ] Have we identified which assumptions each alternative requires?</li>
+<li>[ ] Have we consulted domain experts about feasibility?</li>
+<li>[ ] Have we checked whether similar problems have been solved before?</li>
+<li>[ ] Have we resisted the urge to prematurely eliminate options?</li>
+</ul>
+<p>If you answered "no" to any of these, your alternatives menu may be incomplete.</p>
+<h3 id="try-it-generate-your-alternatives-menu">Try It: Generate Your Alternatives Menu<a class="headerlink" href="#try-it-generate-your-alternatives-menu" title="Permanent link">&para;</a></h3>
+<p>For your problem:</p>
+<ol>
+<li><strong>State your outcome and atomic unit</strong> from Steps 1-2</li>
+<li><strong>Generate 5+ solution alternatives</strong> using the archetypes as prompts</li>
+<li><strong>For each alternative, document</strong>:</li>
+<li>Brief description of approach</li>
+<li>Key pros (what it does well)</li>
+<li>Key cons (what it struggles with)</li>
+<li>Data requirements</li>
+<li>Development effort estimate (low/medium/high)</li>
+<li><strong>Ensure your menu includes</strong>:</li>
+<li>At least one simple baseline (rules, heuristics)</li>
+<li>At least one classical ML approach</li>
+<li>At least one GenAI approach (if applicable)</li>
+<li>At least one hybrid option</li>
+</ol>
+<p>The goal is breadth, not depth. You're creating options, not building detailed implementation plans yet.</p>
+<hr />
+<h2 id="step-4-trade-offs">Step 4: Trade-Offs<a class="headerlink" href="#step-4-trade-offs" title="Permanent link">&para;</a></h2>
+<p>You've defined your outcome (Step 1), deconstructed the problem (Step 2), and generated alternatives (Step 3). Now comes the hard part: <strong>choosing which alternative to pursue.</strong></p>
+<p>There is no solution that dominates across all dimensions. Every choice involves trade-offs:</p>
+<ul>
+<li>High accuracy may require expensive infrastructure</li>
+<li>Low latency may sacrifice personalization</li>
+<li>Interpretability may limit model complexity</li>
+<li>Organizational fit may constrain technical options</li>
+</ul>
+<p><strong>The goal of Step 4 is to make these trade-offs explicit and transparent.</strong> When trade-offs are implicit, teams argue past each other—engineers advocate for technical elegance while business stakeholders prioritize speed to market. When trade-offs are explicit, disagreements become productive conversations about priorities.</p>
+<h3 id="key-trade-off-dimensions">Key Trade-Off Dimensions<a class="headerlink" href="#key-trade-off-dimensions" title="Permanent link">&para;</a></h3>
+<p>Most AI solution choices involve trade-offs across these dimensions:</p>
+<p><strong>1. Accuracy vs. Cost</strong>
+- High-accuracy models often require more compute, data, or engineering effort
+- Example: GPT-4 offers better accuracy than GPT-3.5 but costs 10-20x more per request</p>
+<p><strong>2. Latency vs. Accuracy</strong>
+- Complex models that improve accuracy often increase inference time
+- Example: Large ensemble models achieve 2% better accuracy but take 500ms vs. 50ms</p>
+<p><strong>3. Interpretability vs. Performance</strong>
+- Simpler models (logistic regression, decision trees) are easier to explain
+- Complex models (deep learning, large ensembles) often perform better but are opaque
+- Example: Logistic regression provides coefficient interpretations but gradient boosting achieves higher accuracy</p>
+<p><strong>4. Development Speed vs. Long-term Maintainability</strong>
+- Quick-and-dirty solutions ship faster but create technical debt
+- Robust architectures take longer to build but are easier to maintain
+- Example: Hardcoded prompts deploy in days but become unmaintainable spaghetti code</p>
+<p><strong>5. Automation vs. Human Oversight</strong>
+- Fully automated systems scale better but can fail silently
+- Human-in-the-loop systems catch errors but limit throughput
+- Example: Auto-approve 80% of invoices vs. require human review for all</p>
+<p><strong>6. Generalization vs. Specialization</strong>
+- General solutions work across contexts but may underperform in specific cases
+- Specialized solutions excel in narrow domains but require separate systems
+- Example: One model for all customer segments vs. segment-specific models</p>
+<p><strong>7. Data Requirements vs. Development Timeline</strong>
+- Data-hungry approaches (fine-tuning, deep learning) require collection and labeling
+- Few-shot approaches (prompt engineering) work with minimal data
+- Example: Fine-tuning requires 1000+ labeled examples and weeks of effort vs. prompt engineering works with 5-10 examples and days of iteration</p>
+<p><strong>8. Organizational Fit vs. Technical Optimality</strong>
+- The technically best solution may not fit organizational constraints
+- Example: State-of-the-art deep learning may be infeasible if team lacks ML expertise</p>
+<h3 id="the-trade-off-canvas">The Trade-Off Canvas<a class="headerlink" href="#the-trade-off-canvas" title="Permanent link">&para;</a></h3>
+<p>Use this canvas to evaluate alternatives systematically:</p>
+<table>
+<thead>
+<tr>
+<th>Alternative</th>
+<th>Accuracy</th>
+<th>Cost</th>
+<th>Latency</th>
+<th>Interpret.</th>
+<th>Dev Effort</th>
+<th>Maintenance</th>
+<th>Org Fit</th>
+<th>Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Option 1</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td></td>
+</tr>
+<tr>
+<td>Option 2</td>
+<td>★★★★☆</td>
+<td>★★☆☆☆</td>
+<td>★★★☆☆</td>
+<td>★★☆☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+<td></td>
+</tr>
+<tr>
+<td>Option 3</td>
+<td>★★★★★</td>
+<td>★☆☆☆☆</td>
+<td>★★☆☆☆</td>
+<td>★☆☆☆☆</td>
+<td>★★☆☆☆</td>
+<td>★★☆☆☆</td>
+<td>★★☆☆☆</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>For each dimension, rate each alternative on a 1-5 star scale. More stars = better performance on that dimension.</p>
+<h3 id="example-churn-prediction-trade-offs">Example: Churn Prediction Trade-Offs<a class="headerlink" href="#example-churn-prediction-trade-offs" title="Permanent link">&para;</a></h3>
+<p>Let's evaluate three alternatives for churn prediction:</p>
+<p><strong>Alternative A: Rule-based scoring</strong>
+- <strong>Accuracy</strong>: ★★★☆☆ — Captures obvious patterns but misses complex signals
+- <strong>Cost</strong>: ★★★★★ — No infrastructure, minimal compute
+- <strong>Latency</strong>: ★★★★★ — Near-instant scoring
+- <strong>Interpretability</strong>: ★★★★★ — Every rule is explicit
+- <strong>Dev Effort</strong>: ★★★★★ — Can build in days
+- <strong>Maintenance</strong>: ★★★★☆ — Rules need occasional tuning
+- <strong>Org Fit</strong>: ★★★★★ — Business stakeholders can understand and trust</p>
+<p><strong>Alternative B: Gradient boosted trees (XGBoost)</strong>
+- <strong>Accuracy</strong>: ★★★★★ — Captures non-linear patterns and interactions
+- <strong>Cost</strong>: ★★★★☆ — Moderate compute for training/inference
+- <strong>Latency</strong>: ★★★★☆ — Fast inference (10-50ms)
+- <strong>Interpretability</strong>: ★★★☆☆ — SHAP values provide some insight
+- <strong>Dev Effort</strong>: ★★★☆☆ — Requires feature engineering, model tuning
+- <strong>Maintenance</strong>: ★★★☆☆ — Needs retraining as patterns shift
+- <strong>Org Fit</strong>: ★★★★☆ — Team has ML experience</p>
+<p><strong>Alternative C: Deep neural network</strong>
+- <strong>Accuracy</strong>: ★★★★★ — Can capture complex temporal patterns
+- <strong>Cost</strong>: ★★☆☆☆ — GPU training, larger infrastructure
+- <strong>Latency</strong>: ★★★☆☆ — Reasonable inference (50-100ms)
+- <strong>Interpretability</strong>: ★★☆☆☆ — Black box, limited explainability
+- <strong>Dev Effort</strong>: ★★☆☆☆ — Requires more data, longer training
+- <strong>Maintenance</strong>: ★★☆☆☆ — Complex training pipeline
+- <strong>Org Fit</strong>: ★★☆☆☆ — Team has limited deep learning expertise</p>
+<h3 id="making-the-choice">Making the Choice<a class="headerlink" href="#making-the-choice" title="Permanent link">&para;</a></h3>
+<p>Trade-off analysis doesn't provide a single "correct" answer—it makes priorities explicit so stakeholders can make informed decisions.</p>
+<p><strong>Scenario 1: Early-stage startup, limited resources</strong>
+- <strong>Choose</strong>: Rule-based scoring (Alternative A)
+- <strong>Rationale</strong>: Speed to market matters most; team can iterate quickly; interpretability helps build stakeholder trust; minimal resource requirements</p>
+<p><strong>Scenario 2: Established company, data available, accuracy critical</strong>
+- <strong>Choose</strong>: Gradient boosted trees (Alternative B)
+- <strong>Rationale</strong>: Strong accuracy without excessive complexity; team has ML expertise; reasonable cost/latency trade-off; some interpretability preserved</p>
+<p><strong>Scenario 3: Tech giant, large ML team, accuracy is competitive differentiator</strong>
+- <strong>Choose</strong>: Deep neural network (Alternative C)
+- <strong>Rationale</strong>: Accuracy improvement justifies cost/complexity; team has deep learning expertise; infrastructure exists; can invest in explainability tooling</p>
+<p>Notice that context determines the "right" choice. There's no universally best solution—only solutions that fit your constraints, capabilities, and priorities.</p>
+<h3 id="try-it-evaluate-your-trade-offs">Try It: Evaluate Your Trade-Offs<a class="headerlink" href="#try-it-evaluate-your-trade-offs" title="Permanent link">&para;</a></h3>
+<p>For your problem and alternatives:</p>
+<ol>
+<li><strong>Identify the 5-7 dimensions</strong> most important for your context</li>
+<li><strong>Rate each alternative</strong> on each dimension (1-5 stars or similar scale)</li>
+<li><strong>Identify dominant trade-offs</strong>: Which dimensions conflict most?</li>
+<li><strong>Consider your context</strong>: What constraints, capabilities, and priorities matter?</li>
+<li><strong>Make a recommendation</strong>: Which alternative best fits your trade-offs?</li>
+<li><strong>Document your reasoning</strong>: Why is this the right choice given your context?</li>
+</ol>
+<p>The goal isn't to find a perfect solution—it's to make a well-reasoned choice you can justify and revisit as circumstances change.</p>
+<hr />
+<h2 id="step-5-signals">Step 5: Signals<a class="headerlink" href="#step-5-signals" title="Permanent link">&para;</a></h2>
+<p>You've chosen a solution approach. Now comes the critical question: <strong>How will you know if it's working?</strong></p>
+<p>Most teams define success vaguely ("improve customer retention") or focus solely on model metrics ("achieve 85% accuracy"). The problem is that model performance doesn't guarantee business impact, and by the time business metrics move, you've lost months to a failing approach.</p>
+<p><strong>Step 5 defines three types of signals that enable early course correction:</strong></p>
+<ol>
+<li><strong>Success signals</strong>: Observable indicators that the solution is delivering value</li>
+<li><strong>Kill signals</strong>: Observable indicators that the solution is fundamentally broken</li>
+<li><strong>Leading indicators</strong>: Early predictors of success or failure, measured before final outcomes</li>
+</ol>
+<p>Think of signals as an early warning system. Good signals let you detect problems when pivoting is cheap, not after you've overcommitted resources.</p>
+<h3 id="success-signals">Success Signals<a class="headerlink" href="#success-signals" title="Permanent link">&para;</a></h3>
+<p>Success signals tell you when to persist and expand. They should be:</p>
+<ul>
+<li><strong>Observable</strong>: You can measure them with available data</li>
+<li><strong>Timely</strong>: You can detect them reasonably early</li>
+<li><strong>Actionable</strong>: They inform specific decisions</li>
+<li><strong>Aligned</strong>: They predict business outcomes, not just technical metrics</li>
+</ul>
+<p><strong>Example: Churn Prediction Success Signals</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retention interventions save 30%+ of targeted customers</td>
+<td>Measured monthly</td>
+<td>Model identifies actionable churn risk</td>
+</tr>
+<tr>
+<td>Sales team adoption exceeds 70%</td>
+<td>Measured after 2 months</td>
+<td>Solution fits workflow</td>
+</tr>
+<tr>
+<td>Cost per saved customer &lt; $200</td>
+<td>Measured monthly</td>
+<td>Economics are favorable</td>
+</tr>
+<tr>
+<td>Model predictions align with sales intuition 80%+ of time</td>
+<td>Measured via spot checks</td>
+<td>Model is trustworthy</td>
+</tr>
+</tbody>
+</table>
+<p>Notice these signals combine:
+- <strong>Business metrics</strong> (retention rate improvement, cost per save)
+- <strong>Adoption metrics</strong> (team usage, workflow integration)
+- <strong>Trust metrics</strong> (alignment with human judgment)</p>
+<p><strong>Example: Invoice Processing Success Signals</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extraction accuracy exceeds 95% on validation set</td>
+<td>Measured weekly</td>
+<td>Technical performance is adequate</td>
+</tr>
+<tr>
+<td>Manual review time decreases by 60%+</td>
+<td>Measured monthly</td>
+<td>Automation delivers efficiency gains</td>
+</tr>
+<tr>
+<td>Finance team trusts system enough to reduce spot-checks</td>
+<td>Measured via surveys</td>
+<td>Stakeholder confidence is building</td>
+</tr>
+<tr>
+<td>Processing errors don't increase vs. manual baseline</td>
+<td>Measured monthly</td>
+<td>Quality is maintained</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kill-signals">Kill Signals<a class="headerlink" href="#kill-signals" title="Permanent link">&para;</a></h3>
+<p>Kill signals tell you when to stop. They indicate fundamental problems that can't be fixed with iteration—the problem frame or solution approach is wrong.</p>
+<p>Kill signals should be:</p>
+<ul>
+<li><strong>Clear</strong>: No ambiguity about what triggers stopping</li>
+<li><strong>Irreversible</strong>: The problem can't be solved with minor adjustments</li>
+<li><strong>Timely</strong>: Detectable before massive resource waste</li>
+</ul>
+<p><strong>Example: Churn Prediction Kill Signals</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retention interventions show no improvement after 3 months</td>
+<td>90 days</td>
+<td>Churn isn't preventable with available actions</td>
+</tr>
+<tr>
+<td>Model precision drops below 40%</td>
+<td>Measured monthly</td>
+<td>Too many false positives, unusable</td>
+</tr>
+<tr>
+<td>Sales team stops using predictions</td>
+<td>Measured after 60 days</td>
+<td>Solution doesn't fit reality</td>
+</tr>
+<tr>
+<td>Customer complaints increase due to mistargeted outreach</td>
+<td>Any complaints</td>
+<td>Solution actively harms relationships</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: Invoice Processing Kill Signals</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extraction accuracy can't exceed 90% after 3 iterations</td>
+<td>3 months</td>
+<td>Data or problem is too variable</td>
+</tr>
+<tr>
+<td>Manual correction time exceeds manual entry time</td>
+<td>Measured monthly</td>
+<td>Automation creates more work than it saves</td>
+</tr>
+<tr>
+<td>Processing errors increase defect rate by 20%+</td>
+<td>2 months</td>
+<td>Quality regression is unacceptable</td>
+</tr>
+<tr>
+<td>Finance team reverts to manual processing</td>
+<td>Any reversion</td>
+<td>Trust is broken</td>
+</tr>
+</tbody>
+</table>
+<p>Kill signals feel uncomfortable to define upfront because they force you to articulate failure conditions. But that discomfort is the point—if you can't imagine what failure looks like, you can't detect it early.</p>
+<h3 id="leading-indicators">Leading Indicators<a class="headerlink" href="#leading-indicators" title="Permanent link">&para;</a></h3>
+<p>Leading indicators predict future success or failure before final outcomes materialize. They enable course correction when it's still cheap.</p>
+<p>Good leading indicators:</p>
+<ul>
+<li><strong>Predict lagging metrics</strong>: Correlate with eventual success/failure</li>
+<li><strong>Appear early</strong>: Measurable weeks/months before final outcomes</li>
+<li><strong>Drive decisions</strong>: Inform specific actions (persist, adjust, pivot)</li>
+</ul>
+<p><strong>Example: Churn Prediction Leading Indicators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Leading Indicator</th>
+<th>Predicts</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model agreement with human judgment</td>
+<td>Eventual trust and adoption</td>
+<td>If low: improve interpretability or involve domain experts</td>
+</tr>
+<tr>
+<td>Sales team engagement with predictions</td>
+<td>Long-term usage</td>
+<td>If low: improve UX or provide training</td>
+</tr>
+<tr>
+<td>Speed of improvement in model accuracy</td>
+<td>Technical viability</td>
+<td>If plateaued early: pivot to different approach</td>
+</tr>
+<tr>
+<td>Intervention response rate</td>
+<td>Eventual retention impact</td>
+<td>If low: reconsider intervention strategy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: Invoice Processing Leading Indicators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Leading Indicator</th>
+<th>Predicts</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extraction accuracy on validation set</td>
+<td>Production performance</td>
+<td>If low: collect more training data or try different model</td>
+</tr>
+<tr>
+<td>Finance team spot-check frequency</td>
+<td>Trust and adoption</td>
+<td>If increasing: address specific error patterns</td>
+</tr>
+<tr>
+<td>Manual correction patterns</td>
+<td>Systematic model weaknesses</td>
+<td>If concentrated: add rules or fine-tune on those cases</td>
+</tr>
+<tr>
+<td>Processing time per invoice</td>
+<td>Scalability and cost</td>
+<td>If too high: optimize inference or architecture</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-signals-canvas">The Signals Canvas<a class="headerlink" href="#the-signals-canvas" title="Permanent link">&para;</a></h3>
+<p>Use this canvas to document your signal framework:</p>
+<table>
+<thead>
+<tr>
+<th>Signal Type</th>
+<th>Specific Signal</th>
+<th>Measurement</th>
+<th>Threshold</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Success</strong></td>
+<td>[What indicates success?]</td>
+<td>[How measured?]</td>
+<td>[What value?]</td>
+<td>[What will you do?]</td>
+</tr>
+<tr>
+<td><strong>Success</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Success</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kill</strong></td>
+<td>[What indicates fundamental failure?]</td>
+<td>[How measured?]</td>
+<td>[What value?]</td>
+<td>[What will you do?]</td>
+</tr>
+<tr>
+<td><strong>Kill</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Leading</strong></td>
+<td>[What predicts success/failure early?]</td>
+<td>[How measured?]</td>
+<td>[What value?]</td>
+<td>[What will you do?]</td>
+</tr>
+<tr>
+<td><strong>Leading</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-signals-matter">Why Signals Matter<a class="headerlink" href="#why-signals-matter" title="Permanent link">&para;</a></h3>
+<p>Teams without clear signals:</p>
+<ul>
+<li><strong>Miss early warnings</strong>: Problems become obvious only after expensive commitment</li>
+<li><strong>Persist too long</strong>: Sunk cost fallacy drives continued investment in failing approaches</li>
+<li><strong>Pivot randomly</strong>: Without signals, pivots feel arbitrary rather than evidence-driven</li>
+<li><strong>Lose stakeholder trust</strong>: Unclear progress updates create perception of flailing</li>
+</ul>
+<p>Teams with clear signals:</p>
+<ul>
+<li><strong>Detect problems early</strong>: Course-correct when change is cheap</li>
+<li><strong>Justify pivots</strong>: Evidence-based reasoning replaces intuition</li>
+<li><strong>Build confidence</strong>: Transparent progress against defined metrics</li>
+<li><strong>Enable fast learning</strong>: Clear feedback loops accelerate iteration</li>
+</ul>
+<h3 id="try-it-design-your-signal-framework">Try It: Design Your Signal Framework<a class="headerlink" href="#try-it-design-your-signal-framework" title="Permanent link">&para;</a></h3>
+<p>For your chosen solution approach:</p>
+<ol>
+<li><strong>Define 3-4 success signals</strong> that indicate the solution is working</li>
+<li><strong>Define 2-3 kill signals</strong> that indicate the solution should be abandoned</li>
+<li><strong>Define 3-4 leading indicators</strong> that predict success/failure early</li>
+<li><strong>For each signal, specify</strong>:</li>
+<li>Exact measurement approach</li>
+<li>Threshold that triggers action</li>
+<li>Timeframe for evaluation</li>
+<li>What action you'll take when threshold is crossed</li>
+<li><strong>Validate your signals</strong>:</li>
+<li>Can you actually measure these with available data?</li>
+<li>Are thresholds realistic (not too easy or impossibly hard)?</li>
+<li>Do these signals predict what you actually care about?</li>
+</ol>
+<p>If you can't define clear signals, you're not ready to implement—you don't know how you'll tell success from failure.</p>
+<hr />
+<h2 id="worked-example-churn-prediction">Worked Example: Churn Prediction<a class="headerlink" href="#worked-example-churn-prediction" title="Permanent link">&para;</a></h2>
+<p>Let's walk through The Loop for a complete churn prediction scenario.</p>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
+<p><strong>Company</strong>: SaaS company providing project management software
+<strong>Users</strong>: 10,000 business customers (small teams to mid-sized companies)
+<strong>Current state</strong>: 5% monthly churn, no systematic retention efforts
+<strong>Objective</strong>: Reduce churn and improve customer lifetime value</p>
+<h3 id="step-1-outcome_1">Step 1: Outcome<a class="headerlink" href="#step-1-outcome_1" title="Permanent link">&para;</a></h3>
+<p><strong>Initial statement</strong>: "We need to reduce churn"</p>
+<p><strong>Decomposed into specific metrics</strong>:
+- Reduce overall monthly churn from 5% to 4%?
+- Reduce churn among high-value customers (&gt;$500/month) by 25%?
+- Increase customer lifetime value by 20%?
+- Increase success rate of retention interventions from 0% (none attempted) to 30%?</p>
+<p><strong>Chosen metric</strong>: <strong>Increase 90-day retention rate among customers identified as at-risk from 50% (baseline) to 70% within 6 months</strong></p>
+<p><strong>Rationale</strong>:
+- Focuses on actionable segment (at-risk customers we can intervene with)
+- 90-day horizon gives time for interventions to work
+- 70% target is ambitious but achievable
+- Improves retention without requiring intervention at scale (only target at-risk segment)</p>
+<h3 id="step-2-deconstruction_1">Step 2: Deconstruction<a class="headerlink" href="#step-2-deconstruction_1" title="Permanent link">&para;</a></h3>
+<p><strong>Atomic unit</strong>: Subscription (not customer, since customers may have multiple subscriptions)</p>
+<p><strong>Key assumptions</strong>:
+1. Historical engagement patterns predict future churn risk
+2. We can identify churn risk 30+ days in advance
+3. Targeted retention interventions (discounts, outreach, training) can influence decisions
+4. Churn is primarily driven by product value perception, not external factors
+5. Sales team has capacity to execute ~100 retention interventions per month
+6. Cost of retention intervention (~$200/customer) is justified by LTV recovery</p>
+<p><strong>Validation plan</strong>:
+- Test assumption 1: Analyze historical cohorts to see if past engagement predicts future churn
+- Test assumption 2: Look at time lag between engagement decline and cancellation
+- Test assumption 3: Run small pilot with manual outreach to high-risk customers
+- Test assumption 4: Survey churned customers about reasons
+- Test assumption 5: Discuss capacity with sales leadership
+- Test assumption 6: Calculate intervention cost threshold based on LTV</p>
+<h3 id="step-3-alternatives_1">Step 3: Alternatives<a class="headerlink" href="#step-3-alternatives_1" title="Permanent link">&para;</a></h3>
+<p><strong>Alternative 1: Rule-based risk scoring</strong>
+- Assign points for: declining usage, support tickets, payment issues, lack of feature adoption
+- Flag subscriptions above threshold as high-risk
+- <strong>Pros</strong>: Fast to implement, interpretable, no training data needed
+- <strong>Cons</strong>: Limited to obvious signals, requires manual tuning</p>
+<p><strong>Alternative 2: Logistic regression</strong>
+- Train on historical churn with engagement and demographic features
+- Predict churn probability per subscription
+- <strong>Pros</strong>: Interpretable, well-understood, quantifies feature importance
+- <strong>Cons</strong>: Assumes linear relationships, limited interactions</p>
+<p><strong>Alternative 3: Gradient boosted trees (XGBoost)</strong>
+- Train ensemble model on rich feature set (engagement, support, billing, feature usage)
+- Capture non-linear patterns and feature interactions
+- <strong>Pros</strong>: High accuracy, automatic feature interaction, handles mixed types
+- <strong>Cons</strong>: Less interpretable, requires hyperparameter tuning</p>
+<p><strong>Alternative 4: Survival analysis (Cox model)</strong>
+- Model time-to-churn hazard rather than binary churn
+- Predict when customers are most at risk
+- <strong>Pros</strong>: Captures temporal dynamics, identifies critical windows
+- <strong>Cons</strong>: More complex, requires time-series feature engineering</p>
+<p><strong>Alternative 5: Customer segmentation + separate models</strong>
+- Cluster customers by behavior and firmographics
+- Train separate churn models per segment
+- <strong>Pros</strong>: Captures segment-specific patterns, actionable segments
+- <strong>Cons</strong>: Requires sufficient data per segment, more complex</p>
+<h3 id="step-4-trade-offs_1">Step 4: Trade-Offs<a class="headerlink" href="#step-4-trade-offs_1" title="Permanent link">&para;</a></h3>
+<p>Using the Trade-Off Canvas:</p>
+<table>
+<thead>
+<tr>
+<th>Alternative</th>
+<th>Accuracy</th>
+<th>Cost</th>
+<th>Latency</th>
+<th>Interpret.</th>
+<th>Dev Effort</th>
+<th>Maintenance</th>
+<th>Org Fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rule-based</td>
+<td>★★★☆☆</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>Logistic</td>
+<td>★★★★☆</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>XGBoost</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>Survival</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+<td>★★☆☆☆</td>
+<td>★★☆☆☆</td>
+<td>★★☆☆☆</td>
+</tr>
+<tr>
+<td>Segmented</td>
+<td>★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★☆☆☆</td>
+<td>★★☆☆☆</td>
+<td>★★★☆☆</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision</strong>: Start with <strong>Logistic Regression</strong> (Alternative 2)</p>
+<p><strong>Rationale</strong>:
+- <strong>Provides good baseline</strong>: Establishes what's achievable with simple approach
+- <strong>Fast iteration</strong>: Can implement and test within 2-3 weeks
+- <strong>Interpretability matters</strong>: Sales team needs to understand why customers are flagged
+- <strong>Organizational fit</strong>: Team has ML experience but limited deep learning expertise
+- <strong>Enables learning</strong>: Can validate assumptions quickly, then upgrade to XGBoost if needed
+- <strong>Low regret</strong>: If logistic regression is insufficient, feature engineering carries over to more complex models</p>
+<p><strong>Plan</strong>: Implement logistic regression first, measure performance against success signals for 2 months, then evaluate whether to persist or upgrade to XGBoost based on accuracy plateaus and sales team feedback.</p>
+<h3 id="step-5-signals_1">Step 5: Signals<a class="headerlink" href="#step-5-signals_1" title="Permanent link">&para;</a></h3>
+<p><strong>Success Signals</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Measurement</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model achieves 70%+ precision on validation set</td>
+<td>70%</td>
+<td>Weekly, hold-out validation</td>
+<td>Technical performance is adequate</td>
+</tr>
+<tr>
+<td>Retention interventions save 30%+ of targeted customers</td>
+<td>30%</td>
+<td>Monthly, compare intervention vs. control</td>
+<td>Model identifies actionable risk</td>
+</tr>
+<tr>
+<td>Sales team consistently uses predictions in workflow</td>
+<td>70% adoption</td>
+<td>Monthly usage logs</td>
+<td>Solution fits sales process</td>
+</tr>
+<tr>
+<td>Cost per retained customer &lt; $300</td>
+<td>$300</td>
+<td>Monthly, intervention cost / saves</td>
+<td>Economics are favorable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kill Signals</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Measurement</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model precision remains below 40% after 3 tuning iterations</td>
+<td>40% / 3 months</td>
+<td>Monthly validation</td>
+<td>Too many false positives, unusable</td>
+</tr>
+<tr>
+<td>Retention interventions show no lift over control after 3 months</td>
+<td>0% lift / 90 days</td>
+<td>A/B test: intervention vs. control</td>
+<td>Churn isn't preventable with current actions</td>
+</tr>
+<tr>
+<td>Sales team stops using predictions after training period</td>
+<td>&lt;30% adoption / 60 days</td>
+<td>Usage logs</td>
+<td>Solution doesn't match reality</td>
+</tr>
+<tr>
+<td>Customer complaints increase due to retention outreach</td>
+<td>Any complaints</td>
+<td>Support ticket monitoring</td>
+<td>Interventions harm relationships</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Leading Indicators</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Leading Indicator</th>
+<th>Predicts</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agreement between model predictions and sales intuition</td>
+<td>Eventual adoption and trust</td>
+<td>If &lt;70%: investigate disagreements, improve features or involve sales in feature selection</td>
+</tr>
+<tr>
+<td>Speed of accuracy improvement during development</td>
+<td>Technical ceiling</td>
+<td>If plateaus at &lt;65% precision: pivot to XGBoost or revisit problem frame</td>
+</tr>
+<tr>
+<td>Sales team engagement during pilot</td>
+<td>Long-term adoption</td>
+<td>If low: improve UX, add context to predictions, or provide training</td>
+</tr>
+<tr>
+<td>Intervention response rate (customers engaging with outreach)</td>
+<td>Eventual retention impact</td>
+<td>If &lt;50%: reconsider intervention strategy or targeting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-plan">Implementation Plan<a class="headerlink" href="#implementation-plan" title="Permanent link">&para;</a></h3>
+<p><strong>Weeks 1-2</strong>: Feature engineering and exploratory analysis
+- Build feature pipeline (engagement metrics, support interactions, billing events)
+- Validate assumptions about engagement-churn correlation
+- Establish baseline: what % of at-risk customers can we correctly identify?</p>
+<p><strong>Weeks 3-4</strong>: Model development and validation
+- Train logistic regression on historical data (6 months prior)
+- Validate on hold-out set (most recent month)
+- Analyze errors: which customers are we missing? Which false positives?</p>
+<p><strong>Weeks 5-6</strong>: Pilot with sales team
+- Deploy predictions for subset of customers
+- Sales team attempts retention interventions
+- Collect feedback: are predictions useful? What context is missing?</p>
+<p><strong>Months 2-3</strong>: Measure signals and decide
+- Track success signals: precision, retention lift, adoption, cost per save
+- Track kill signals: watch for precision floor, zero lift, abandonment
+- Track leading indicators: agreement with sales, accuracy trajectory, engagement</p>
+<p><strong>Decision point (Month 3)</strong>:
+- <strong>If success signals met</strong>: Expand to full customer base, continue with logistic regression
+- <strong>If success signals missed but not kill signals hit</strong>: Upgrade to XGBoost for accuracy improvement
+- <strong>If kill signals hit</strong>: Pivot problem frame (maybe churn isn't preventable, focus on onboarding instead)</p>
+<hr />
+<h2 id="worked-example-invoice-processing-genai">Worked Example: Invoice Processing (GenAI)<a class="headerlink" href="#worked-example-invoice-processing-genai" title="Permanent link">&para;</a></h2>
+<p>Let's walk through The Loop for a GenAI application.</p>
+<h3 id="context_1">Context<a class="headerlink" href="#context_1" title="Permanent link">&para;</a></h3>
+<p><strong>Company</strong>: Mid-sized accounting firm processing 5,000+ invoices/month for clients
+<strong>Current state</strong>: Manual data entry from PDF/image invoices into accounting software
+<strong>Pain points</strong>: 40 hours/week of manual work, ~2% error rate, 2-3 day processing lag
+<strong>Objective</strong>: Automate invoice processing to reduce manual effort and improve turnaround</p>
+<h3 id="step-1-outcome_2">Step 1: Outcome<a class="headerlink" href="#step-1-outcome_2" title="Permanent link">&para;</a></h3>
+<p><strong>Initial statement</strong>: "Automate invoice processing"</p>
+<p><strong>Decomposed into specific metrics</strong>:
+- Reduce manual data entry time by 80%?
+- Achieve 99%+ accuracy on invoice extraction?
+- Process invoices within 24 hours of receipt?
+- Reduce error rate from 2% to 0.5%?</p>
+<p><strong>Chosen metric</strong>: <strong>Reduce manual processing time by 60% while maintaining error rate below 2% within 3 months</strong></p>
+<p><strong>Rationale</strong>:
+- 60% reduction is ambitious but achievable with automation + human review
+- Maintaining current error rate prevents quality regression
+- 3-month timeline aligns with quarterly planning
+- Time savings translate directly to cost savings and capacity for higher-value work</p>
+<h3 id="step-2-deconstruction_2">Step 2: Deconstruction<a class="headerlink" href="#step-2-deconstruction_2" title="Permanent link">&para;</a></h3>
+<p><strong>Atomic unit</strong>: Invoice line item (not entire invoice)</p>
+<p><strong>Why line item?</strong>
+- Invoices have varying numbers of line items (1-50+)
+- Extraction errors often affect specific line items, not entire invoice
+- Quality metrics need line-level granularity to diagnose problems
+- Allows partial automation (high-confidence lines auto-approved, low-confidence reviewed)</p>
+<p><strong>Key assumptions</strong>:
+1. Invoices follow predictable structural patterns despite format variation
+2. Line items contain sufficient context for categorization (description, amount, vendor)
+3. Vendors provide accurate information (extraction accuracy doesn't validate correctness)
+4. 95%+ extraction accuracy is sufficient to provide value (some manual correction acceptable)
+5. Cost of LLM API calls is justified by labor savings (~$0.01/invoice vs. $5 manual processing)
+6. Finance team will trust automated extraction with spot-checking</p>
+<p><strong>Validation plan</strong>:
+- Test assumption 1: Manually review 100 diverse invoices to assess format variability
+- Test assumption 2: Check if line item descriptions alone enable categorization
+- Test assumption 3: Analyze historical errors (extraction vs. vendor errors)
+- Test assumption 4: Calculate acceptable error rate based on review time
+- Test assumption 5: Estimate API costs for expected volume
+- Test assumption 6: Discuss with finance team, understand trust requirements</p>
+<h3 id="step-3-alternatives_2">Step 3: Alternatives<a class="headerlink" href="#step-3-alternatives_2" title="Permanent link">&para;</a></h3>
+<p><strong>Alternative 1: Template matching + OCR</strong>
+- Define templates for common invoice formats (top 20 vendors)
+- Use OCR + regex to extract fields based on position
+- <strong>Pros</strong>: Fast, deterministic, low per-invoice cost
+- <strong>Cons</strong>: Brittle to format changes, doesn't handle novel vendors, high maintenance</p>
+<p><strong>Alternative 2: Fine-tuned document extraction model (LayoutLM)</strong>
+- Fine-tune LayoutLM on labeled invoices
+- Extract structured data from document layout
+- <strong>Pros</strong>: Handles format variation, learns from examples, state-of-the-art for documents
+- <strong>Cons</strong>: Requires 500+ labeled invoices, longer development time, GPU infrastructure</p>
+<p><strong>Alternative 3: GPT-4 with structured prompting</strong>
+- OCR invoice to text, pass to GPT-4 with JSON schema prompt
+- Request structured output (vendor, date, line items with descriptions/amounts/categories)
+- <strong>Pros</strong>: Minimal training data, flexible, handles edge cases, rapid iteration
+- <strong>Cons</strong>: API cost (~$0.05-0.10 per invoice), latency (5-10 seconds), less predictable</p>
+<p><strong>Alternative 4: GPT-4 Vision (multimodal)</strong>
+- Pass invoice image directly to GPT-4 Vision
+- Extract structured data from visual layout without separate OCR
+- <strong>Pros</strong>: No OCR preprocessing, handles complex layouts, captures visual structure
+- <strong>Cons</strong>: Higher API cost (~$0.10-0.20 per invoice), newer technology</p>
+<p><strong>Alternative 5: Hybrid: OCR + GPT-4 + validation rules</strong>
+- Use OCR to extract text
+- GPT-4 to structure and categorize
+- Business rules to validate (amounts sum correctly, dates are valid, categories match chart of accounts)
+- <strong>Pros</strong>: Balances cost/accuracy, catches errors, handles edge cases gracefully
+- <strong>Cons</strong>: More complex pipeline, requires orchestration</p>
+<p><strong>Alternative 6: Hybrid: Template matching + GPT-4 fallback</strong>
+- Try template matching first for known formats
+- Fall back to GPT-4 for unknown formats or low-confidence extractions
+- <strong>Pros</strong>: Optimizes cost (cheap for common cases, robust for edge cases)
+- <strong>Cons</strong>: Most complex, requires two systems</p>
+<h3 id="step-4-trade-offs_2">Step 4: Trade-Offs<a class="headerlink" href="#step-4-trade-offs_2" title="Permanent link">&para;</a></h3>
+<p>Using the Trade-Off Canvas:</p>
+<table>
+<thead>
+<tr>
+<th>Alternative</th>
+<th>Accuracy</th>
+<th>Cost/Invoice</th>
+<th>Latency</th>
+<th>Handles Variation</th>
+<th>Dev Effort</th>
+<th>Maintenance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Template</td>
+<td>★★★☆☆</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★☆☆☆</td>
+<td>★★★☆☆</td>
+<td>★★☆☆☆</td>
+</tr>
+<tr>
+<td>Fine-tuned</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★★★</td>
+<td>★★☆☆☆</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>GPT-4 text</td>
+<td>★★★★☆</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>GPT-4 vision</td>
+<td>★★★★★</td>
+<td>★★☆☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>OCR+GPT-4+rules</td>
+<td>★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+<td>★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>Template+GPT-4</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>★★☆☆☆</td>
+<td>★★☆☆☆</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision</strong>: Start with <strong>GPT-4 with structured prompting</strong> (Alternative 3)</p>
+<p><strong>Rationale</strong>:
+- <strong>Fastest time to value</strong>: Can implement and test within 1-2 weeks
+- <strong>Handles variability</strong>: Vendor format diversity makes template matching fragile
+- <strong>Cost is justified</strong>: $0.05-0.10/invoice &lt; $5 manual processing cost
+- <strong>Enables learning</strong>: Can rapidly iterate on prompts based on error patterns
+- <strong>Low regret</strong>: Prompt engineering insights transfer to GPT-4 Vision or fine-tuning if needed
+- <strong>Team capability</strong>: No ML expertise required, can leverage existing dev team</p>
+<p><strong>Plan</strong>: Implement GPT-4 text extraction with structured prompts, evaluate for 1 month, then decide whether to:
+- <strong>Persist</strong> if accuracy &gt;95% and cost acceptable
+- <strong>Upgrade to GPT-4 Vision</strong> if OCR errors are main failure mode
+- <strong>Add validation rules</strong> if systematic errors can be caught with business logic
+- <strong>Consider fine-tuning</strong> if cost becomes prohibitive at scale</p>
+<h3 id="step-5-signals_2">Step 5: Signals<a class="headerlink" href="#step-5-signals_2" title="Permanent link">&para;</a></h3>
+<p><strong>Success Signals</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Measurement</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extraction accuracy &gt;95% on validation set</td>
+<td>95%</td>
+<td>Weekly, manually review 50 invoices</td>
+<td>Technical performance is adequate</td>
+</tr>
+<tr>
+<td>Manual review time decreases by 50%+</td>
+<td>50%</td>
+<td>Monthly, time tracking</td>
+<td>Automation delivers efficiency</td>
+</tr>
+<tr>
+<td>Error rate remains below 2%</td>
+<td>2%</td>
+<td>Monthly, downstream error tracking</td>
+<td>Quality is maintained</td>
+</tr>
+<tr>
+<td>Finance team reduces spot-check frequency</td>
+<td>20% → 10% spot-check</td>
+<td>Monthly, team feedback</td>
+<td>Trust is building</td>
+</tr>
+<tr>
+<td>Cost per invoice &lt; $0.15</td>
+<td>$0.15</td>
+<td>Weekly, API cost monitoring</td>
+<td>Economics are sustainable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kill Signals</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extraction accuracy plateaus below 90% after prompt tuning</td>
+<td>90% / 4 weeks</td>
+<td>LLM approach insufficient, need fine-tuning</td>
+</tr>
+<tr>
+<td>Manual correction time exceeds manual entry time</td>
+<td>Any time correction &gt; entry</td>
+<td>Automation creates more work</td>
+</tr>
+<tr>
+<td>Error rate increases to &gt;3%</td>
+<td>3% / 2 months</td>
+<td>Quality regression unacceptable</td>
+</tr>
+<tr>
+<td>API costs exceed $0.25/invoice</td>
+<td>$0.25 / sustained</td>
+<td>Economics don't work, need cheaper alternative</td>
+</tr>
+<tr>
+<td>Finance team loses trust and reverts to manual</td>
+<td>Any reversion</td>
+<td>Solution is broken</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Leading Indicators</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Leading Indicator</th>
+<th>Predicts</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extraction accuracy on diverse sample during development</td>
+<td>Production performance</td>
+<td>If &lt;93%: improve prompts or add examples</td>
+</tr>
+<tr>
+<td>Finance team engagement with review UI during pilot</td>
+<td>Long-term adoption</td>
+<td>If low: simplify UI or improve flagging</td>
+</tr>
+<tr>
+<td>Pattern in extraction errors (OCR vs. categorization vs. validation)</td>
+<td>Systematic weaknesses</td>
+<td>If OCR errors dominant: upgrade to GPT-4 Vision</td>
+</tr>
+<tr>
+<td>API cost trajectory as volume scales</td>
+<td>Sustainability</td>
+<td>If trending &gt;$0.20: optimize prompts or consider alternatives</td>
+</tr>
+<tr>
+<td>Time to manually correct flagged line items</td>
+<td>Review efficiency</td>
+<td>If &gt;30 seconds/item: improve error highlighting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-plan_1">Implementation Plan<a class="headerlink" href="#implementation-plan_1" title="Permanent link">&para;</a></h3>
+<p><strong>Week 1</strong>: Prompt engineering and validation
+- Develop structured JSON schema for invoice output
+- Test GPT-4 prompts on 50 diverse invoices (various vendors, formats, complexities)
+- Analyze errors: OCR quality, field extraction accuracy, categorization correctness
+- Establish baseline: current manual processing time per invoice</p>
+<p><strong>Week 2</strong>: Build pipeline and review UI
+- Integrate OCR → GPT-4 → structured output pipeline
+- Build simple review UI: side-by-side comparison of invoice image and extracted data
+- Implement confidence scoring: flag low-confidence extractions for human review</p>
+<p><strong>Weeks 3-4</strong>: Pilot with finance team
+- Process 100 invoices through automated system
+- Finance team reviews all outputs, corrects errors, provides feedback
+- Measure: extraction accuracy, review time per invoice, error patterns
+- Iterate on prompts based on systematic errors</p>
+<p><strong>Month 2</strong>: Expand and optimize
+- Roll out to 500 invoices/month with selective human review (high-confidence auto-approved)
+- Monitor success signals: accuracy, time savings, error rate, cost
+- Monitor kill signals: watch for quality regressions or cost overruns
+- Track leading indicators: error patterns, finance team satisfaction</p>
+<p><strong>Decision point (Month 2-3)</strong>:
+- <strong>If success signals met</strong>: Scale to full volume, reduce human review to spot-checking
+- <strong>If OCR errors dominate</strong>: Upgrade to GPT-4 Vision (eliminate OCR preprocessing)
+- <strong>If categorization errors dominate</strong>: Add validation rules or provide category examples in prompt
+- <strong>If cost is issue</strong>: Optimize prompts for token efficiency or explore template matching for common vendors
+- <strong>If kill signals hit</strong>: Revert to manual or pivot to fine-tuned model approach</p>
+<hr />
+<h2 id="reflection-questions">Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permanent link">&para;</a></h2>
+<p>Use these questions to deepen your understanding of The Loop:</p>
+<ol>
+<li>
+<p><strong>On outcome definition</strong>: Think about a recent AI project. What was the implicit outcome metric? If you made it explicit, would different stakeholders have agreed? How might the project have differed with a different outcome definition?</p>
+</li>
+<li>
+<p><strong>On atomic units</strong>: For a problem you're working on, what happens if you choose the wrong granularity? How would diagnosing problems differ if you chose one level too coarse or one level too fine?</p>
+</li>
+<li>
+<p><strong>On assumptions</strong>: What assumptions did you make in a past project that turned out to be false? How did you discover the assumption was invalid? What would have happened if you'd surfaced and tested the assumption earlier?</p>
+</li>
+<li>
+<p><strong>On alternatives</strong>: Think about a solution you implemented recently. What alternatives did you consider? What alternatives did you NOT consider that, in hindsight, might have been better? What prevented you from exploring more alternatives?</p>
+</li>
+<li>
+<p><strong>On trade-offs</strong>: Describe a recent technical decision involving trade-offs. Were the trade-offs explicit or implicit during the decision? Did different stakeholders prioritize dimensions differently? How would making trade-offs more explicit have changed the discussion?</p>
+</li>
+<li>
+<p><strong>On signals</strong>: For a current or recent project, what signals did you use to evaluate progress? Were they leading or lagging indicators? Did you define success and kill signals upfront, or figure them out as you went? What would have changed with clearer signals earlier?</p>
+</li>
+<li>
+<p><strong>On The Loop</strong>: Think about a failed or struggling AI project. Work backward through The Loop—where did the framing break down? Was it an unclear outcome? Invalid assumption? Missed alternative? Unstated trade-off? Lack of signals?</p>
+</li>
+<li>
+<p><strong>On iteration</strong>: How often do you revisit your problem framing? When new information arrives, do you update your outcome definition, validate assumptions, reconsider alternatives, or recalibrate signals? What prevents more frequent Loop iteration?</p>
+</li>
+</ol>
+<hr />
+<h2 id="portfolio-project-apply-the-loop">Portfolio Project: Apply The Loop<a class="headerlink" href="#portfolio-project-apply-the-loop" title="Permanent link">&para;</a></h2>
+<p><strong>Objective</strong>: Demonstrate your ability to systematically frame an AI problem using The Loop framework.</p>
+<h3 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
+<p>Choose one of the following scenarios (or propose your own with instructor approval):</p>
+<p><strong>Scenario A: Educational Content Recommendation</strong>
+A university wants to build a system that recommends learning resources (articles, videos, exercises) to students based on their learning progress, struggling topics, and goals.</p>
+<p><strong>Scenario B: Manufacturing Quality Prediction</strong>
+A factory wants to predict which products coming off the assembly line are likely to have defects, enabling early intervention before shipping to customers.</p>
+<p><strong>Scenario C: Customer Support Ticket Routing</strong>
+A SaaS company receives 1,000+ support tickets per day and wants to automatically route them to the right team and prioritize them by urgency and complexity.</p>
+<p><strong>Scenario D: Medical Diagnosis Assistance</strong>
+A healthcare provider wants an AI system to help clinicians identify potential diagnoses based on patient symptoms, medical history, and test results.</p>
+<h3 id="deliverable">Deliverable<a class="headerlink" href="#deliverable" title="Permanent link">&para;</a></h3>
+<p>Complete the following analysis for your chosen scenario:</p>
+<p><strong>1. Outcome Definition (Step 1)</strong>
+- State the vague business objective
+- Generate 4-5 specific outcome metrics
+- Choose one metric and justify why it's the right frame
+- Articulate what constraints, trade-offs, and priorities this metric implies</p>
+<p><strong>2. Problem Deconstruction (Step 2)</strong>
+- Identify the atomic unit and justify the granularity choice
+- Complete the Atomic Unit Canvas
+- List 6-8 critical assumptions your frame depends on
+- For each assumption, explain what breaks if it's false
+- Identify the 2-3 most fragile assumptions and propose how you'd validate them</p>
+<p><strong>3. Alternatives Menu (Step 3)</strong>
+- Generate 5-6 distinct solution alternatives spanning simple to complex
+- For each alternative, document:
+  - Brief approach description
+  - Key strengths and weaknesses
+  - Data requirements
+  - Development effort estimate
+- Ensure your menu includes rule-based, classical ML, and GenAI options</p>
+<p><strong>4. Trade-Off Analysis (Step 4)</strong>
+- Complete the Trade-Off Canvas for your alternatives
+- Identify the 2-3 most critical trade-off dimensions for your context
+- Choose one alternative and justify based on:
+  - Your context (resources, constraints, capabilities)
+  - The trade-offs you're willing to accept
+  - Why this is better than other alternatives for your situation</p>
+<p><strong>5. Signal Framework (Step 5)</strong>
+- Complete the Signals Canvas with:
+  - 3-4 success signals (with thresholds and measurement approaches)
+  - 2-3 kill signals (with thresholds and conditions)
+  - 3-4 leading indicators (with what they predict and enabling actions)
+- For each signal, explain:
+  - How you'll measure it with available data
+  - Why this threshold is meaningful
+  - What action you'll take when the signal triggers</p>
+<p><strong>6. Implementation Plan</strong>
+- Outline a 3-month implementation and evaluation plan
+- Include specific milestones, decision points, and pivot triggers
+- Explain how you'll use signals to decide whether to persist, pivot, or stop</p>
+<h3 id="evaluation-criteria">Evaluation Criteria<a class="headerlink" href="#evaluation-criteria" title="Permanent link">&para;</a></h3>
+<p>Your analysis will be evaluated on:</p>
+<ul>
+<li><strong>Systematic application of The Loop</strong>: Did you work through all five steps methodically?</li>
+<li><strong>Depth of reasoning</strong>: Did you explore second-order effects, hidden assumptions, and edge cases?</li>
+<li><strong>Explicit articulation</strong>: Did you make trade-offs, assumptions, and priorities transparent?</li>
+<li><strong>Contextual awareness</strong>: Did you ground decisions in realistic constraints and capabilities?</li>
+<li><strong>Signal quality</strong>: Are your signals measurable, timely, and actionable?</li>
+<li><strong>Clarity</strong>: Is your reasoning easy to follow and well-organized?</li>
+</ul>
+<p><strong>Length</strong>: 8-12 pages (including canvases and tables)</p>
+<p><strong>Submission</strong>: Upload PDF to the course portal by [deadline]</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The Loop framework provides a systematic process for transforming ambiguous business problems into actionable AI initiatives:</p>
+<ol>
+<li><strong>OUTCOME</strong>: Define the metric—it IS the problem frame</li>
+<li><strong>DECONSTRUCTION</strong>: Identify atomic units and surface assumptions</li>
+<li><strong>ALTERNATIVES</strong>: Build a comprehensive menu before committing</li>
+<li><strong>TRADE-OFFS</strong>: Choose based on explicit priorities and constraints</li>
+<li><strong>SIGNALS</strong>: Define success, failure, and leading indicators upfront</li>
+</ol>
+<p><strong>Key insights from this chapter:</strong></p>
+<ul>
+<li><strong>Metric choice determines the problem you solve</strong>: Different outcomes imply fundamentally different solutions, even when casual language sounds the same</li>
+<li><strong>Assumptions are fragile</strong>: Every frame rests on beliefs that, if false, invalidate the entire approach—surface them early so you can test them</li>
+<li><strong>Premature convergence wastes resources</strong>: Generate alternatives systematically before committing—your first idea is rarely your best</li>
+<li><strong>No solution dominates</strong>: Every choice involves trade-offs—make them explicit so stakeholders can make informed decisions</li>
+<li><strong>Signals enable fast pivots</strong>: Clear success criteria, kill conditions, and leading indicators catch problems while change is still cheap</li>
+</ul>
+<p><strong>The Loop is iterative, not one-time</strong>: Initial framing is based on incomplete information. Implementation generates data. Good teams cycle through The Loop quickly, using each iteration to refine understanding and adjust course.</p>
+<p><strong>Use The Loop as a diagnostic tool</strong>: When projects feel stuck, work backward through the steps to find where framing broke down. When stakeholders disagree, use The Loop's structured language to articulate differences. When new information arrives, cycle through The Loop to update your frame.</p>
+<p>In the next chapters, we'll build on The Loop:</p>
+<ul>
+<li><strong>Chapter 4 (Diagnosis)</strong> teaches how to read signals from live systems to detect when frames need adjustment</li>
+<li><strong>Chapter 5 (Pivot)</strong> covers decision-making: when to persist, pivot, or stop based on signal evidence</li>
+<li><strong>Chapter 6 (Application)</strong> applies The Loop to complex, multi-stakeholder case studies across domains</li>
+</ul>
+<p>For now, practice The Loop on your portfolio project. The framework will feel mechanical at first, but with repetition it becomes second nature—a systematic way of thinking about AI problems that prevents common failure modes and enables better strategic decisions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-ai-alternatives/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Quiz">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. Quiz
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3. Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

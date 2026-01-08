@@ -1,0 +1,1670 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/chapters/06-application/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../../sims/loop-framework-visualizer/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. Quiz - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-6-application-quiz" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../sims/loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-remember-classic-ml-pivot-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Remember | Classic ML Pivot Recognition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-remember-genai-pivot-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Remember | GenAI Pivot Identification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-understand-pattern-bridge-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Understand | Pattern Bridge Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-understand-problem-portfolio-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Understand | Problem Portfolio Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-apply-monday-morning-checklist-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Apply | Monday Morning Checklist in Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-apply-synthesis-of-pivots-and-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Apply | Synthesis of Pivots and Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-analyze-pattern-recognition-across-problem-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Analyze | Pattern Recognition Across Problem Domains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-analyze-evaluating-pivot-necessity-through-systematic-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Analyze | Evaluating Pivot Necessity Through Systematic Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-evaluate-trade-off-analysis-in-application-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Evaluate | Trade-off Analysis in Application Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-create-comprehensive-problem-portfolio-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Create | Comprehensive Problem Portfolio Decision
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blooms-distribution-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloom's Distribution Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-assessed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts Assessed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-key-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answer Key &amp; Scoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Key &amp; Scoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-rubric-for-q10-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoring Rubric for Q10 (Create)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-prompts-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discussion Prompts (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-6-application-quiz">Chapter 6: Application - Quiz<a class="headerlink" href="#chapter-6-application-quiz" title="Permanent link">&para;</a></h1>
+<p><strong>Course:</strong> AI Problem Framing for AI Practitioners
+<strong>Chapter Type:</strong> Advanced (Synthesis)
+<strong>Focus:</strong> Case study analysis, pattern recognition across pivots, and practical application of the Monday Morning Checklist</p>
+<hr />
+<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
+<p>This quiz contains 10 questions designed to assess your understanding of the Application chapter. Questions range from basic recall to complex synthesis tasks. For each question, select the best answer or provide your response as indicated.</p>
+<p><strong>Time Estimate:</strong> 30-45 minutes</p>
+<hr />
+<h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h2>
+<h3 id="1-remember-classic-ml-pivot-recognition">1. <strong>Remember</strong> | Classic ML Pivot Recognition<a class="headerlink" href="#1-remember-classic-ml-pivot-recognition" title="Permanent link">&para;</a></h3>
+<p>A team has spent 3 months building a rules-based invoice processing system that achieved 78% extraction accuracy. They realize accuracy is insufficient for their use case. Which of the following is the most direct Classic ML Pivot opportunity?</p>
+<p>A) Switch to a completely different problem domain
+B) Implement a fine-tuned language model for invoice extraction
+C) Add more manual rules to improve the heuristic system
+D) Hire more people to manually process invoices</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> A Classic ML Pivot involves moving from simpler approaches (rules-based) to machine learning when the simpler approach cannot achieve sufficient performance. Fine-tuning a language model represents a clear ML Pivot from rule-based extraction.</p>
+<hr />
+<h3 id="2-remember-genai-pivot-identification">2. <strong>Remember</strong> | GenAI Pivot Identification<a class="headerlink" href="#2-remember-genai-pivot-identification" title="Permanent link">&para;</a></h3>
+<p>Which scenario best exemplifies a GenAI Pivot decision?</p>
+<p>A) A team improves their existing classification model's hyperparameters
+B) A team switches from traditional NLP pipelines to using a large language model's generation capabilities for text summarization
+C) A team adds more training data to their existing regression model
+D) A team changes their feature engineering approach</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> A GenAI Pivot represents a shift toward generative AI approaches when traditional models or simpler methods are insufficient. Moving to LLM-based generation for summarization is a classic GenAI Pivot.</p>
+<hr />
+<h3 id="3-understand-pattern-bridge-application">3. <strong>Understand</strong> | Pattern Bridge Application<a class="headerlink" href="#3-understand-pattern-bridge-application" title="Permanent link">&para;</a></h3>
+<p>A healthcare organization successfully deployed a machine learning system to predict patient readmission risk, achieving high accuracy. They now want to apply the same pattern to predict no-show rates for appointments. What is this an example of?</p>
+<p>A) Problem Pivot
+B) Pattern Bridge
+C) Scope Pivot
+D) Tool Pivot</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Pattern Bridging is the structured transfer of a successful problem-solving approach from one context (readmission prediction) to a similar but distinct problem (no-show prediction). It recognizes that the underlying pattern—predicting binary user behavior from historical data—transfers across domains.</p>
+<hr />
+<h3 id="4-understand-problem-portfolio-structure">4. <strong>Understand</strong> | Problem Portfolio Structure<a class="headerlink" href="#4-understand-problem-portfolio-structure" title="Permanent link">&para;</a></h3>
+<p>A fintech company has identified 12 potential AI improvement opportunities across their platform. Before beginning development, they should use a Problem Portfolio to accomplish which of the following?</p>
+<p>A) Immediately start implementation on all 12 problems in parallel
+B) Rank and prioritize problems by business impact and solution feasibility
+C) Assign each problem to a different engineer
+D) Guarantee that all solutions will use the same ML architecture</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> A Problem Portfolio provides a structured inventory of related problems prioritized by business impact and solution feasibility. This enables strategic focus rather than chaotic parallel development.</p>
+<hr />
+<h3 id="5-apply-monday-morning-checklist-in-practice">5. <strong>Apply</strong> | Monday Morning Checklist in Practice<a class="headerlink" href="#5-apply-monday-morning-checklist-in-practice" title="Permanent link">&para;</a></h3>
+<p>It's Monday morning, and your team is resuming work on a customer churn prediction model you started 2 weeks ago. Which question should NOT be part of your Monday Morning Checklist evaluation?</p>
+<p>A) Has the business context changed (new competitive threat, market shift, organizational priorities)?
+B) Are the data quality assumptions still valid?
+C) What is the exact model architecture we used for our initial prototype?
+D) Is the original problem we're solving still the most critical priority?</p>
+<p><strong>Correct Answer:</strong> C</p>
+<p><strong>Explanation:</strong> The Monday Morning Checklist is designed to validate whether your original framing remains sound. It focuses on business context, data validity, and strategic alignment—not implementation details like model architecture. Knowing the exact architecture doesn't help assess if you're solving the right problem.</p>
+<hr />
+<h3 id="6-apply-synthesis-of-pivots-and-signals">6. <strong>Apply</strong> | Synthesis of Pivots and Signals<a class="headerlink" href="#6-apply-synthesis-of-pivots-and-signals" title="Permanent link">&para;</a></h3>
+<p>A team built a GenAI-powered customer service system using prompt engineering. After 2 weeks in production, they observe: high user satisfaction (90%) but increasing latency (5s → 12s response times) and rising API costs ($2K → $12K monthly). What decision does your Monday Morning Checklist suggest?</p>
+<p>A) Continue with GenAI Pivot—the signals don't matter
+B) Persist with current approach; user satisfaction is the only metric that matters
+C) Evaluate whether the current approach is sustainable despite positive sentiment signals
+D) Immediately switch to a Classic ML approach without analysis</p>
+<p><strong>Correct Answer:</strong> C</p>
+<p><strong>Explanation:</strong> The Monday Morning Checklist synthesizes multiple signals. While user satisfaction is a success signal, increasing latency and costs are leading indicators of operational strain. A responsible evaluation must weigh whether the current solution is sustainable given its cost and performance trajectory, even with positive user feedback. This might lead to an Approach Pivot toward a hybrid solution.</p>
+<hr />
+<h3 id="7-analyze-pattern-recognition-across-problem-domains">7. <strong>Analyze</strong> | Pattern Recognition Across Problem Domains<a class="headerlink" href="#7-analyze-pattern-recognition-across-problem-domains" title="Permanent link">&para;</a></h3>
+<p>You're reviewing three completed projects: (1) a recommendation system using collaborative filtering, (2) a fraud detection system using anomaly detection, and (3) a demand forecasting system using time series prediction. Which Pattern Bridge opportunity exists?</p>
+<p>A) All three should use identical algorithms
+B) The anomaly detection pattern from fraud detection could apply to demand forecasting for identifying unusual market conditions
+C) Recommendation systems and forecasting have no shared patterns
+D) All three problems are fundamentally different and cannot share approaches</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> Pattern Bridging involves recognizing structural similarities across surface-level differences. Both fraud detection (identifying anomalies) and demand forecasting (modeling normal behavior) operate on the pattern of distinguishing expected from unexpected observations. The anomaly detection approach used in fraud could transfer to identifying unusual demand patterns caused by market disruptions.</p>
+<hr />
+<h3 id="8-analyze-evaluating-pivot-necessity-through-systematic-analysis">8. <strong>Analyze</strong> | Evaluating Pivot Necessity Through Systematic Analysis<a class="headerlink" href="#8-analyze-evaluating-pivot-necessity-through-systematic-analysis" title="Permanent link">&para;</a></h3>
+<p>A logistics company tried a rules-based route optimization system. After 6 months, they achieved 85% of theoretical optimal routes. Their stakeholders ask: "Should we pivot to an ML-based approach?" What framework should guide this analysis?</p>
+<p>A) Immediately pivot because 85% isn't perfect
+B) Apply the Loop framework to diagnose: Does 85% solve the business problem? What are the constraints? What would ML realistically achieve? What are the costs?
+C) Always use ML for optimization problems
+D) Never pivot from rules-based systems</p>
+<p><strong>Correct Answer:</strong> B</p>
+<p><strong>Explanation:</strong> The decision to pivot is not binary "good vs. perfect" but strategic. The Loop framework guides analysis: Is the current solution adequate for business outcomes? Is the problem likely solvable better with ML (not just theoretically)? What are realistic improvements vs. implementation costs? What would the operational impact be?</p>
+<hr />
+<h3 id="9-evaluate-trade-off-analysis-in-application-decisions">9. <strong>Evaluate</strong> | Trade-off Analysis in Application Decisions<a class="headerlink" href="#9-evaluate-trade-off-analysis-in-application-decisions" title="Permanent link">&para;</a></h3>
+<p>Your team must choose between two approaches for a new recommendation system:</p>
+<p><strong>Approach A (Classic ML Pivot):</strong> Train a collaborative filtering model on historical user-item interactions. Estimated accuracy: 88%, cost: $50K development, latency: 200ms, interpretability: Low</p>
+<p><strong>Approach B (GenAI Pivot):</strong> Use an LLM with prompt engineering to generate personalized recommendations. Estimated quality: 92% (subjective), cost: $15K development + $5K/month API fees, latency: 2-5s, interpretability: High</p>
+<p>Which is not a legitimate evaluation criterion for deciding between these approaches?</p>
+<p>A) Total cost of ownership over 12 months
+B) Whether latency impact will degrade user experience
+C) Whether A or B has the cooler sounding name
+D) Whether interpretability is critical for stakeholder trust</p>
+<p><strong>Correct Answer:</strong> C</p>
+<p><strong>Explanation:</strong> Trade-off analysis must consider relevant business and technical dimensions: cost, performance, latency, interpretability, organizational fit, etc. The "coolness" of an approach name has zero bearing on whether it solves the problem effectively and sustainably.</p>
+<hr />
+<h3 id="10-create-comprehensive-problem-portfolio-decision">10. <strong>Create</strong> | Comprehensive Problem Portfolio Decision<a class="headerlink" href="#10-create-comprehensive-problem-portfolio-decision" title="Permanent link">&para;</a></h3>
+<p>A healthcare organization has identified three AI opportunities in their Problem Portfolio:</p>
+<ol>
+<li><strong>Readmission Prediction:</strong> High business impact, moderate solution complexity, known domain patterns</li>
+<li><strong>Drug Interaction Detection:</strong> Medium business impact, high solution complexity (regulatory constraints), limited existing patterns</li>
+<li><strong>Patient Communication Optimization:</strong> High business impact, low solution complexity, strong Pattern Bridge from marketing domain</li>
+</ol>
+<p>Using the concepts of Problem Portfolio, Pattern Bridge, and the Loop framework, rank these by implementation priority and justify your ranking in 2-3 sentences.</p>
+<p><strong>Evaluation Criteria:</strong>
+- Does the ranking reflect sound strategic thinking?
+- Are Pattern Bridge opportunities recognized and valued?
+- Is the justification grounded in course concepts (Portfolio prioritization, Pattern Bridge value, Loop framework considerations)?
+- Does the response acknowledge trade-offs or constraints?</p>
+<p><strong>Model Answer:</strong></p>
+<p>The ranking should be: (1) Patient Communication Optimization, (2) Readmission Prediction, (3) Drug Interaction Detection.</p>
+<p><strong>Justification:</strong> Patient Communication Optimization offers the best combination of high impact and low complexity, with immediate Pattern Bridge opportunity from marketing (proven transferable knowledge), enabling quick wins that build organizational AI capability. Readmission Prediction follows as a medium-risk, high-impact core healthcare application with known patterns. Drug Interaction Detection, while important, should be deferred until the team has built capability and tribal knowledge through earlier successes—the high regulatory and technical complexity requires deeper domain expertise that later Pattern Bridges could provide from completed projects.</p>
+<hr />
+<h2 id="blooms-distribution-summary">Bloom's Distribution Summary<a class="headerlink" href="#blooms-distribution-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Count</th>
+<th>Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remember</td>
+<td>2</td>
+<td>Q1, Q2</td>
+</tr>
+<tr>
+<td>Understand</td>
+<td>2</td>
+<td>Q3, Q4</td>
+</tr>
+<tr>
+<td>Apply</td>
+<td>2</td>
+<td>Q5, Q6</td>
+</tr>
+<tr>
+<td>Analyze</td>
+<td>2</td>
+<td>Q7, Q8</td>
+</tr>
+<tr>
+<td>Evaluate</td>
+<td>1</td>
+<td>Q9</td>
+</tr>
+<tr>
+<td>Create</td>
+<td>1</td>
+<td>Q10</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>10</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-concepts-assessed">Key Concepts Assessed<a class="headerlink" href="#key-concepts-assessed" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>ML Pivot &amp; GenAI Pivot:</strong> Recognition and application of when and why to transition from simpler to more complex approaches (Q1, Q2, Q6)</li>
+<li><strong>Pattern Bridge:</strong> Understanding how successful patterns transfer across problem contexts (Q3, Q7)</li>
+<li><strong>Problem Portfolio:</strong> Strategic prioritization of multiple AI opportunities (Q4, Q10)</li>
+<li><strong>Monday Morning Checklist:</strong> Systematic re-validation of problem frames and decisions (Q5, Q6)</li>
+<li><strong>Signal Recognition &amp; Synthesis:</strong> Integrating multiple signals to make persist/pivot decisions (Q6, Q8)</li>
+<li><strong>Trade-off Analysis:</strong> Evaluating competing priorities across multiple dimensions (Q9)</li>
+<li><strong>Systematic Decision-Making:</strong> Applying frameworks over intuition (Q8, Q10)</li>
+</ul>
+<hr />
+<h2 id="answer-key-scoring">Answer Key &amp; Scoring<a class="headerlink" href="#answer-key-scoring" title="Permanent link">&para;</a></h2>
+<p><strong>Multiple Choice Questions (Q1-Q9):</strong> 1 point each = 9 points
+<strong>Essay Question (Q10):</strong> 1 point = 1 point
+<strong>Total Possible:</strong> 10 points</p>
+<p><strong>Passing Score:</strong> 7/10 (70%)
+<strong>Mastery:</strong> 9/10 (90%)</p>
+<h3 id="scoring-rubric-for-q10-create">Scoring Rubric for Q10 (Create)<a class="headerlink" href="#scoring-rubric-for-q10-create" title="Permanent link">&para;</a></h3>
+<p><strong>1 point:</strong> Ranking is provided with brief justification that references at least one course concept (Portfolio, Pattern Bridge, or Loop framework).</p>
+<p><strong>0.5 points:</strong> Ranking shows strategic thinking but justification lacks clear connection to course concepts.</p>
+<p><strong>0 points:</strong> Ranking is provided without justification, or justification is inaccurate.</p>
+<hr />
+<h2 id="discussion-prompts-optional">Discussion Prompts (Optional)<a class="headerlink" href="#discussion-prompts-optional" title="Permanent link">&para;</a></h2>
+<p>For deeper learning, consider these reflection questions:</p>
+<ol>
+<li>
+<p><strong>Pattern Bridge Analysis:</strong> In your organization or field, what successful problem-solving patterns could be "bridged" to new contexts? What would make those bridges successful or risky?</p>
+</li>
+<li>
+<p><strong>Monday Morning Checklist in Your Work:</strong> Describe a project where the Monday Morning Checklist would have prevented or caught a strategic misalignment. What changed between the initial framing and when the issue was discovered?</p>
+</li>
+<li>
+<p><strong>Problem Portfolio Trade-offs:</strong> If you had to choose between solving a high-impact, high-complexity problem immediately versus deferring it to build capability through lower-complexity problems first, how would you justify that choice to a stakeholder?</p>
+</li>
+<li>
+<p><strong>Pivot Recognition:</strong> Think of a project where a pivot was needed but didn't happen (or vice versa). What signals should have been stronger? How would applying The Loop framework have changed the outcome?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6. Application &amp; Case Studies">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                6. Application & Case Studies
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../sims/loop-framework-visualizer/" class="md-footer__link md-footer__link--next" aria-label="Next: Loop Framework Visualizer">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Loop Framework Visualizer
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

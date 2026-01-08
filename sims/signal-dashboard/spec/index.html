@@ -1,0 +1,1482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/sims/signal-dashboard/spec/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>MicroSim: Signal Dashboard - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#microsim-signal-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MicroSim: Signal Dashboard
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../chapters/01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pivot-decision-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="microsim-signal-dashboard">MicroSim: Signal Dashboard<a class="headerlink" href="#microsim-signal-dashboard" title="Permanent link">&para;</a></h1>
+<h2 id="concept-visualized">Concept Visualized<a class="headerlink" href="#concept-visualized" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Concept:</strong> Success/Kill/Leading Indicators for AI Project Monitoring</li>
+<li><strong>Learning Goal:</strong> Students will design, configure, and interpret signal dashboards that drive persist/pivot/stop decisions based on threshold-based monitoring of project health indicators</li>
+<li><strong>Difficulty:</strong> Advanced (graduate level)</li>
+<li><strong>Bloom's Level:</strong> Evaluate/Create</li>
+</ul>
+<h2 id="controls-right-panel">Controls (Right Panel)<a class="headerlink" href="#controls-right-panel" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Type</th>
+<th>Range</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Signal</td>
+<td>Button + Form</td>
+<td>-</td>
+<td>-</td>
+<td>Create new signal with name, type, thresholds</td>
+</tr>
+<tr>
+<td>Signal Name</td>
+<td>Text input</td>
+<td>50 chars</td>
+<td>Empty</td>
+<td>Label for dashboard tile</td>
+</tr>
+<tr>
+<td>Signal Type</td>
+<td>Dropdown</td>
+<td>[Success, Kill, Leading]</td>
+<td>Success</td>
+<td>Category and color</td>
+</tr>
+<tr>
+<td>Current Value</td>
+<td>Slider</td>
+<td>0-100</td>
+<td>50</td>
+<td>Real-time metric value</td>
+</tr>
+<tr>
+<td>Green Threshold</td>
+<td>Number input</td>
+<td>0-100</td>
+<td>70</td>
+<td>Success zone (≥ this value)</td>
+</tr>
+<tr>
+<td>Yellow Threshold</td>
+<td>Number input</td>
+<td>0-100</td>
+<td>40</td>
+<td>Warning zone</td>
+</tr>
+<tr>
+<td>Red Threshold</td>
+<td>Number input</td>
+<td>0-100</td>
+<td>0</td>
+<td>Danger zone (&lt; yellow)</td>
+</tr>
+<tr>
+<td>Unit</td>
+<td>Text input</td>
+<td>20 chars</td>
+<td>"%"</td>
+<td>Display unit (%, ms, $, etc.)</td>
+</tr>
+<tr>
+<td>Trend Period</td>
+<td>Dropdown</td>
+<td>[1 week, 1 month, 3 months, 6 months]</td>
+<td>1 month</td>
+<td>Historical data window</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Dropdown</td>
+<td>[Real-time, Hourly, Daily, Weekly]</td>
+<td>Daily</td>
+<td>Refresh rate</td>
+</tr>
+<tr>
+<td>Alert Enabled</td>
+<td>Checkbox</td>
+<td>On/Off</td>
+<td>Off</td>
+<td>Notification when thresholds crossed</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Slider</td>
+<td>1-10</td>
+<td>5</td>
+<td>Importance in overall decision</td>
+</tr>
+<tr>
+<td>Remove Signal</td>
+<td>Button (per signal)</td>
+<td>-</td>
+<td>-</td>
+<td>Delete signal from dashboard</td>
+</tr>
+<tr>
+<td>Load Template</td>
+<td>Dropdown</td>
+<td>[E-commerce, Healthcare, FinTech, Custom]</td>
+<td>Custom</td>
+<td>Pre-configured signal sets</td>
+</tr>
+<tr>
+<td>Time Simulation</td>
+<td>Play/Pause</td>
+<td>-</td>
+<td>Paused</td>
+<td>Animate values changing over time</td>
+</tr>
+<tr>
+<td>Simulation Speed</td>
+<td>Slider</td>
+<td>0.5x-5x</td>
+<td>1x</td>
+<td>Playback speed for time series</td>
+</tr>
+<tr>
+<td>Export Dashboard</td>
+<td>Button</td>
+<td>-</td>
+<td>-</td>
+<td>Download config as JSON</td>
+</tr>
+<tr>
+<td>Import Dashboard</td>
+<td>File upload</td>
+<td>JSON</td>
+<td>-</td>
+<td>Load saved configuration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visualization-left-panel">Visualization (Left Panel)<a class="headerlink" href="#visualization-left-panel" title="Permanent link">&para;</a></h2>
+<h3 id="dashboard-layout">Dashboard Layout<a class="headerlink" href="#dashboard-layout" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Grid of tiles:</strong> 2-4 columns, responsive</li>
+<li><strong>Each tile shows:</strong></li>
+<li>Signal name (bold, top)</li>
+<li>Large gauge/dial visualization</li>
+<li>Current value (prominent number + unit)</li>
+<li>Threshold markers on gauge</li>
+<li>Color background (green/yellow/red zone)</li>
+<li>Mini trend line (sparkline showing recent history)</li>
+<li>Status icon (✓, ⚠, ✗)</li>
+<li>Last updated timestamp</li>
+</ul>
+<h3 id="gauge-styles-by-signal-type">Gauge Styles by Signal Type<a class="headerlink" href="#gauge-styles-by-signal-type" title="Permanent link">&para;</a></h3>
+<p><strong>Success Signals (Green border):</strong>
+- Semi-circular gauge, 0-100 scale
+- Higher is better
+- Green zone (≥ green threshold)
+- Yellow zone (yellow to green threshold)
+- Red zone (&lt; yellow threshold)
+- Example: User satisfaction, model accuracy, engagement rate</p>
+<p><strong>Kill Signals (Red border):</strong>
+- Semi-circular gauge, inverted color scheme
+- Lower is better
+- Red zone (≥ red threshold) → Project should stop
+- Yellow zone (yellow to red threshold)
+- Green zone (&lt; yellow threshold)
+- Example: Error rate, customer churn, cost overrun</p>
+<p><strong>Leading Indicators (Blue border):</strong>
+- Linear progress bar
+- Predicts future success/kill signals
+- Directional arrow showing trend
+- Example: Data labeling progress, team velocity, user adoption rate</p>
+<h3 id="overall-decision-panel">Overall Decision Panel<a class="headerlink" href="#overall-decision-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Top banner</strong> summarizing dashboard state:</li>
+<li><strong>Persist:</strong> All critical signals green, majority positive</li>
+<li><strong>Pivot:</strong> Mixed signals, some yellows/reds but recoverable</li>
+<li><strong>Stop:</strong> Critical kill signals in red, low recovery probability</li>
+<li><strong>Decision confidence:</strong> Percentage based on weighted signals</li>
+<li><strong>Recommendation text:</strong> Human-readable guidance</li>
+<li><strong>Key concerns:</strong> Bullet list of red/yellow signals needing attention</li>
+</ul>
+<h3 id="historical-trends-section">Historical Trends Section<a class="headerlink" href="#historical-trends-section" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Time series line chart</strong> below gauge tiles</li>
+<li>Select any signal to expand full trend view</li>
+<li>Overlay multiple signals for correlation analysis</li>
+<li>Threshold lines visible on timeline</li>
+<li>Annotations for key events (pivots, launches, etc.)</li>
+<li>Date range selector for zoom</li>
+</ul>
+<h3 id="alert-feed">Alert Feed<a class="headerlink" href="#alert-feed" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sidebar</strong> showing recent threshold crossings</li>
+<li>"Accuracy dropped below 85% (yellow threshold)"</li>
+<li>Timestamp and severity icon</li>
+<li>Clickable to jump to relevant signal tile</li>
+</ul>
+<h2 id="interaction-flow">Interaction Flow<a class="headerlink" href="#interaction-flow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Set up signals:</strong></li>
+<li>Add 3-8 signals covering success, kill, and leading indicators</li>
+<li>Configure thresholds based on project requirements</li>
+<li>
+<p>Assign weights to critical signals</p>
+</li>
+<li>
+<p><strong>Monitor dashboard:</strong></p>
+</li>
+<li>View real-time or simulated values</li>
+<li>Watch gauges change color as thresholds crossed</li>
+<li>
+<p>Check overall decision recommendation</p>
+</li>
+<li>
+<p><strong>Analyze trends:</strong></p>
+</li>
+<li>Expand individual signals to see historical patterns</li>
+<li>Identify correlations (e.g., leading indicators predict success signals)</li>
+<li>
+<p>Spot early warnings before kill signals trigger</p>
+</li>
+<li>
+<p><strong>Simulate scenarios:</strong></p>
+</li>
+<li>Use time simulation to test "what if" situations</li>
+<li>Adjust thresholds to see impact on recommendations</li>
+<li>
+<p>Explore how different weighting affects decisions</p>
+</li>
+<li>
+<p><strong>Export and share:</strong></p>
+</li>
+<li>Save dashboard configuration for team use</li>
+<li>Generate reports for stakeholder updates</li>
+</ol>
+<h2 id="the-aha-moment">The "Aha" Moment<a class="headerlink" href="#the-aha-moment" title="Permanent link">&para;</a></h2>
+<p>Students realize that <strong>defining signals upfront prevents sunk cost fallacy</strong>—when kill thresholds are clear and agreed upon, teams can objectively decide to stop failing projects rather than throwing good money after bad. They also see how leading indicators provide early warning, enabling pivots before irreversible failure. The weighted decision logic shows that not all signals are equal—some are critical, others informative.</p>
+<h2 id="technical-notes">Technical Notes<a class="headerlink" href="#technical-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Canvas:</strong> Responsive grid, minimum 800px width, variable height</li>
+<li><strong>Library:</strong> Chart.js for gauges and trends, custom gauge component</li>
+<li><strong>Data Structure:</strong> Signal array with metadata (name, type, thresholds, values, history)</li>
+<li><strong>Time Series:</strong> Array of {timestamp, value} pairs per signal</li>
+<li><strong>Persistence:</strong> LocalStorage for dashboard config, IndexedDB for time series</li>
+<li><strong>Mobile:</strong> Stacked tiles, swipe to switch signals, collapsible trend section</li>
+<li><strong>Accessibility:</strong> High contrast mode, text alternatives for gauges, keyboard navigation</li>
+<li><strong>Performance:</strong> Virtualized rendering for &gt;20 signals, debounced updates</li>
+</ul>
+<h2 id="assessment-integration">Assessment Integration<a class="headerlink" href="#assessment-integration" title="Permanent link">&para;</a></h2>
+<p>This MicroSim prepares students for:
+- <strong>Quiz Question 1:</strong> "What's the difference between success and leading indicators?"
+- <strong>Quiz Question 2:</strong> "Why are kill signals essential for project governance?"
+- <strong>Quiz Question 3:</strong> "How do thresholds convert metrics into actionable decisions?"
+- <strong>Case Study:</strong> "Analyze this signal dashboard and recommend persist/pivot/stop"
+- <strong>Design Exercise:</strong> "Create a signal dashboard for your capstone project"</p>
+<h2 id="pre-configured-templates">Pre-configured Templates<a class="headerlink" href="#pre-configured-templates" title="Permanent link">&para;</a></h2>
+<h3 id="e-commerce-recommendation-system">E-commerce Recommendation System<a class="headerlink" href="#e-commerce-recommendation-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Success:</strong> Click-through rate (&gt;15% green), conversion rate (&gt;5% green), revenue lift (&gt;10% green)</li>
+<li><strong>Kill:</strong> API latency (&gt;500ms red), model staleness (&gt;7 days red), cost per conversion (&gt;$20 red)</li>
+<li><strong>Leading:</strong> Training data freshness, A/B test enrollment, user feedback score</li>
+</ul>
+<h3 id="healthcare-diagnostic-ai">Healthcare Diagnostic AI<a class="headerlink" href="#healthcare-diagnostic-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Success:</strong> Sensitivity (&gt;95% green), specificity (&gt;90% green), physician trust score (&gt;4/5 green)</li>
+<li><strong>Kill:</strong> False negative rate (&gt;2% red), regulatory audit failures (&gt;0 red), patient complaints (&gt;5/month red)</li>
+<li><strong>Leading:</strong> Dataset diversity, expert annotation agreement, deployment pipeline health</li>
+</ul>
+<h3 id="fintech-fraud-detection">FinTech Fraud Detection<a class="headerlink" href="#fintech-fraud-detection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Success:</strong> Fraud catch rate (&gt;85% green), precision (&gt;80% green), processing speed (&lt;100ms green)</li>
+<li><strong>Kill:</strong> False positive rate (&gt;5% red), customer friction score (&gt;3/5 red), compliance violations (&gt;0 red)</li>
+<li><strong>Leading:</strong> Model retrain frequency, data drift detection, transaction volume growth</li>
+</ul>
+<h2 id="edge-cases">Edge Cases<a class="headerlink" href="#edge-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Conflicting signals:</strong> Success and kill both in red zones → Show "Mixed Evidence, Manual Review Required"</li>
+<li><strong>No data:</strong> Gray gauge with "Awaiting Data" message</li>
+<li><strong>Threshold overlap:</strong> Validate yellow between red and green, prevent invalid configs</li>
+<li><strong>All signals green:</strong> Celebrate but warn against complacency, suggest stretch goals</li>
+<li><strong>Rapid oscillation:</strong> Dampen updates if value crosses thresholds too frequently (noise vs. signal)</li>
+</ul>
+<h2 id="extension-opportunities">Extension Opportunities<a class="headerlink" href="#extension-opportunities" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Forecasting:</strong> ML model predicts signal values 1-4 weeks ahead</li>
+<li><strong>Anomaly detection:</strong> Alert when signal deviates from expected pattern</li>
+<li><strong>Team collaboration:</strong> Comments and annotations on signals</li>
+<li><strong>Integration APIs:</strong> Pull real-time data from Google Analytics, Datadog, etc.</li>
+<li><strong>Automated reports:</strong> Weekly email summaries with dashboard snapshots</li>
+<li><strong>Decision history:</strong> Log persist/pivot/stop decisions with rationale for retrospectives</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

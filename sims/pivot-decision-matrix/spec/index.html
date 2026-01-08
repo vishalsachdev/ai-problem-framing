@@ -1,0 +1,1563 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A graduate-level course on systematic AI problem framing using The Loop framework, covering mindset foundations, AI solution alternatives, diagnosis, and pivoting strategies.">
+      
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-problem-framing/sims/pivot-decision-matrix/spec/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>MicroSim: Pivot Decision Matrix - AI Problem Framing for AI Practitioners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#microsim-pivot-decision-matrix" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-header__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Problem Framing for AI Practitioners
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MicroSim: Pivot Decision Matrix
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../chapters/01-mindset/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../loop-framework-visualizer/" class="md-tabs__link">
+          
+  
+  
+  Simulations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Problem Framing for AI Practitioners" class="md-nav__button md-logo" aria-label="AI Problem Framing for AI Practitioners" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Problem Framing for AI Practitioners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/01-mindset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The AI Problem Framing Mindset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/01-mindset/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/02-ai-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. AI Solution Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/02-ai-alternatives/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/03-the-loop-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Loop Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/03-the-loop-framework/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/04-diagnosis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/04-diagnosis/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/05-pivot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Pivot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/05-pivot/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/06-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application & Case Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapters/06-application/quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loop-framework-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop Framework Visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-alternatives-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Alternatives Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pivot Decision Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="microsim-pivot-decision-matrix">MicroSim: Pivot Decision Matrix<a class="headerlink" href="#microsim-pivot-decision-matrix" title="Permanent link">&para;</a></h1>
+<h2 id="concept-visualized">Concept Visualized<a class="headerlink" href="#concept-visualized" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Concept:</strong> Multi-dimensional trade-off analysis for pivot decisions using weighted scoring matrices</li>
+<li><strong>Learning Goal:</strong> Students will evaluate pivot options across competing dimensions, visualize trade-offs spatially, apply weighted scoring, and make defensible decisions when alternatives have conflicting strengths</li>
+<li><strong>Difficulty:</strong> Advanced (graduate level)</li>
+<li><strong>Bloom's Level:</strong> Evaluate/Create</li>
+</ul>
+<h2 id="controls-right-panel">Controls (Right Panel)<a class="headerlink" href="#controls-right-panel" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Type</th>
+<th>Range</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matrix Type</td>
+<td>Dropdown</td>
+<td>[2x2, Bubble Chart, Radar, Weighted Table]</td>
+<td>2x2</td>
+<td>Visualization style</td>
+</tr>
+<tr>
+<td>X-Axis Dimension</td>
+<td>Dropdown</td>
+<td>[Impact, Effort, Cost, Risk, Speed, Complexity, Value, Certainty]</td>
+<td>Impact</td>
+<td>Horizontal axis</td>
+</tr>
+<tr>
+<td>Y-Axis Dimension</td>
+<td>Dropdown</td>
+<td>[Impact, Effort, Cost, Risk, Speed, Complexity, Value, Certainty]</td>
+<td>Effort</td>
+<td>Vertical axis</td>
+</tr>
+<tr>
+<td>Bubble Size (if bubble)</td>
+<td>Dropdown</td>
+<td>[Confidence, ROI, Team Buy-in, Data Quality]</td>
+<td>Confidence</td>
+<td>Third dimension</td>
+</tr>
+<tr>
+<td>Add Option</td>
+<td>Button + Form</td>
+<td>-</td>
+<td>-</td>
+<td>Create new pivot option</td>
+</tr>
+<tr>
+<td>Option Name</td>
+<td>Text input</td>
+<td>50 chars</td>
+<td>Empty</td>
+<td>Label for alternative</td>
+</tr>
+<tr>
+<td>X-Axis Score</td>
+<td>Slider</td>
+<td>0-10</td>
+<td>5</td>
+<td>Position on horizontal</td>
+</tr>
+<tr>
+<td>Y-Axis Score</td>
+<td>Slider</td>
+<td>0-10</td>
+<td>5</td>
+<td>Position on vertical</td>
+</tr>
+<tr>
+<td>Bubble Value</td>
+<td>Slider</td>
+<td>0-10</td>
+<td>5</td>
+<td>Size (if bubble chart)</td>
+</tr>
+<tr>
+<td>Option Color</td>
+<td>Color picker</td>
+<td>-</td>
+<td>Random</td>
+<td>Visual identification</td>
+</tr>
+<tr>
+<td>Option Notes</td>
+<td>Text area</td>
+<td>200 chars</td>
+<td>Empty</td>
+<td>Rationale, risks, assumptions</td>
+</tr>
+<tr>
+<td>Remove Option</td>
+<td>Button (per option)</td>
+<td>-</td>
+<td>-</td>
+<td>Delete alternative</td>
+</tr>
+<tr>
+<td>Add Dimension</td>
+<td>Button + Form</td>
+<td>-</td>
+<td>-</td>
+<td>Custom scoring criteria</td>
+</tr>
+<tr>
+<td>Dimension Name</td>
+<td>Text input</td>
+<td>30 chars</td>
+<td>Empty</td>
+<td>Custom dimension label</td>
+</tr>
+<tr>
+<td>Dimension Weight</td>
+<td>Slider</td>
+<td>1-10</td>
+<td>5</td>
+<td>Importance in overall score</td>
+</tr>
+<tr>
+<td>Score Options</td>
+<td>Button</td>
+<td>-</td>
+<td>-</td>
+<td>Rate all options on this dimension</td>
+</tr>
+<tr>
+<td>Scoring Mode</td>
+<td>Toggle</td>
+<td>[Manual, Auto-calculate]</td>
+<td>Manual</td>
+<td>Weighted sum or direct input</td>
+</tr>
+<tr>
+<td>Pareto Toggle</td>
+<td>Checkbox</td>
+<td>On/Off</td>
+<td>On</td>
+<td>Highlight Pareto frontier</td>
+</tr>
+<tr>
+<td>Grid Lines</td>
+<td>Checkbox</td>
+<td>On/Off</td>
+<td>On</td>
+<td>Show quadrant dividers</td>
+</tr>
+<tr>
+<td>Labels</td>
+<td>Checkbox</td>
+<td>On/Off</td>
+<td>On</td>
+<td>Show option names on chart</td>
+</tr>
+<tr>
+<td>Zoom/Pan</td>
+<td>Mouse/Touch</td>
+<td>-</td>
+<td>-</td>
+<td>Navigate large matrices</td>
+</tr>
+<tr>
+<td>Compare Mode</td>
+<td>Checkbox</td>
+<td>On/Off</td>
+<td>Off</td>
+<td>Side-by-side option comparison</td>
+</tr>
+<tr>
+<td>Selected Options</td>
+<td>Multi-select</td>
+<td>-</td>
+<td>None</td>
+<td>Compare subset of options</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Button</td>
+<td>-</td>
+<td>-</td>
+<td>Download as PNG/PDF/CSV</td>
+</tr>
+<tr>
+<td>Load Template</td>
+<td>Dropdown</td>
+<td>[Feature Pivot, Model Change, Market Shift, Resource Reallocate]</td>
+<td>Custom</td>
+<td>Pre-configured scenarios</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visualization-left-panel">Visualization (Left Panel)<a class="headerlink" href="#visualization-left-panel" title="Permanent link">&para;</a></h2>
+<h3 id="2x2-matrix-view-default">2x2 Matrix View (Default)<a class="headerlink" href="#2x2-matrix-view-default" title="Permanent link">&para;</a></h3>
+<p><strong>Layout:</strong>
+- X-axis: Selected dimension (e.g., Impact), 0-10 scale
+- Y-axis: Selected dimension (e.g., Effort), 0-10 scale
+- Four quadrants with labels:
+  - <strong>Top-right (High Impact, High Effort):</strong> "Big Bets" (yellow)
+  - <strong>Top-left (Low Impact, High Effort):</strong> "Money Pits" (red)
+  - <strong>Bottom-right (High Impact, Low Effort):</strong> "Quick Wins" (green)
+  - <strong>Bottom-left (Low Impact, Low Effort):</strong> "Low Priority" (gray)</p>
+<p><strong>Option Representation:</strong>
+- Colored circles placed at (X-score, Y-score) coordinates
+- Circle size: Fixed or proportional to third dimension if enabled
+- Option name as label (togglable)
+- Draggable: Click and drag to reposition
+- Hover: Tooltip with all dimension scores and notes</p>
+<p><strong>Pareto Frontier:</strong>
+- Dashed line connecting non-dominated options
+- Options below/left of frontier are suboptimal
+- Highlighted in bold or with star icon</p>
+<h3 id="bubble-chart-view">Bubble Chart View<a class="headerlink" href="#bubble-chart-view" title="Permanent link">&para;</a></h3>
+<p><strong>3D Representation:</strong>
+- X-axis: Dimension 1 (e.g., Impact)
+- Y-axis: Dimension 2 (e.g., Risk)
+- Bubble size: Dimension 3 (e.g., Confidence)
+- Color: Option category or custom grouping
+- Legend: Bubble size scale (small = low, large = high)</p>
+<p><strong>Interaction:</strong>
+- Click bubble: Expand detail panel with all scores
+- Drag bubble: Adjust X/Y scores, size auto-updates if linked to formula
+- Overlap detection: Slight jitter to separate overlapping bubbles</p>
+<h3 id="radar-chart-view">Radar Chart View<a class="headerlink" href="#radar-chart-view" title="Permanent link">&para;</a></h3>
+<p><strong>Multi-dimensional Profile:</strong>
+- Polygon per option overlaid on same axes
+- Each vertex: One dimension (up to 8 dimensions supported)
+- Shaded area: Represents option's overall strength profile
+- Color-coded by option
+- Hover: Highlight single option, dim others</p>
+<p><strong>Interaction:</strong>
+- Click vertex: Edit score for that dimension
+- Toggle options on/off to reduce visual clutter
+- Rotate chart to prioritize different dimensions</p>
+<h3 id="weighted-table-view">Weighted Table View<a class="headerlink" href="#weighted-table-view" title="Permanent link">&para;</a></h3>
+<p><strong>Spreadsheet-style Matrix:</strong>
+- Rows: Pivot options
+- Columns: Dimensions + Weighted Score + Rank
+- Each cell: Editable score (0-10)
+- Dimension column headers: Weight slider
+- Weighted score formula: Σ(dimension_score × dimension_weight) / Σ(weights)
+- Auto-sort by rank or any column
+- Conditional formatting: Green (high scores), Red (low scores)</p>
+<p><strong>Interaction:</strong>
+- Click cell: Edit score
+- Click header: Adjust weight
+- Click option row: Expand notes section
+- Export to CSV for external analysis</p>
+<h3 id="compare-mode-side-panel">Compare Mode (Side Panel)<a class="headerlink" href="#compare-mode-side-panel" title="Permanent link">&para;</a></h3>
+<p><strong>When 2+ options selected:</strong>
+- Split-screen comparison table
+- Row per dimension showing side-by-side scores
+- Difference column: Option A - Option B
+- Visual bar charts for quick comparison
+- "Winner" indicator per dimension
+- Overall recommendation based on weighted scores</p>
+<h2 id="decision-logic">Decision Logic<a class="headerlink" href="#decision-logic" title="Permanent link">&para;</a></h2>
+<h3 id="weighted-scoring-algorithm">Weighted Scoring Algorithm<a class="headerlink" href="#weighted-scoring-algorithm" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>For each option:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  WeightedScore = Σ(DimensionScore_i × DimensionWeight_i) / Σ(DimensionWeight_i)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  Rank = Sort options by WeightedScore descending
+</code></pre></div>
+<h3 id="pareto-frontier-detection">Pareto Frontier Detection<a class="headerlink" href="#pareto-frontier-detection" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Option A dominates Option B if:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  - A scores ≥ B on all dimensions (for benefit dimensions like Impact)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  - At least one dimension where A &gt; B
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Pareto Frontier = All non-dominated options
+</code></pre></div>
+<h3 id="recommendation-engine">Recommendation Engine<a class="headerlink" href="#recommendation-engine" title="Permanent link">&para;</a></h3>
+<p><strong>Quick Win Detection (2x2 Matrix):</strong>
+- Bottom-right quadrant (High Impact, Low Effort)
+- Recommendation: "Prioritize these—high ROI"</p>
+<p><strong>Money Pit Detection (2x2 Matrix):</strong>
+- Top-left quadrant (Low Impact, High Effort)
+- Recommendation: "Avoid these—poor ROI"</p>
+<p><strong>Big Bet Decision (2x2 Matrix):</strong>
+- Top-right quadrant (High Impact, High Effort)
+- Recommendation: "Strategic choice—high risk/reward, ensure resources available"</p>
+<p><strong>Weighted Score Recommendation:</strong>
+- Top 3 options by weighted score
+- Flag ties (&lt; 5% difference)
+- Warn if top option has critical weakness (any dimension &lt; 3/10)</p>
+<h2 id="the-aha-moment">The "Aha" Moment<a class="headerlink" href="#the-aha-moment" title="Permanent link">&para;</a></h2>
+<p>Students discover that <strong>the "best" pivot depends on what you optimize for</strong>—changing dimension weights or axes completely reorders options. They see that optimal choices lie on the Pareto frontier (can't improve one dimension without worsening another), and that dominated options should be eliminated immediately. The visualization makes trade-offs visceral: you can't have high impact, low effort, low risk, and low cost all at once. Decisions require accepting trade-offs.</p>
+<h2 id="technical-notes">Technical Notes<a class="headerlink" href="#technical-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Canvas:</strong> Responsive SVG, minimum 600px × 600px for 2x2, scalable for bubble/radar</li>
+<li><strong>Library:</strong> D3.js for charts, custom drag-and-drop handlers</li>
+<li><strong>Layout Algorithm:</strong> Force-directed for bubble overlap prevention, automatic label positioning</li>
+<li><strong>State Management:</strong> Option array with {name, scores[], notes, color} objects</li>
+<li><strong>Persistence:</strong> LocalStorage for autosave, export to JSON for versioning</li>
+<li><strong>Mobile:</strong> Touch gestures for drag, pinch-to-zoom, tap for tooltips</li>
+<li><strong>Accessibility:</strong> Keyboard navigation (tab through options, arrow keys to adjust scores), screen reader table fallback</li>
+<li><strong>Performance:</strong> Canvas rendering for &gt;50 options, SVG for &lt;50</li>
+</ul>
+<h2 id="assessment-integration">Assessment Integration<a class="headerlink" href="#assessment-integration" title="Permanent link">&para;</a></h2>
+<p>This MicroSim prepares students for:
+- <strong>Quiz Question 1:</strong> "What is a Pareto frontier and why does it matter for pivot decisions?"
+- <strong>Quiz Question 2:</strong> "Why might different stakeholders choose different pivots from the same matrix?"
+- <strong>Quiz Question 3:</strong> "How does changing dimension weights affect the recommended pivot?"
+- <strong>Case Study:</strong> "Analyze this pivot decision matrix and defend your recommended choice"
+- <strong>Design Exercise:</strong> "Create a pivot decision matrix for your capstone project with 5+ alternatives"</p>
+<h2 id="pre-configured-templates">Pre-configured Templates<a class="headerlink" href="#pre-configured-templates" title="Permanent link">&para;</a></h2>
+<h3 id="feature-pivot-product-development">Feature Pivot (Product Development)<a class="headerlink" href="#feature-pivot-product-development" title="Permanent link">&para;</a></h3>
+<p><strong>Options:</strong>
+1. AI-powered recommendation engine
+2. Manual curation by experts
+3. Hybrid (AI suggestions + human override)
+4. User-generated content (crowdsourced)
+5. No personalization (one-size-fits-all)</p>
+<p><strong>Dimensions:</strong>
+- <strong>Impact:</strong> User engagement lift (0 = none, 10 = 2x growth)
+- <strong>Effort:</strong> Development time in months (0 = 1 month, 10 = 12+ months)
+- <strong>Cost:</strong> Budget required (0 = $10K, 10 = $500K+)
+- <strong>Risk:</strong> Uncertainty in outcome (0 = proven, 10 = experimental)
+- <strong>Speed to market:</strong> Time to first user value (0 = 1 week, 10 = 6+ months)</p>
+<p><strong>Default Axis:</strong> Impact (X) vs. Effort (Y)</p>
+<h3 id="model-change-technical-pivot">Model Change (Technical Pivot)<a class="headerlink" href="#model-change-technical-pivot" title="Permanent link">&para;</a></h3>
+<p><strong>Options:</strong>
+1. Keep current model architecture
+2. Switch to transformer-based model
+3. Ensemble of multiple models
+4. Simplify to linear regression
+5. Outsource to third-party API</p>
+<p><strong>Dimensions:</strong>
+- <strong>Accuracy:</strong> Expected performance improvement (0 = worse, 10 = 50%+ better)
+- <strong>Complexity:</strong> Model maintenance burden (0 = simple, 10 = very complex)
+- <strong>Inference Speed:</strong> Latency impact (0 = 10x slower, 10 = 10x faster)
+- <strong>Data Requirements:</strong> Labeled data needed (0 = 100 samples, 10 = 1M+ samples)
+- <strong>Interpretability:</strong> Explainability for stakeholders (0 = black box, 10 = fully transparent)</p>
+<p><strong>Default Axis:</strong> Accuracy (X) vs. Complexity (Y), Bubble size = Interpretability</p>
+<h3 id="market-shift-strategic-pivot">Market Shift (Strategic Pivot)<a class="headerlink" href="#market-shift-strategic-pivot" title="Permanent link">&para;</a></h3>
+<p><strong>Options:</strong>
+1. Enterprise B2B focus
+2. Consumer B2C focus
+3. Freemium + Premium tiers
+4. White-label licensing
+5. Open-source + Consulting</p>
+<p><strong>Dimensions:</strong>
+- <strong>Revenue Potential:</strong> 3-year projection (0 = &lt;$1M, 10 = $50M+)
+- <strong>Customer Acquisition Cost:</strong> CAC ratio (0 = low, 10 = high)
+- <strong>Time to Revenue:</strong> Months to first paying customer (0 = 1 month, 10 = 12+ months)
+- <strong>Market Size:</strong> Total addressable market (0 = niche, 10 = mass market)
+- <strong>Competitive Intensity:</strong> Existing player strength (0 = blue ocean, 10 = red ocean)
+- <strong>Team Fit:</strong> Expertise alignment (0 = no experience, 10 = perfect fit)</p>
+<p><strong>Default Axis:</strong> Revenue Potential (X) vs. Competitive Intensity (Y)</p>
+<h3 id="resource-reallocation-operational-pivot">Resource Reallocation (Operational Pivot)<a class="headerlink" href="#resource-reallocation-operational-pivot" title="Permanent link">&para;</a></h3>
+<p><strong>Options:</strong>
+1. Hire 3 ML engineers
+2. Hire 1 data scientist + outsource labeling
+3. Buy third-party tools ($100K/year)
+4. Retrain existing team (6-month bootcamp)
+5. Partner with university research lab</p>
+<p><strong>Dimensions:</strong>
+- <strong>Capability Gain:</strong> New skills acquired (0 = minimal, 10 = transformative)
+- <strong>Cost:</strong> Total expenditure (0 = $0, 10 = $500K+)
+- <strong>Speed:</strong> Time to operational (0 = 1 week, 10 = 12+ months)
+- <strong>Sustainability:</strong> Long-term viability (0 = temporary fix, 10 = permanent solution)
+- <strong>Quality:</strong> Output excellence (0 = adequate, 10 = world-class)</p>
+<p><strong>Default Axis:</strong> Capability Gain (X) vs. Cost (Y)</p>
+<h2 id="edge-cases">Edge Cases<a class="headerlink" href="#edge-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>All options in same quadrant:</strong> Suggest adjusting scales or choosing different dimensions</li>
+<li><strong>No clear winner:</strong> Display top 3 with recommendation to gather more data or run experiments</li>
+<li><strong>Extreme outlier:</strong> Option with one 10/10 score and rest 1/10 → Flag as "high risk specialist choice"</li>
+<li><strong>Ties in weighted score:</strong> Show sensitivity analysis (how much would weights need to change to break tie?)</li>
+<li><strong>Contradictory dimensions:</strong> E.g., "Impact" and "Value" are redundant → Warn user to diversify dimensions</li>
+</ul>
+<h2 id="extension-opportunities">Extension Opportunities<a class="headerlink" href="#extension-opportunities" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Sensitivity analysis:</strong> Slider to adjust all weights, watch ranking change in real-time</li>
+<li><strong>Monte Carlo simulation:</strong> Add uncertainty ranges to scores, run 1000 simulations, show probability of each option being best</li>
+<li><strong>Stakeholder views:</strong> Different stakeholder roles (CEO, Engineer, User) with preset dimension weights</li>
+<li><strong>Time dimension:</strong> Animate how option scores evolve over project timeline</li>
+<li><strong>Collaborative scoring:</strong> Team members vote on scores independently, consensus view with outlier detection</li>
+<li><strong>AI suggestions:</strong> GPT recommends dimension scores based on option descriptions, human can override</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/ai-problem-framing" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
